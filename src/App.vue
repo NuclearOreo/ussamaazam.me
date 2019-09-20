@@ -43,44 +43,29 @@
             <router-link to="/">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
-                  <i class="fa fa-home"></i>
+                  <i class="fa fa-user"></i>
                   <span class="nav-link-inner--text d-lg-none">About Me</span>
                 </a>
               </li>
             </router-link>
-            <router-link to="/about">
+            <router-link to="/algorithm">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
-                  <i class="fa fa-terminal"></i>
+                  <i class="fa fa-file-code-o"></i>
                   <span class="nav-link-inner--text d-lg-none"
-                    >Common Algorithm</span
+                    >Common Algorithms</span
                   >
                 </a>
               </li>
             </router-link>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link nav-link-icon"
-                href="#"
-                id="navbar-default_dropdown_1"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="ni ni-settings-gear-65"></i>
-                <span class="nav-link-inner--text d-lg-none">Settings</span>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-right"
-                aria-labelledby="navbar-default_dropdown_1"
-              >
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
+            <router-link to="/photos">
+              <li class="nav-item">
+                <a class="nav-link nav-link-icon" href="#">
+                  <i class="fa fa-camera"></i>
+                  <span class="nav-link-inner--text d-lg-none">Photos</span>
+                </a>
+              </li>
+            </router-link>
           </ul>
         </div>
       </div>
