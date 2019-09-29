@@ -90,12 +90,13 @@
                       into challenging adventures. In my eyes, life is best
                       lived by doing what you enjoy and design a world around to
                       keep your passions alive. No money in the world will
-                      replace you enjoying life because that's the fuel that
-                      keeps you going. My current ventures to learned how to
-                      design and creating clothing, become a better photographer
-                      and improve my health through calisthenics/Fasting. Also,
-                      hoping I'll find time in the future to jump into
-                      skateboarding.
+                      replace you enjoying life om current the moment because
+                      that's the fuel that keeps you going. Live life through
+                      the roads you've set. My current ventures are learning to
+                      design and creating clothing, becoming a better
+                      photographer and improving my health through
+                      calisthenics/fasting. Also, hoping I'll find time in the
+                      future to jump into skateboarding.
                     </p>
                   </div>
                 </div>
