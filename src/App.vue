@@ -43,7 +43,7 @@
             <router-link to="/">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
-                  <i class="ni ni-circle-08"></i>
+                  <i class="fa fa-user"></i>
                   <span class="nav-link-inner--text d-lg-none">About Me</span>
                 </a>
               </li>
@@ -51,7 +51,7 @@
             <router-link to="/algorithm">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
-                  <i class="ni ni-laptop"></i>
+                  <i class="fa fa-code"></i>
                   <span class="nav-link-inner--text d-lg-none"
                     >Common Algorithms</span
                   >
@@ -61,7 +61,7 @@
             <router-link to="/photos">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
-                  <i class="ni ni-camera-compact"></i>
+                  <i class="fa fa-picture-o"></i>
                   <span class="nav-link-inner--text d-lg-none">Photos</span>
                 </a>
               </li>
