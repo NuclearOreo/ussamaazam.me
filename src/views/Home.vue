@@ -27,9 +27,14 @@
                       class="btn btn-sm btn-info mr-4"
                       >LinkedIn</a
                     >
-                    <a href="#" class="btn btn-sm btn-default float-right"
-                      >Resume</a
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-default float-right"
+                      data-toggle="modal"
+                      data-target="#exampleModal"
                     >
+                      Email
+                    </button>
                   </div>
                 </div>
                 <div class="col-lg-4 order-lg-1">
@@ -68,7 +73,7 @@
                 </div>
               </div>
               <div class="text-center mt-5">
-                <h3>Ussama Azam<span class="font-weight-light">, 24</span></h3>
+                <h3>Ussama Azam</h3>
                 <div class="h6 font-weight-300">
                   <i class="ni location_pin mr-2"></i>Miami, United States
                 </div>
@@ -95,8 +100,7 @@
                       the roads you've set. My current ventures are learning to
                       design and creating clothing, becoming a better
                       photographer and improving my health through
-                      calisthenics/fasting. Also, hoping I'll find time in the
-                      future to jump into skateboarding.
+                      calisthenics/fasting.
                     </p>
                   </div>
                 </div>
@@ -106,6 +110,44 @@
         </div>
       </section>
     </main>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
