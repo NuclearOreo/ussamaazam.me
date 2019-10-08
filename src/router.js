@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import Algorithm from "./views/Algorithm.vue";
+import Problems from "./views/problems.vue";
 import Photos from "./views/photos.vue";
 import Lost from "./views/lost.vue";
 
@@ -17,9 +17,9 @@ export default new Router({
       component: Home
     },
     {
-      path: "/algorithm",
-      name: "algorithm",
-      component: Algorithm
+      path: "/problems",
+      name: "problems",
+      component: Problems
     },
     {
       path: "/Photos",

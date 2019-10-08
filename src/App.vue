@@ -48,7 +48,7 @@
                 </a>
               </li>
             </router-link>
-            <router-link to="/algorithm">
+            <router-link to="/problems">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
                   <i class="fa fa-code"></i>
