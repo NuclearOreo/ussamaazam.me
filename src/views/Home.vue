@@ -40,33 +40,33 @@
                 <div class="col-lg-4 order-lg-1">
                   <div class="card-profile-stats d-flex justify-content-center">
                     <div>
-                      <span
-                        class="iconify"
-                        data-icon="simple-icons:leetcode"
-                        data-inline="false"
-                      ></span>
                       <a href="https://leetcode.com/nuclearoreo/">
-                        <span class="description">LeetCode</span>
+                        <span
+                          class="iconify"
+                          data-icon="simple-icons:leetcode"
+                          data-inline="false"
+                        ></span>
+                        <span class="description hide">LeetCode</span>
                       </a>
                     </div>
                     <div>
-                      <span
-                        class="iconify"
-                        data-icon="zmdi:github"
-                        data-inline="false"
-                      ></span>
                       <a href="https://github.com/NuclearOreo">
-                        <span class="description">GitHub</span>
+                        <span
+                          class="iconify"
+                          data-icon="zmdi:github"
+                          data-inline="false"
+                        ></span>
+                        <span class="description hide">GitHub</span>
                       </a>
                     </div>
                     <div>
-                      <span
-                        class="iconify"
-                        data-icon="jam:unsplash"
-                        data-inline="false"
-                      ></span>
                       <a href="https://unsplash.com/@ussi">
-                        <span class="description">Unsplash</span>
+                        <span
+                          class="iconify"
+                          data-icon="jam:unsplash"
+                          data-inline="false"
+                        ></span>
+                        <span class="description hide">Unsplash</span>
                       </a>
                     </div>
                   </div>
@@ -162,11 +162,17 @@
   .topspacing {
     margin-top: 35%;
   }
+  .hide {
+    display: none;
+  }
 }
 
 @media (max-width: 450px) {
   .topspacing {
     margin-top: 53%;
+  }
+  .hide {
+    display: none;
   }
 }
 </style>
