@@ -2,11 +2,11 @@
 ## Docker (NGINX) for production
 Build Image
 ```
-docker build -t <name of image> .
+docker build -t ussamaazam.me .
 ```
 Run Container 
 ```
-docker run -it -p 80:80 --rm <name of image>
+docker run -it -p 80:80 --rm ussamaazam.me
 ```
 ## Project setup
 ```
