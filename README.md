@@ -1,5 +1,13 @@
 # My Personal Website using Vue.js
-
+## Docker (NGINX) for production
+Build Image
+```
+docker build -t <name of image> .
+```
+Run Container 
+```
+docker run -it -p 80:80 --rm <name of image>
+```
 ## Project setup
 ```
 npm install
