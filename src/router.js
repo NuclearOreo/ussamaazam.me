@@ -27,11 +27,6 @@ export default new Router({
       component: Photos
     },
     {
-      path: "/Photos/:page",
-      name: "photos",
-      component: Photos
-    },
-    {
       path: "*",
       name: "lost",
       component: Lost

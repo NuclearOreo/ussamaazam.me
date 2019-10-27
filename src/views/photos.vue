@@ -1,6 +1,34 @@
 <template>
   <div v-if="pics !== null" class="container">
     <br />
+    <div v-if="stats !== null" class="row">
+      <div class="col">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <center>
+              <h1 class="display-4">Total Views</h1>
+
+              <p class="lead">
+                {{ stats.data.views.total }}
+              </p>
+            </center>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <center>
+              <h1 class="display-4">Total Downloads</h1>
+
+              <p class="lead">
+                {{ stats.data.downloads.total }}
+              </p>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
     <nav>
       <ul class="pagination justify-content-center">
         <li class="page-item" v-bind:class="{ active: page === 1 }">
@@ -52,7 +80,7 @@ const instance = axios.create({
   timeout: 1000,
   headers: {
     Authorization:
-      ""
+      "Client-ID "
   }
 });
 
@@ -64,6 +92,7 @@ export default {
   data() {
     return {
       pics: null,
+      stats: null,
       page: 1
     };
   },
@@ -75,8 +104,14 @@ export default {
   },
   async mounted() {
     this.pics = await instance.get(`/users/ussamaazam/photos`);
+    this.stats = await instance.get(`/users/ussamaazam/statistics`);
   }
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.jumbotron {
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+</style>
