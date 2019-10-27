@@ -93,7 +93,7 @@ const instance = axios.create({
   timeout: 1000,
   headers: {
     Authorization:
-      "Client-ID "
+      ""
   }
 });
 
@@ -119,8 +119,8 @@ export default {
     }
   },
   async mounted() {
-    this.pics = await instance.get(`/users/ussamaazam/photos`);
-    this.stats = await instance.get(`/users/ussamaazam/statistics`);
+    this.pics = await instance.get("/users/ussamaazam/photos");
+    this.stats = await instance.get("/users/ussamaazam/statistics");
   }
 };
 </script>

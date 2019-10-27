@@ -9,13 +9,11 @@
               <div class="row justify-content-center">
                 <div class="col-lg-3 order-lg-2">
                   <div class="card-profile-image">
-                    <a href="#">
-                      <img
-                        src="../assets/avatar.png"
-                        class="rounded-circle"
-                        alt="image"
-                      />
-                    </a>
+                    <img
+                      src="../assets/avatar.png"
+                      class="rounded-circle"
+                      alt="image"
+                    />
                   </div>
                 </div>
                 <div
@@ -27,14 +25,11 @@
                       class="btn btn-sm btn-info mr-4"
                       >LinkedIn</a
                     >
-                    <button
-                      type="button"
+                    <a
+                      href="mailto:azamussama@gmail.com"
                       class="btn btn-sm btn-default float-right"
-                      data-toggle="modal"
-                      data-target="#exampleModal"
+                      >email</a
                     >
-                      Email
-                    </button>
                   </div>
                 </div>
                 <div class="col-lg-4 order-lg-1">
@@ -110,44 +105,6 @@
         </div>
       </section>
     </main>
-
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
