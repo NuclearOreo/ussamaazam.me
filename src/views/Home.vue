@@ -63,7 +63,7 @@
                       <a href="https://unsplash.com/@ussi">
                         <span
                           class="iconify"
-                          data-icon="jam:unsplash"
+                          data-icon="simple-icons:unsplash"
                           data-inline="false"
                         ></span>
                         <span class="description hide">Unsplash</span>

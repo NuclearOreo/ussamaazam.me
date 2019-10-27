@@ -1,28 +1,41 @@
 <template>
   <div v-if="pics !== null" class="container">
     <br />
+    <center>
+      <a href="https://unsplash.com/@ussamaazam">
+        <span
+          class="iconify unsplash"
+          data-icon="simple-icons:unsplash"
+          data-inline="false"
+        ></span>
+        <h1 class="display-4 unsplash">Unsplash</h1>
+      </a>
+    </center>
+    <br />
     <div v-if="stats !== null" class="row">
       <div class="col">
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron">
           <div class="container">
             <center>
               <h1 class="display-4">Total Views</h1>
-
               <p class="lead">
-                {{ stats.data.views.total }}
+                <strong>
+                  {{ formatNumber(stats.data.views.total) }}
+                </strong>
               </p>
             </center>
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron">
           <div class="container">
             <center>
               <h1 class="display-4">Total Downloads</h1>
-
               <p class="lead">
-                {{ stats.data.downloads.total }}
+                <strong>
+                  {{ formatNumber(stats.data.downloads.total) }}
+                </strong>
               </p>
             </center>
           </div>
@@ -97,6 +110,9 @@ export default {
     };
   },
   methods: {
+    formatNumber(num) {
+      return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+    },
     async Page(page) {
       this.pics = await instance.get(`/users/ussamaazam/photos?page=${page}`);
       this.page = page;
@@ -113,5 +129,11 @@ export default {
 .jumbotron {
   padding-bottom: 5%;
   padding-top: 5%;
+}
+.iconify {
+  font-size: 50px;
+}
+.unsplash {
+  color: #000000;
 }
 </style>
