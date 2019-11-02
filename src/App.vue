@@ -79,7 +79,7 @@
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition-duration: 0.4s;
+  transition-duration: 0.33s;
   transition-property: opacity;
   transition-timing-function: ease;
 }
