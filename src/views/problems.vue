@@ -6,9 +6,9 @@
           Sorting
         </strong>
       </h6>
-      <a href="#about">Insertion Sort</a>
-      <a href="#services">Bubble Sort</a>
-      <a href="#clients">Selection Sort</a>
+      <a v-on:click="selected = 'insertion'">Insertion Sort</a>
+      <a v-on:click="selected = 'selection'">Selection Sort</a>
+      <a href="#clients">Bubble Sort</a>
       <a href="#contact">Quick Sort</a>
       <a href="#contact">Merge Sort</a>
       <h6>
@@ -22,36 +22,28 @@
       <a href="#contact">Quick Sort</a>
       <a href="#contact">Merge Sort</a>
     </div>
-    <InsertionSort />
+    <div v-if="selected === 'insertion'">
+      <InsertionSort />
+    </div>
+    <div v-if="selected === 'selection'">
+      <SelectionSort />
+    </div>
   </div>
 </template>
 
 <script>
-import marked from "marked";
 import InsertionSort from "../components/problems/insertionSort";
+import SelectionSort from "../components/problems/selectionSort";
 
 export default {
   components: {
-    InsertionSort
+    InsertionSort,
+    SelectionSort
   },
   data() {
     return {
-      problem:
-        "# Insertion Sort List\n" +
-        "Sort a linked list using insertion sort.\n\n" +
-        "![alt text](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif 'Insertion Sort')\n\n" +
-        "A graphical example of insertion sort. The partial sorted list (black) initially contains only the first element in the list.\n" +
-        "With each iteration one element (red) is removed from the input data and inserted in-place into the sorted list\n\n" +
-        "**Algorithm of Insertion Sort:**\n" +
-        "- Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list.\n" +
-        "- At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there.\n" +
-        "- It repeats until no input elements remain.\n"
+      selected: "selection"
     };
-  },
-  methods: {
-    compiledMarkdown(text) {
-      return marked(text);
-    }
   }
 };
 </script>
