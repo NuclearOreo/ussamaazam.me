@@ -77,6 +77,10 @@
 </template>
 
 <style scoped>
+.navbar {
+  z-index: 1;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition-duration: 0.3s;

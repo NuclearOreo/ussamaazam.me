@@ -1,6 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="sidenav">
+      <div class="buffer"></div>
       <h6>
         <strong>
           Sorting
@@ -8,7 +9,7 @@
       </h6>
       <a v-on:click="selected = 'insertion'">Insertion Sort</a>
       <a v-on:click="selected = 'selection'">Selection Sort</a>
-      <a href="#clients">Bubble Sort</a>
+      <a v-on:click="selected = 'bubble'">Bubble Sort</a>
       <a href="#contact">Quick Sort</a>
       <a href="#contact">Merge Sort</a>
       <h6>
@@ -28,17 +29,22 @@
     <div v-if="selected === 'selection'">
       <SelectionSort />
     </div>
+    <div v-if="selected === 'bubble'">
+      <BubbleSort />
+    </div>
   </div>
 </template>
 
 <script>
 import InsertionSort from "../components/problems/insertionSort";
 import SelectionSort from "../components/problems/selectionSort";
+import BubbleSort from "../components/problems/bubbleSort";
 
 export default {
   components: {
     InsertionSort,
-    SelectionSort
+    SelectionSort,
+    BubbleSort
   },
   data() {
     return {
@@ -49,12 +55,18 @@ export default {
 </script>
 
 <style scoped>
+.buffer {
+  margin-top: 30%;
+}
+
 .sidenav {
   height: 100%;
   width: 250px;
   position: fixed;
-  z-index: 1;
+  z-index: 0;
+  top: 0;
   left: 0;
+  bottom: auto;
   background-color: #f6f9fc;
   overflow-x: hidden;
   padding-top: 20px;
