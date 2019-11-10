@@ -47,9 +47,6 @@
             aria-labelledby="tabs-icons-text-1-tab"
           >
             <div v-html="compiledMarkdown(problem)"></div>
-            <br />
-            <br />
-            <br />
           </div>
           <div
             class="tab-pane fade"
@@ -70,30 +67,17 @@
             >
               <pre
                 style="margin: 0; line-height: 125%"
-              ><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">insertionSort</span><span style="color: #f8f8f2">(arr):</span> 
-  
-    <span style="color: #75715e"># Traverse through 1 to len(arr) </span>
-    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">len(arr)):</span> 
-  
-        <span style="color: #f8f8f2">key</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">arr[i]</span> 
-  
-        <span style="color: #75715e"># Move elements of arr[0..i-1], that are </span>
-        <span style="color: #75715e"># greater than key, to one position ahead </span>
-        <span style="color: #75715e"># of their current position </span>
-        <span style="color: #f8f8f2">j</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">-</span><span style="color: #ae81ff">1</span>
-        <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">j</span> <span style="color: #f92672">&gt;=</span><span style="color: #ae81ff">0</span> <span style="color: #f92672">and</span> <span style="color: #f8f8f2">key</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">arr[j]</span> <span style="color: #f8f8f2">:</span> 
-                <span style="color: #f8f8f2">arr[j</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">arr[j]</span> 
-                <span style="color: #f8f8f2">j</span> <span style="color: #f92672">-=</span> <span style="color: #ae81ff">1</span>
-        <span style="color: #f8f8f2">arr[j</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">key</span> 
-  
-  
-<span style="color: #75715e"># Driver code to test above </span>
-<span style="color: #f8f8f2">arr</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">12</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">11</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">13</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">]</span> 
-<span style="color: #f8f8f2">insertionSort(arr)</span> 
-<span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Sorted array is:&quot;</span><span style="color: #f8f8f2">)</span> 
-<span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(len(arr)):</span> 
-    <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;%d&quot;</span> <span style="color: #f92672">%</span><span style="color: #f8f8f2">arr[i])</span> 
-  
+              ><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">bubbleSort</span><span style="color: #f8f8f2">(array):</span>
+   <span style="color: #f8f8f2">isSorted</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">False</span>
+   <span style="color: #66d9ef">while</span> <span style="color: #f92672">not</span> <span style="color: #f8f8f2">isSorted:</span>
+      <span style="color: #f8f8f2">isSorted</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">True</span>
+      <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(len(array)</span> <span style="color: #f92672">-</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">):</span>
+         <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">array[i]</span> <span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">array[i</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]:</span>
+           <span style="color: #f8f8f2">temp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">array[i]</span>
+           <span style="color: #f8f8f2">array[i]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">array[i</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span>
+           <span style="color: #f8f8f2">array[i</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">temp</span>
+           <span style="color: #f8f8f2">isSorted</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">False</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">array</span>
 </pre>
             </div>
           </div>
@@ -111,15 +95,21 @@ export default {
   data() {
     return {
       problem:
-        "# Selection Sort List\n" +
-        "Here is an example of this sort algorithm sorting five elements:n\n" +
-        "![alt text](https://he-s3.s3.amazonaws.com/media/uploads/2888f5b.png 'Insertion Sort')\n\n" +
-        "A graphical example of insertion sort. The partial sorted list (black) initially contains only the first element in the list.\n" +
-        "With each iteration one element (red) is removed from the input data and inserted in-place into the sorted list\n\n" +
-        "**Algorithm of Insertion Sort:**\n" +
-        "- Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list.\n" +
-        "- At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there.\n" +
-        "- It repeats until no input elements remain.\n"
+        "# Bubble Sort\n\n" +
+        "The bubble sort is also known as the ripple sort. The bubble sort is probably the first, reasonably complex module that any beginning programmer has to write. It is a very simple construct which introduces the student to the fundamentals of how sorting works.\n\n" +
+        "A bubble sort makes use of an array and some sort of swapping mechanism. Most programming languages have a built-in function to swap elements of an array. Even if a swapping function does not exist, only a couple of extra lines of code are required to store one\n" +
+        "array element in a temporary field in order to swap a second element into its place. Then the first element is moved out of the temporary field and back into the array at the second element's position.\n\n" +
+        "Here is a simple example of how a bubble sort works: Suppose you have a row of children's toy blocks with letters on them. They are in random order and you wish to arrange them in alphabetical order from left to right.\n\n" +
+        "1. Begin with the first block. In this case, the letter G.\n\n\t" +
+        "![alt text](https://upload.wikimedia.org/wikibooks/en/1/19/Bubble01.png)\n\n" +
+        "2. Look at the block just to the right of it.\n\n" +
+        "3. If the block to the right should come before the block on the left, swap them so that they are in order\n\n\t" +
+        "![alt text](https://upload.wikimedia.org/wikibooks/en/3/3b/Bubble02.png)\n\n" +
+        "4. Compare the next block in line with the first, and repeat step 3. Do this until you run out of blocks. Then begin step one again with the second block.\n\n\t" +
+        "![alt text](https://upload.wikimedia.org/wikibooks/en/b/bf/Bubble03.png)\n\n\t" +
+        "![alt text](https://upload.wikimedia.org/wikibooks/en/2/27/Bubble04.png)\n\n\t" +
+        "![alt text](https://upload.wikimedia.org/wikibooks/en/7/76/Bubble05.png)\n\n\t" +
+        "![alt text](https://upload.wikimedia.org/wikibooks/en/a/a4/Bubble06.png)"
     };
   },
   methods: {
@@ -133,9 +123,5 @@ export default {
 <style scoped>
 .main {
   margin-left: 250px;
-}
-
-.tab-content {
-  overflow: scroll;
 }
 </style>
