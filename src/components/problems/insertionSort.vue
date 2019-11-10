@@ -67,30 +67,14 @@
             >
               <pre
                 style="margin: 0; line-height: 125%"
-              ><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">insertionSort</span><span style="color: #f8f8f2">(arr):</span> 
-  
-    <span style="color: #75715e"># Traverse through 1 to len(arr) </span>
-    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">len(arr)):</span> 
-  
-        <span style="color: #f8f8f2">key</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">arr[i]</span> 
-  
-        <span style="color: #75715e"># Move elements of arr[0..i-1], that are </span>
-        <span style="color: #75715e"># greater than key, to one position ahead </span>
-        <span style="color: #75715e"># of their current position </span>
-        <span style="color: #f8f8f2">j</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">-</span><span style="color: #ae81ff">1</span>
-        <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">j</span> <span style="color: #f92672">&gt;=</span><span style="color: #ae81ff">0</span> <span style="color: #f92672">and</span> <span style="color: #f8f8f2">key</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">arr[j]</span> <span style="color: #f8f8f2">:</span> 
-                <span style="color: #f8f8f2">arr[j</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">arr[j]</span> 
-                <span style="color: #f8f8f2">j</span> <span style="color: #f92672">-=</span> <span style="color: #ae81ff">1</span>
-        <span style="color: #f8f8f2">arr[j</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">key</span> 
-  
-  
-<span style="color: #75715e"># Driver code to test above </span>
-<span style="color: #f8f8f2">arr</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">12</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">11</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">13</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">]</span> 
-<span style="color: #f8f8f2">insertionSort(arr)</span> 
-<span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Sorted array is:&quot;</span><span style="color: #f8f8f2">)</span> 
-<span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(len(arr)):</span> 
-    <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;%d&quot;</span> <span style="color: #f92672">%</span><span style="color: #f8f8f2">arr[i])</span> 
-  
+              ><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">insertionSort</span><span style="color: #f8f8f2">(array):</span>
+   <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">len(array)):</span>
+      <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">j</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">i):</span>
+         <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">array[j]</span> <span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">array[i]:</span>
+             <span style="color: #f8f8f2">temp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">array[j]</span>
+             <span style="color: #f8f8f2">array[j]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">array[i]</span>
+             <span style="color: #f8f8f2">array[i]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">temp</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">array</span>
 </pre>
             </div>
           </div>
@@ -116,7 +100,7 @@ export default {
         "**Algorithm of Insertion Sort:**\n" +
         "- Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list.\n" +
         "- At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there.\n" +
-        "- It repeats until no input elements remain.\n"
+        "- It repeats until no input elements remain.\n\n"
     };
   },
   methods: {

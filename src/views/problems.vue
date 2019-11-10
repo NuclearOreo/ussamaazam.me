@@ -48,7 +48,7 @@ export default {
   },
   data() {
     return {
-      selected: "selection"
+      selected: "insertion"
     };
   }
 };

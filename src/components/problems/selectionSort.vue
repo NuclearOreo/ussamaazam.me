@@ -63,34 +63,24 @@
             aria-labelledby="tabs-icons-text-3-tab"
           >
             <div
-              style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;"
+              style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"
             >
               <pre
                 style="margin: 0; line-height: 125%"
-              ><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">insertionSort</span><span style="color: #f8f8f2">(arr):</span> 
-  
-    <span style="color: #75715e"># Traverse through 1 to len(arr) </span>
-    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">len(arr)):</span> 
-  
-        <span style="color: #f8f8f2">key</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">arr[i]</span> 
-  
-        <span style="color: #75715e"># Move elements of arr[0..i-1], that are </span>
-        <span style="color: #75715e"># greater than key, to one position ahead </span>
-        <span style="color: #75715e"># of their current position </span>
-        <span style="color: #f8f8f2">j</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">-</span><span style="color: #ae81ff">1</span>
-        <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">j</span> <span style="color: #f92672">&gt;=</span><span style="color: #ae81ff">0</span> <span style="color: #f92672">and</span> <span style="color: #f8f8f2">key</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">arr[j]</span> <span style="color: #f8f8f2">:</span> 
-                <span style="color: #f8f8f2">arr[j</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">arr[j]</span> 
-                <span style="color: #f8f8f2">j</span> <span style="color: #f92672">-=</span> <span style="color: #ae81ff">1</span>
-        <span style="color: #f8f8f2">arr[j</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">key</span> 
-  
-  
-<span style="color: #75715e"># Driver code to test above </span>
-<span style="color: #f8f8f2">arr</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span><span style="color: #ae81ff">12</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">11</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">13</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">]</span> 
-<span style="color: #f8f8f2">insertionSort(arr)</span> 
-<span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Sorted array is:&quot;</span><span style="color: #f8f8f2">)</span> 
-<span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(len(arr)):</span> 
-    <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;%d&quot;</span> <span style="color: #f92672">%</span><span style="color: #f8f8f2">arr[i])</span> 
-  
+              ><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">selectionSort</span><span style="color: #f8f8f2">(array):</span>
+   <span style="color: #f8f8f2">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
+   <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">len(array):</span>
+	<span style="color: #f8f8f2">smallest,</span> <span style="color: #f8f8f2">index</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">float(</span><span style="color: #e6db74">&#39;inf&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span>
+	<span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">j</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(i</span> <span style="color: #f8f8f2">,len(array)):</span>
+		<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">array[j]</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">smallest:</span>
+			<span style="color: #f8f8f2">smallest</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">array[j]</span>
+			<span style="color: #f8f8f2">index</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">j</span>
+	<span style="color: #f8f8f2">temp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">array[i]</span>
+	<span style="color: #f8f8f2">array[i]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">smallest</span>
+	<span style="color: #f8f8f2">array[index]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">temp</span>
+	<span style="color: #f8f8f2">i</span> <span style="color: #f92672">+=</span> <span style="color: #ae81ff">1</span>
+	
+   <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">array</span>
 </pre>
             </div>
           </div>
@@ -108,15 +98,22 @@ export default {
   data() {
     return {
       problem:
-        "# Selection Sort List\n" +
-        "Here is an example of this sort algorithm sorting five elements:n\n" +
-        "![alt text](https://he-s3.s3.amazonaws.com/media/uploads/2888f5b.png 'Insertion Sort')\n\n" +
-        "A graphical example of insertion sort. The partial sorted list (black) initially contains only the first element in the list.\n" +
-        "With each iteration one element (red) is removed from the input data and inserted in-place into the sorted list\n\n" +
-        "**Algorithm of Insertion Sort:**\n" +
-        "- Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list.\n" +
-        "- At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there.\n" +
-        "- It repeats until no input elements remain.\n"
+        "# Selection Sort\n\n" +
+        "Consider the following depicted array as an example.\n\n" +
+        "![alt text](https://www.tutorialspoint.com/data_structures_algorithms/images/unsorted_array.jpg)\n\n" +
+        "For the first position in the sorted list, the whole list is scanned sequentially. The first position where 14 is stored presently, we search the whole list and find that 10 is the lowest value.\n\n" +
+        "![alt text](https://www.tutorialspoint.com/data_structures_algorithms/images/selection_sort_1.jpg)\n\n" +
+        "So we replace 14 with 10. After one iteration 10, which happens to be the minimum value in the list, appears in the first position of the sorted list.\n\n" +
+        "![alt text](https://www.tutorialspoint.com/data_structures_algorithms/images/selection_sort_2.jpg)\n\n" +
+        "For the second position, where 33 is residing, we start scanning the rest of the list in a linear manner.\n\n" +
+        "![alt text](https://www.tutorialspoint.com/data_structures_algorithms/images/selection_sort_3.jpg)\n\n" +
+        "We find that 14 is the second lowest value in the list and it should appear at the second place. We swap these values.\n\n" +
+        "![alt text](https://www.tutorialspoint.com/data_structures_algorithms/images/selection_sort_4.jpg)\n\n" +
+        "After two iterations, two least values are positioned at the beginning in a sorted manner.\n\n" +
+        "![alt text](https://www.tutorialspoint.com/data_structures_algorithms/images/selection_sort_5.jpg)\n\n" +
+        "The same process is applied to the rest of the items in the array.\n\n" +
+        "Following is a pictorial depiction of the entire sorting process −\n\n" +
+        "![alt text](https://www.tutorialspoint.com/data_structures_algorithms/images/selection_sort.jpg)\n\n"
     };
   },
   methods: {
