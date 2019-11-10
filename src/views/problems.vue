@@ -10,7 +10,7 @@
       <a v-on:click="selected = 'insertion'">Insertion Sort</a>
       <a v-on:click="selected = 'selection'">Selection Sort</a>
       <a v-on:click="selected = 'bubble'">Bubble Sort</a>
-      <a href="#contact">Quick Sort</a>
+      <a v-on:click="selected = 'quick'">Quick Sort</a>
       <a href="#contact">Merge Sort</a>
       <h6>
         <strong>
@@ -32,6 +32,9 @@
     <div v-if="selected === 'bubble'">
       <BubbleSort />
     </div>
+    <div v-if="selected === 'quick'">
+      <QuickSort />
+    </div>
   </div>
 </template>
 
@@ -39,12 +42,14 @@
 import InsertionSort from "../components/problems/insertionSort";
 import SelectionSort from "../components/problems/selectionSort";
 import BubbleSort from "../components/problems/bubbleSort";
+import QuickSort from "../components/problems/quickSort";
 
 export default {
   components: {
     InsertionSort,
     SelectionSort,
-    BubbleSort
+    BubbleSort,
+    QuickSort
   },
   data() {
     return {
