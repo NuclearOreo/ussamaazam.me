@@ -17,11 +17,9 @@
           Dynamic Programming
         </strong>
       </h6>
-      <a href="#about">Insertion Sort</a>
-      <a href="#services">Bubble Sort</a>
-      <a href="#clients">Selection Sort</a>
-      <a href="#contact">Quick Sort</a>
-      <a href="#contact">Merge Sort</a>
+      <a v-on:click="selected = 'kadane'">Kadane's algorithm</a>
+      <a v-on:click="selected = 'Levenshtein'">Levenshtein Distance</a>
+      <a v-on:click="selected = 'Water'">Water Area</a>
     </div>
     <div v-if="selected === 'insertion'">
       <InsertionSort />
@@ -38,6 +36,9 @@
     <div v-if="selected === 'merge'">
       <MergeSort />
     </div>
+    <div v-if="selected === 'kadane'">
+      <Kadane />
+    </div>
   </div>
 </template>
 
@@ -47,6 +48,7 @@ import SelectionSort from "../components/problems/selectionSort";
 import BubbleSort from "../components/problems/bubbleSort";
 import QuickSort from "../components/problems/quickSort";
 import MergeSort from "../components/problems/mergeSort";
+import Kadane from "../components/problems/kadane";
 
 export default {
   components: {
@@ -54,7 +56,8 @@ export default {
     SelectionSort,
     BubbleSort,
     QuickSort,
-    MergeSort
+    MergeSort,
+    Kadane
   },
   data() {
     return {
