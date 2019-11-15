@@ -132,4 +132,10 @@
     display: none;
   }
 }
+
+@media (min-width: 1024px) {
+  .topspacing {
+    margin-top: 400px;
+  }
+}
 </style>

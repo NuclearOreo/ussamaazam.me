@@ -91,10 +91,7 @@ import axios from "axios";
 const instance = axios.create({
   baseURL: "https://api.unsplash.com",
   timeout: 1000,
-  headers: {
-    Authorization:
-      "Client-ID ed853b2961135894328200aa72bc66d5c9aa94642ec6d559aaf133b7ffa8fc69"
-  }
+  headers: { Authorization: process.env.VUE_APP_UNSPLASH }
 });
 
 export default {
