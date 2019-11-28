@@ -7,19 +7,27 @@
           Sorting
         </strong>
       </h6>
-      <a v-on:click="selected = 'insertion'">Insertion Sort</a>
-      <a v-on:click="selected = 'selection'">Selection Sort</a>
-      <a v-on:click="selected = 'bubble'">Bubble Sort</a>
-      <a v-on:click="selected = 'quick'">Quick Sort</a>
-      <a v-on:click="selected = 'merge'">Merge Sort</a>
+      <a class="hvr-forward" v-on:click="selected = 'insertion'"
+        >Insertion Sort</a
+      >
+      <a class="hvr-forward" v-on:click="selected = 'selection'"
+        >Selection Sort</a
+      >
+      <a class="hvr-forward" v-on:click="selected = 'bubble'">Bubble Sort</a>
+      <a class="hvr-forward" v-on:click="selected = 'quick'">Quick Sort</a>
+      <a class="hvr-forward" v-on:click="selected = 'merge'">Merge Sort</a>
       <h6>
         <strong>
           Dynamic Programming
         </strong>
       </h6>
-      <a v-on:click="selected = 'kadane'">Kadane's algorithm</a>
-      <a v-on:click="selected = 'levenshtein'">Levenshtein Distance</a>
-      <a v-on:click="selected = 'waterArea'">Water Area</a>
+      <a class="hvr-forward" v-on:click="selected = 'kadane'"
+        >Kadane's algorithm</a
+      >
+      <a class="hvr-forward" v-on:click="selected = 'levenshtein'"
+        >Levenshtein Distance</a
+      >
+      <a class="hvr-forward" v-on:click="selected = 'waterArea'">Water Area</a>
     </div>
     <div v-if="selected === 'insertion'">
       <InsertionSort />
@@ -123,5 +131,23 @@ export default {
   .sidenav a {
     font-size: 18px;
   }
+}
+
+.hvr-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-forward:hover,
+.hvr-forward:focus,
+.hvr-forward:active {
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
 }
 </style>
