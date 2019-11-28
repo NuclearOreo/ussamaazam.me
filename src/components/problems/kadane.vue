@@ -98,7 +98,7 @@ export default {
         "This problem falls under Dynamic Programming Paradigm.\n\n" +
         "Let’s take an array dp[] where each dp[i] denotes maximum subarray sum ending at index i (including i).\n\n" +
         "We can say that\n\n" +
-        "![alt text](https://hackernoon.com/hn-images/1*T4JsrEKrbZcwmFDz3R2ooQ.jpeg)" 
+        "![alt text](https://hackernoon.com/hn-images/1*T4JsrEKrbZcwmFDz3R2ooQ.jpeg)"
     };
   },
   methods: {
