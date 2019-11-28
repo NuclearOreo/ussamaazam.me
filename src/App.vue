@@ -48,7 +48,7 @@
                 </a>
               </li>
             </router-link>
-            <router-link to="/problems">
+            <router-link class="hide" to="/problems">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
                   <i class="fa fa-code"></i>
@@ -91,5 +91,11 @@
 .fade-enter,
 .fade-leave-active {
   opacity: 0;
+}
+
+@media (max-width: 450px) {
+  .hide {
+    display: none;
+  }
 }
 </style>
