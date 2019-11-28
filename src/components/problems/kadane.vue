@@ -89,20 +89,16 @@ export default {
     return {
       problem:
         "# Kadane's Algorithm\n\n" +
-        "The bubble sort is also known as the ripple sort. The bubble sort is probably the first, reasonably complex module that any beginning programmer has to write. It is a very simple construct which introduces the student to the fundamentals of how sorting works.\n\n" +
-        "A bubble sort makes use of an array and some sort of swapping mechanism. Most programming languages have a built-in function to swap elements of an array. Even if a swapping function does not exist, only a couple of extra lines of code are required to store one\n" +
-        "array element in a temporary field in order to swap a second element into its place. Then the first element is moved out of the temporary field and back into the array at the second element's position.\n\n" +
-        "Here is a simple example of how a bubble sort works: Suppose you have a row of children's toy blocks with letters on them. They are in random order and you wish to arrange them in alphabetical order from left to right.\n\n" +
-        "1. Begin with the first block. In this case, the letter G.\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/1/19/Bubble01.png)\n\n" +
-        "2. Look at the block just to the right of it.\n\n" +
-        "3. If the block to the right should come before the block on the left, swap them so that they are in order\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/3/3b/Bubble02.png)\n\n" +
-        "4. Compare the next block in line with the first, and repeat step 3. Do this until you run out of blocks. Then begin step one again with the second block.\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/b/bf/Bubble03.png)\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/2/27/Bubble04.png)\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/7/76/Bubble05.png)\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/a/a4/Bubble06.png)"
+        "The array can be of any dimension. For simplicity, let’s start with a 1D array.\n\n" +
+        "Let’s take a 0-indexed array:\n\n" +
+        "arr: [5, 7, -3, 2, 9, 6, 16, 22, 21, 29, -14, 10, 12]\n\n" +
+        "We can start the subarray at any point. Let’s say we start at index 2 i.e., arr[2] = -3. Now, at index 3, the sum will be -3 + 2 = -1. If we started the subarray at index 3 instead, the sum at index 3 is 2, which is greater than the previous sum.\n\n" +
+        "So we have two choices: either start at the current index or add the current element to the previous sum.\n\n" +
+        "And since we want the maximum subarray sum, we add the current element to the maximum of 0 and previous sum (zero here denotes that we’re starting anew from the current element).\n\n" +
+        "This problem falls under Dynamic Programming Paradigm.\n\n" +
+        "Let’s take an array dp[] where each dp[i] denotes maximum subarray sum ending at index i (including i).\n\n" +
+        "We can say that\n\n" +
+        "![alt text](https://hackernoon.com/hn-images/1*T4JsrEKrbZcwmFDz3R2ooQ.jpeg)" 
     };
   },
   methods: {
