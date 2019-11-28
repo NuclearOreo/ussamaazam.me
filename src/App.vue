@@ -23,7 +23,11 @@
             <div class="row">
               <div class="col-6 collapse-brand ">
                 <a href="index.html">
-                  <img src="assets/img/brand/blue.png" />
+                  <span
+                    class="iconify"
+                    data-icon="si-glyph:ying-yang"
+                    data-inline="false"
+                  ></span>
                 </a>
               </div>
               <div class="col-6 collapse-close">
