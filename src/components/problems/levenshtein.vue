@@ -84,11 +84,11 @@
 import marked from "marked";
 
 export default {
-  name: "Kadane",
+  name: "Levenshtein",
   data() {
     return {
       problem:
-        "# Kadane's Algorithm\n\n" +
+        "# Levenshtein Distance\n\n" +
         "The bubble sort is also known as the ripple sort. The bubble sort is probably the first, reasonably complex module that any beginning programmer has to write. It is a very simple construct which introduces the student to the fundamentals of how sorting works.\n\n" +
         "A bubble sort makes use of an array and some sort of swapping mechanism. Most programming languages have a built-in function to swap elements of an array. Even if a swapping function does not exist, only a couple of extra lines of code are required to store one\n" +
         "array element in a temporary field in order to swap a second element into its place. Then the first element is moved out of the temporary field and back into the array at the second element's position.\n\n" +

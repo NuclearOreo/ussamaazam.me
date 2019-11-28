@@ -18,8 +18,8 @@
         </strong>
       </h6>
       <a v-on:click="selected = 'kadane'">Kadane's algorithm</a>
-      <a v-on:click="selected = 'Levenshtein'">Levenshtein Distance</a>
-      <a v-on:click="selected = 'Water'">Water Area</a>
+      <a v-on:click="selected = 'levenshtein'">Levenshtein Distance</a>
+      <a v-on:click="selected = 'waterArea'">Water Area</a>
     </div>
     <div v-if="selected === 'insertion'">
       <InsertionSort />
@@ -39,6 +39,12 @@
     <div v-if="selected === 'kadane'">
       <Kadane />
     </div>
+    <div v-if="selected === 'levenshtein'">
+      <Levenshtein />
+    </div>
+    <div v-if="selected === 'waterArea'">
+      <WaterArea />
+    </div>
   </div>
 </template>
 
@@ -49,6 +55,8 @@ import BubbleSort from "../components/problems/bubbleSort";
 import QuickSort from "../components/problems/quickSort";
 import MergeSort from "../components/problems/mergeSort";
 import Kadane from "../components/problems/kadane";
+import Levenshtein from "../components/problems/levenshtein";
+import WaterArea from "../components/problems/waterArea";
 
 export default {
   components: {
@@ -57,7 +65,9 @@ export default {
     BubbleSort,
     QuickSort,
     MergeSort,
-    Kadane
+    Kadane,
+    Levenshtein,
+    WaterArea
   },
   data() {
     return {
