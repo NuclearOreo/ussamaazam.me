@@ -67,10 +67,14 @@
             >
               <pre
                 style="margin: 0; line-height: 125%"
-              ><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">kadane</span><span style="color: #f8f8f2">(nums):</span>
-    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">len(nums)):</span>
-        <span style="color: #f8f8f2">nums[i]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">max(nums[i],</span> <span style="color: #f8f8f2">nums[i]</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">nums[i</span><span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">])</span>
-    <span style="color: #66d9ef">return</span> <span style="color: #ae81ff">0</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">nums[</span><span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">0</span> <span style="color: #66d9ef">else</span> <span style="color: #f8f8f2">nums[</span><span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> 
+              ><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Solution</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">maxArea</span><span style="color: #f8f8f2">(self,</span> <span style="color: #f8f8f2">height:</span> <span style="color: #f8f8f2">List[int])</span> <span style="color: #f92672">-&gt;</span> <span style="color: #f8f8f2">int:</span>
+        <span style="color: #f8f8f2">left,</span> <span style="color: #f8f8f2">right,</span> <span style="color: #f8f8f2">maxarea</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">len(height)</span> <span style="color: #f92672">-</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span>
+        <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">left</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">right:</span>
+            <span style="color: #f8f8f2">maxarea</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">max(maxarea,</span> <span style="color: #f8f8f2">min(height[right],</span> <span style="color: #f8f8f2">height[left])</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">(right</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">left))</span>
+            <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">height[left]</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">height[right]:</span> <span style="color: #f8f8f2">left</span> <span style="color: #f92672">+=</span> <span style="color: #ae81ff">1</span>
+            <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">right</span> <span style="color: #f92672">-=</span> <span style="color: #ae81ff">1</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">maxarea</span>
 </pre>
             </div>
           </div>
@@ -89,20 +93,11 @@ export default {
     return {
       problem:
         "# Water Area\n\n" +
-        "The bubble sort is also known as the ripple sort. The bubble sort is probably the first, reasonably complex module that any beginning programmer has to write. It is a very simple construct which introduces the student to the fundamentals of how sorting works.\n\n" +
-        "A bubble sort makes use of an array and some sort of swapping mechanism. Most programming languages have a built-in function to swap elements of an array. Even if a swapping function does not exist, only a couple of extra lines of code are required to store one\n" +
-        "array element in a temporary field in order to swap a second element into its place. Then the first element is moved out of the temporary field and back into the array at the second element's position.\n\n" +
-        "Here is a simple example of how a bubble sort works: Suppose you have a row of children's toy blocks with letters on them. They are in random order and you wish to arrange them in alphabetical order from left to right.\n\n" +
-        "1. Begin with the first block. In this case, the letter G.\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/1/19/Bubble01.png)\n\n" +
-        "2. Look at the block just to the right of it.\n\n" +
-        "3. If the block to the right should come before the block on the left, swap them so that they are in order\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/3/3b/Bubble02.png)\n\n" +
-        "4. Compare the next block in line with the first, and repeat step 3. Do this until you run out of blocks. Then begin step one again with the second block.\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/b/bf/Bubble03.png)\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/2/27/Bubble04.png)\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/7/76/Bubble05.png)\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/a/a4/Bubble06.png)"
+        "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.\n\n" +
+        "For example, given [0,1,0,2,1,0,1,3,2,1,2,1], return 6.\n\n" +
+        "#### Analysis\n\n" +
+        "It can be solve by scanning from both sides and then get the total.\n\n" +
+        "![alt text](https://www.programcreek.com/wp-content/uploads/2014/06/trapping-rain-water.png)"
     };
   },
   methods: {
