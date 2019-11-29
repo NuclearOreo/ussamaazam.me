@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-default">
       <div class="container">
         <img
-          class="rounded-circle hvr-pulse-grow"
+          class="rounded-circle hvr-grow-rotate"
           src="./assets/avatar.png"
           width="30"
         />
@@ -48,7 +48,7 @@
           </div>
 
           <ul class="navbar-nav ml-lg-auto">
-            <router-link class="hvr-bob" to="/">
+            <router-link class="hvr-wobble-vertical" to="/">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
                   <i class="fa fa-user"></i>
@@ -56,7 +56,7 @@
                 </a>
               </li>
             </router-link>
-            <router-link class="hide hvr-bob" to="/problems">
+            <router-link class="hide hvr-wobble-vertical" to="/problems">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
                   <i class="fa fa-code"></i>
@@ -66,7 +66,7 @@
                 </a>
               </li>
             </router-link>
-            <router-link class="hvr-bob" to="/photos">
+            <router-link class="hvr-wobble-vertical" to="/photos">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
                   <i class="fa fa-picture-o"></i>
@@ -107,103 +107,95 @@
   }
 }
 
-@-webkit-keyframes hvr-pulse-grow {
-  to {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-}
-@keyframes hvr-pulse-grow {
-  to {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-}
-.hvr-pulse-grow {
+/* Grow Rotate */
+.hvr-grow-rotate {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
 }
-.hvr-pulse-grow:hover,
-.hvr-pulse-grow:focus,
-.hvr-pulse-grow:active {
-  -webkit-animation-name: hvr-pulse-grow;
-  animation-name: hvr-pulse-grow;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
+.hvr-grow-rotate:hover,
+.hvr-grow-rotate:focus,
+.hvr-grow-rotate:active {
+  -webkit-transform: scale(1.3) rotate(180deg);
+  transform: scale(1.3) rotate(180deg);
 }
 
-@-webkit-keyframes hvr-bob {
-  0% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
+/* Wobble Vertical */
+@-webkit-keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
   }
-  50% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
   }
   100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
-@keyframes hvr-bob {
-  0% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
+@keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
   }
-  50% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
   }
   100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
-@-webkit-keyframes hvr-bob-float {
-  100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
-@keyframes hvr-bob-float {
-  100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
-.hvr-bob {
+.hvr-wobble-vertical {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-.hvr-bob:hover,
-.hvr-bob:focus,
-.hvr-bob:active {
-  -webkit-animation-name: hvr-bob-float, hvr-bob;
-  animation-name: hvr-bob-float, hvr-bob;
-  -webkit-animation-duration: 0.3s, 1.5s;
-  animation-duration: 0.3s, 1.5s;
-  -webkit-animation-delay: 0s, 0.3s;
-  animation-delay: 0s, 0.3s;
-  -webkit-animation-timing-function: ease-out, ease-in-out;
-  animation-timing-function: ease-out, ease-in-out;
-  -webkit-animation-iteration-count: 1, infinite;
-  animation-iteration-count: 1, infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-direction: normal, alternate;
-  animation-direction: normal, alternate;
+.hvr-wobble-vertical:hover,
+.hvr-wobble-vertical:focus,
+.hvr-wobble-vertical:active {
+  -webkit-animation-name: hvr-wobble-vertical;
+  animation-name: hvr-wobble-vertical;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
 </style>
