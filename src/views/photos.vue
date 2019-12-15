@@ -18,7 +18,7 @@
           <div class="container">
             <center>
               <h1 class="display-4">Total Views</h1>
-              <p class="lead">
+              <p class="hvr-bounce-in lead">
                 <strong>
                   {{ formatNumber(stats.data.views.total) }}
                 </strong>
@@ -32,7 +32,7 @@
           <div class="container">
             <center>
               <h1 class="display-4">Total Downloads</h1>
-              <p class="lead">
+              <p class="hvr-bounce-in lead">
                 <strong>
                   {{ formatNumber(stats.data.downloads.total) }}
                 </strong>
@@ -172,5 +172,24 @@ export default {
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+}
+
+/* Bounce In */
+.hvr-bounce-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-in:hover,
+.hvr-bounce-in:focus,
+.hvr-bounce-in:active {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 </style>
