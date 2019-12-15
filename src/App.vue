@@ -2,7 +2,7 @@
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-dark bg-default">
       <div class="container">
-        <router-link to="/photos">
+        <router-link to="/">
           <img
             class="rounded-circle hvr-grow-rotate"
             src="./assets/avatar.png"
