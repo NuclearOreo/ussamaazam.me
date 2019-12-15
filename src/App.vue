@@ -48,7 +48,7 @@
           </div>
 
           <ul class="navbar-nav ml-lg-auto">
-            <router-link class="hvr-wobble-vertical" to="/">
+            <router-link class="hvr-bounce-in" to="/">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
                   <i class="fa fa-user"></i>
@@ -56,7 +56,7 @@
                 </a>
               </li>
             </router-link>
-            <router-link class="hide hvr-wobble-vertical" to="/problems">
+            <router-link class="hide hvr-bounce-in" to="/problems">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
                   <i class="fa fa-code"></i>
@@ -66,7 +66,7 @@
                 </a>
               </li>
             </router-link>
-            <router-link class="hvr-wobble-vertical" to="/photos">
+            <router-link class="hvr-bounce-in" to="/photos">
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
                   <i class="fa fa-picture-o"></i>
@@ -126,76 +126,22 @@
   transform: scale(1.3) rotate(180deg);
 }
 
-/* Wobble Vertical */
-@-webkit-keyframes hvr-wobble-vertical {
-  16.65% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-  33.3% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-  }
-  49.95% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
-  66.6% {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
-  }
-  83.25% {
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@keyframes hvr-wobble-vertical {
-  16.65% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-  33.3% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-  }
-  49.95% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
-  66.6% {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
-  }
-  83.25% {
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-.hvr-wobble-vertical {
+/* Bounce In */
+.hvr-bounce-in {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
-.hvr-wobble-vertical:hover,
-.hvr-wobble-vertical:focus,
-.hvr-wobble-vertical:active {
-  -webkit-animation-name: hvr-wobble-vertical;
-  animation-name: hvr-wobble-vertical;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+.hvr-bounce-in:hover,
+.hvr-bounce-in:focus,
+.hvr-bounce-in:active {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 </style>
