@@ -92,10 +92,7 @@
                       keep your passions alive. No money in the world will
                       replace you enjoying life om current the moment because
                       that's the fuel that keeps you going. Live life through
-                      the roads you've set. My current ventures are learning to
-                      design and creating clothing, becoming a better
-                      photographer and improving my health through
-                      calisthenics/fasting.
+                      the roads you've set.
                     </p>
                   </div>
                 </div>
