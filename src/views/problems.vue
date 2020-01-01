@@ -28,6 +28,9 @@
         >Levenshtein Distance</a
       >
       <a class="hvr-forward" v-on:click="selected = 'waterArea'">Water Area</a>
+      <a class="hvr-forward" v-on:click="selected = 'decodeWays'"
+        >Decode Ways</a
+      >
     </div>
     <div v-if="selected === 'insertion'">
       <InsertionSort />
@@ -53,6 +56,9 @@
     <div v-if="selected === 'waterArea'">
       <WaterArea />
     </div>
+    <div v-if="selected === 'decodeWays'">
+      <DecodeWays />
+    </div>
   </div>
 </template>
 
@@ -65,6 +71,7 @@ import MergeSort from "../components/problems/mergeSort";
 import Kadane from "../components/problems/kadane";
 import Levenshtein from "../components/problems/levenshtein";
 import WaterArea from "../components/problems/waterArea";
+import DecodeWays from "../components/problems/decodeWays";
 
 export default {
   components: {
@@ -75,7 +82,8 @@ export default {
     MergeSort,
     Kadane,
     Levenshtein,
-    WaterArea
+    WaterArea,
+    DecodeWays
   },
   data() {
     return {
