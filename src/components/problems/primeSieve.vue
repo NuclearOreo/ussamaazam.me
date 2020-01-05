@@ -67,17 +67,20 @@
             >
               <pre
                 style="margin: 0; line-height: 125%"
-              ><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">bubbleSort</span><span style="color: #f8f8f2">(array):</span>
-   <span style="color: #f8f8f2">isSorted</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">False</span>
-   <span style="color: #66d9ef">while</span> <span style="color: #f92672">not</span> <span style="color: #f8f8f2">isSorted:</span>
-      <span style="color: #f8f8f2">isSorted</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">True</span>
-      <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(len(array)</span> <span style="color: #f92672">-</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">):</span>
-         <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">array[i]</span> <span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">array[i</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]:</span>
-           <span style="color: #f8f8f2">temp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">array[i]</span>
-           <span style="color: #f8f8f2">array[i]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">array[i</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span>
-           <span style="color: #f8f8f2">array[i</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">temp</span>
-           <span style="color: #f8f8f2">isSorted</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">False</span>
-    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">array</span>
+              ><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">primeSieve</span><span style="color: #f8f8f2">(N):</span>
+    <span style="color: #f8f8f2">sieve</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[True]</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">(N</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">sieve[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">sieve[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">False</span>
+
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">N</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">):</span>
+        <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">j</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(i</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">i,</span> <span style="color: #f8f8f2">N</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">i):</span>
+            <span style="color: #f8f8f2">sieve[j]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">False</span>
+    
+    <span style="color: #f8f8f2">prime</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(len(sieve)):</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">sieve[i]:</span>
+            <span style="color: #f8f8f2">prime</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(i)</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">prime</span>
 </pre>
             </div>
           </div>
@@ -96,20 +99,13 @@ export default {
     return {
       problem:
         "# Prime Sieve\n\n" +
-        "The bubble sort is also known as the ripple sort. The bubble sort is probably the first, reasonably complex module that any beginning programmer has to write. It is a very simple construct which introduces the student to the fundamentals of how sorting works.\n\n" +
-        "A bubble sort makes use of an array and some sort of swapping mechanism. Most programming languages have a built-in function to swap elements of an array. Even if a swapping function does not exist, only a couple of extra lines of code are required to store one\n" +
-        "array element in a temporary field in order to swap a second element into its place. Then the first element is moved out of the temporary field and back into the array at the second element's position.\n\n" +
-        "Here is a simple example of how a bubble sort works: Suppose you have a row of children's toy blocks with letters on them. They are in random order and you wish to arrange them in alphabetical order from left to right.\n\n" +
-        "1. Begin with the first block. In this case, the letter G.\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/1/19/Bubble01.png)\n\n" +
-        "2. Look at the block just to the right of it.\n\n" +
-        "3. If the block to the right should come before the block on the left, swap them so that they are in order\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/3/3b/Bubble02.png)\n\n" +
-        "4. Compare the next block in line with the first, and repeat step 3. Do this until you run out of blocks. Then begin step one again with the second block.\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/b/bf/Bubble03.png)\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/2/27/Bubble04.png)\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/7/76/Bubble05.png)\n\n\t" +
-        "![alt text](https://upload.wikimedia.org/wikibooks/en/a/a4/Bubble06.png)"
+        "To find all the prime numbers less than or equal to a given integer n by Eratosthenes' method:\n\n" +
+        "- Create a list of consecutive integers from 2 through n: (2, 3, 4, ..., n).\n\n" +
+        "- Initially, let p equal 2, the smallest prime number.\n\n" +
+        "- numerate the multiples of p by counting in increments of p from 2p to n, and mark them in the list (these will be 2p, 3p, 4p, ...; the p itself should not be marked).\n\n" +
+        "- Find the first number greater than p in the list that is not marked. If there was no such number, stop. Otherwise, let p now equal this new number (which is the next prime), and repeat from step 3.\n\n" +
+        "- When the algorithm terminates, the numbers remaining not marked in the list are all the primes below n.\n\n" +
+        "![alt text](https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif)\n\n"
     };
   },
   methods: {
