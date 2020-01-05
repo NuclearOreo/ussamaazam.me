@@ -88,9 +88,9 @@
                       An individual that enjoys exploring and challenging
                       himself. I'm always open to trying new ideas and jumping
                       into challenging adventures. In my eyes, life is best
-                      lived by doing what you enjoy and design a world around to
-                      keep your passions alive. No money in the world will
-                      replace you enjoying life om current the moment because
+                      lived by doing what you enjoy and creating a world around
+                      to keep your passions alive. No money in the world will
+                      replace you enjoying life in the current moment because
                       that's the fuel that keeps you going. Live life through
                       the roads you've set.
                     </p>
