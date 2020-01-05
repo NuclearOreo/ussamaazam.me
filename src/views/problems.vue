@@ -31,6 +31,9 @@
       <a class="hvr-forward" v-on:click="selected = 'decodeWays'"
         >Decode Ways</a
       >
+      <a class="hvr-forward" v-on:click="selected = 'primeSieve'"
+        >Prime Sieve</a
+      >
     </div>
     <div v-if="selected === 'insertion'">
       <InsertionSort />
@@ -59,6 +62,9 @@
     <div v-if="selected === 'decodeWays'">
       <DecodeWays />
     </div>
+    <div v-if="selected === 'primeSieve'">
+      <PrimeSieve />
+    </div>
   </div>
 </template>
 
@@ -72,6 +78,7 @@ import Kadane from "../components/problems/kadane";
 import Levenshtein from "../components/problems/levenshtein";
 import WaterArea from "../components/problems/waterArea";
 import DecodeWays from "../components/problems/decodeWays";
+import PrimeSieve from "../components/problems/primeSieve";
 
 export default {
   components: {
@@ -83,7 +90,8 @@ export default {
     Kadane,
     Levenshtein,
     WaterArea,
-    DecodeWays
+    DecodeWays,
+    PrimeSieve
   },
   data() {
     return {
