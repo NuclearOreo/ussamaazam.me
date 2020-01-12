@@ -34,6 +34,14 @@
       <a class="hvr-forward" v-on:click="selected = 'primeSieve'"
         >Prime Sieve</a
       >
+      <h6>
+        <strong>
+          Binary Tree
+        </strong>
+      </h6>
+      <a class="hvr-forward" v-on:click="selected = 'treeTraversal'"
+        >Binary Tree Traveral</a
+      >
     </div>
     <div v-if="selected === 'insertion'">
       <InsertionSort />
@@ -65,6 +73,9 @@
     <div v-if="selected === 'primeSieve'">
       <PrimeSieve />
     </div>
+    <div v-if="selected === 'treeTraversal'">
+      <TreeTraversal />
+    </div>
   </div>
 </template>
 
@@ -79,6 +90,7 @@ import Levenshtein from "../components/problems/levenshtein";
 import WaterArea from "../components/problems/waterArea";
 import DecodeWays from "../components/problems/decodeWays";
 import PrimeSieve from "../components/problems/primeSieve";
+import TreeTraversal from "../components/problems/treeTraversal";
 
 export default {
   components: {
@@ -91,7 +103,8 @@ export default {
     Levenshtein,
     WaterArea,
     DecodeWays,
-    PrimeSieve
+    PrimeSieve,
+    TreeTraversal
   },
   data() {
     return {
