@@ -1,6 +1,11 @@
 <template>
   <div v-if="pics !== null" class="container">
     <br />
+    <div class="alert alert-info" role="alert">
+      <strong>Hey, </strong> this is a showcase of photos I've taken. If you
+      like that photos I've been taking then checkout my unsplash account with
+      the lint below.
+    </div>
     <center>
       <a class="hvr-buzz" href="https://unsplash.com/@ussamaazam">
         <span
