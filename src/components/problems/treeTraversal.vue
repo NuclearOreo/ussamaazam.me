@@ -62,7 +62,12 @@
             role="tabpanel"
             aria-labelledby="tabs-icons-text-3-tab"
           >
-          <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">TreeNode</span><span style="color: #f8f8f2">:</span>
+            <div
+              style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;"
+            >
+              <pre
+                style="margin: 0; line-height: 125%"
+              ><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">TreeNode</span><span style="color: #f8f8f2">:</span>
     <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">__init__</span><span style="color: #f8f8f2">(self,</span> <span style="color: #f8f8f2">val):</span>
         <span style="color: #f8f8f2">self</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">val</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">val</span>
         <span style="color: #f8f8f2">self</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">left</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">None</span>
@@ -86,8 +91,8 @@
         <span style="color: #f8f8f2">self</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">postorder(root</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">left)</span>
         <span style="color: #f8f8f2">self</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">postorder(root</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">right)</span>
         <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(root</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">val)</span>
-</pre></div>
-
+</pre>
+            </div>
           </div>
         </div>
       </div>
