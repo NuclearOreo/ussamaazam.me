@@ -10,11 +10,9 @@ const mobileGuard = (to, from, next) => {
   if (
     to.name == "problems" &&
     /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
-  ) {
+  )
     next("/");
-  } else {
-    next();
-  }
+  else next();
 };
 
 const router = new Router({
