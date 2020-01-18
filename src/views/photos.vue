@@ -2,9 +2,9 @@
   <div v-if="pics !== null" class="container">
     <br />
     <div class="alert alert-info" role="alert">
-      <strong>Hey, </strong> this is a showcase of photos I've taken. If you
-      like that photos I've been taking then checkout my unsplash account with
-      the lint below.
+      <strong>Hey,</strong> this is a showcase of photos I've taken. If you like
+      that photos I've been taking then checkout my unsplash account with the
+      lint below.
     </div>
     <center>
       <a class="hvr-buzz" href="https://unsplash.com/@ussamaazam">
@@ -24,9 +24,7 @@
             <center>
               <h1 class="display-4">Total Views</h1>
               <p class="hvr-bounce-in lead">
-                <strong>
-                  {{ formatNumber(stats.data.views.total) }}
-                </strong>
+                <strong>{{ formatNumber(stats.data.views.total) }}</strong>
               </p>
             </center>
           </div>
@@ -38,9 +36,7 @@
             <center>
               <h1 class="display-4">Total Downloads</h1>
               <p class="hvr-bounce-in lead">
-                <strong>
-                  {{ formatNumber(stats.data.downloads.total) }}
-                </strong>
+                <strong>{{ formatNumber(stats.data.downloads.total) }}</strong>
               </p>
             </center>
           </div>
@@ -50,34 +46,22 @@
     <nav>
       <ul class="pagination justify-content-center">
         <li class="page-item" v-bind:class="{ active: page === 1 }">
-          <button v-on:click="Page(1)" class="page-link">
-            1
-          </button>
+          <button v-on:click="Page(1)" class="page-link">1</button>
         </li>
         <li class="page-item" v-bind:class="{ active: page === 2 }">
-          <button v-on:click="Page(2)" class="page-link">
-            2
-          </button>
+          <button v-on:click="Page(2)" class="page-link">2</button>
         </li>
         <li class="page-item" v-bind:class="{ active: page === 3 }">
-          <button v-on:click="Page(3)" class="page-link">
-            3
-          </button>
+          <button v-on:click="Page(3)" class="page-link">3</button>
         </li>
         <li class="page-item" v-bind:class="{ active: page === 4 }">
-          <button v-on:click="Page(4)" class="page-link">
-            4
-          </button>
+          <button v-on:click="Page(4)" class="page-link">4</button>
         </li>
         <li class="page-item" v-bind:class="{ active: page === 5 }">
-          <button v-on:click="Page(5)" class="page-link">
-            5
-          </button>
+          <button v-on:click="Page(5)" class="page-link">5</button>
         </li>
         <li class="page-item" v-bind:class="{ active: page === 6 }">
-          <button v-on:click="Page(6)" class="page-link">
-            6
-          </button>
+          <button v-on:click="Page(6)" class="page-link">6</button>
         </li>
       </ul>
     </nav>
@@ -95,7 +79,7 @@ import axios from "axios";
 
 const instance = axios.create({
   baseURL: "https://api.unsplash.com",
-  timeout: 1000,
+  timeout: 2000,
   headers: { Authorization: process.env.VUE_APP_UNSPLASH }
 });
 
