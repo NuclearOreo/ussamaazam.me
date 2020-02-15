@@ -1,0 +1,7 @@
+- hosts: personal-website
+
+  tasks:
+   - git:
+        repo: "https://github.com/NuclearOreo/ussamaazam.me.git"
+        dest: ~/ussamaazam
+        version: master
