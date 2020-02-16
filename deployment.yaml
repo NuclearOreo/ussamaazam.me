@@ -2,9 +2,38 @@
 
   tasks:
    - git:
-        repo: "https://github.com/NuclearOreo/ussamaazam.me.git"
+        repo: https://github.com/NuclearOreo/ussamaazam.me.git
         dest: ~/site
         version: production
   
    - name: Copy Important Files
-     command: bash -c "cp -r domain_cert nginx.conf Dockerfile site"
+     command: bash -c "cp -r domain_cert nginx.conf Dockerfile .env.production.local site"
+
+   - name: Prune everything
+     docker_prune:
+       containers: yes
+       images: yes
+       images_filters:
+        dangling: false
+       networks: yes
+       volumes: yes
+       builder_cache: yes
+     become: yes
+  
+   - name: Build images for site 
+     docker_image:
+       build:
+         path: ./site
+       name: ussamaazam.me
+     become: yes
+
+   - name: Startup Container
+     docker_container:
+       name: site
+       image: ussamaazam.me
+       state: present
+       recreate: yes
+       ports:
+        - "80:80"
+        - "443:443"
+       become: yes
