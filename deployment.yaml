@@ -3,5 +3,8 @@
   tasks:
    - git:
         repo: "https://github.com/NuclearOreo/ussamaazam.me.git"
-        dest: ~/ussamaazam
-        version: master
+        dest: ~/site
+        version: production
+  
+   - name: Copy Important Files
+     command: bash -c "cp -r domain_cert nginx.conf Dockerfile site"
