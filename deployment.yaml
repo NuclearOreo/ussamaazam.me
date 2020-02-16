@@ -1,13 +1,26 @@
 - hosts: personal-website
 
   tasks:
+
+   - name: Clean up
+     file:
+       path: site
+       state: absent
+     become: yes
+  
    - git:
         repo: https://github.com/NuclearOreo/ussamaazam.me.git
-        dest: ~/site
+        dest: site
         version: production
   
    - name: Copy Important Files
      command: bash -c "cp -r domain_cert nginx.conf Dockerfile .env.production.local site"
+
+   - name: Stop a container
+     docker_container:
+       name: site
+       state: absent
+     become: yes
 
    - name: Prune everything
      docker_prune:
@@ -23,7 +36,7 @@
    - name: Build images for site 
      docker_image:
        build:
-         path: ./site
+         path: site
        name: ussamaazam.me
      become: yes
 
@@ -33,7 +46,12 @@
        image: ussamaazam.me
        state: present
        recreate: yes
+       exposed_ports: 80
        ports:
-        - "80:80"
-        - "443:443"
-       become: yes
+        - 80:80
+     become: yes
+
+  #  - name: Recursively remove directory
+  #    file:
+  #      path: /etc/foo
+  #      state: absent
