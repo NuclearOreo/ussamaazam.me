@@ -3,9 +3,7 @@
     <div class="sidenav">
       <div class="buffer"></div>
       <h6>
-        <strong>
-          Sorting
-        </strong>
+        <strong>Sorting</strong>
       </h6>
       <a class="hvr-forward" v-on:click="selected = 'insertion'"
         >Insertion Sort</a
@@ -17,9 +15,7 @@
       <a class="hvr-forward" v-on:click="selected = 'quick'">Quick Sort</a>
       <a class="hvr-forward" v-on:click="selected = 'merge'">Merge Sort</a>
       <h6>
-        <strong>
-          Dynamic Programming
-        </strong>
+        <strong>Dynamic Programming</strong>
       </h6>
       <a class="hvr-forward" v-on:click="selected = 'kadane'"
         >Kadane's algorithm</a
@@ -35,12 +31,13 @@
         >Prime Sieve</a
       >
       <h6>
-        <strong>
-          Binary Tree
-        </strong>
+        <strong>Binary Tree</strong>
       </h6>
       <a class="hvr-forward" v-on:click="selected = 'treeTraversal'"
         >Binary Tree Traveral</a
+      >
+      <a class="hvr-forward" v-on:click="selected = 'levelTraversal'"
+        >Level Traveral</a
       >
     </div>
     <div v-if="selected === 'insertion'">
@@ -76,6 +73,9 @@
     <div v-if="selected === 'treeTraversal'">
       <TreeTraversal />
     </div>
+    <div v-if="selected === 'levelTraversal'">
+      <levelTraversal />
+    </div>
   </div>
 </template>
 
@@ -91,6 +91,7 @@ import WaterArea from "../components/problems/waterArea";
 import DecodeWays from "../components/problems/decodeWays";
 import PrimeSieve from "../components/problems/primeSieve";
 import TreeTraversal from "../components/problems/treeTraversal";
+import LevelTraversal from "../components/problems/level-traversal";
 
 export default {
   components: {
@@ -104,7 +105,8 @@ export default {
     WaterArea,
     DecodeWays,
     PrimeSieve,
-    TreeTraversal
+    TreeTraversal,
+    LevelTraversal
   },
   data() {
     return {
