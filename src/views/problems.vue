@@ -39,6 +39,7 @@
       <a class="hvr-forward" v-on:click="selected = 'levelTraversal'"
         >Level Traveral</a
       >
+      <a class="hvr-forward" v-on:click="selected = 'validTree'">Valid Tree</a>
     </div>
     <div v-if="selected === 'insertion'">
       <InsertionSort />
@@ -76,6 +77,9 @@
     <div v-if="selected === 'levelTraversal'">
       <levelTraversal />
     </div>
+    <div v-if="selected === 'validTree'">
+      <ValidTree />
+    </div>
   </div>
 </template>
 
@@ -92,6 +96,7 @@ import DecodeWays from "../components/problems/decodeWays";
 import PrimeSieve from "../components/problems/primeSieve";
 import TreeTraversal from "../components/problems/treeTraversal";
 import LevelTraversal from "../components/problems/level-traversal";
+import ValidTree from "../components/problems/validTree";
 
 export default {
   components: {
@@ -106,7 +111,8 @@ export default {
     DecodeWays,
     PrimeSieve,
     TreeTraversal,
-    LevelTraversal
+    LevelTraversal,
+    ValidTree
   },
   data() {
     return {
