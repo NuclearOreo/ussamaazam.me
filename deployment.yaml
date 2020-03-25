@@ -39,14 +39,6 @@
         name: ussamaazam.me
       become: yes
 
-    - name: Startup Container
-      docker_container:
-        name: site
-        image: ussamaazam.me
-        state: present
-        recreate: yes
+    - name: Docker Compose
+      command: bash -c "docker-compose up -d"
       become: yes
-  #  - name: Recursively remove directory
-  #    file:
-  #      path: /etc/foo
-  #      state: absent
