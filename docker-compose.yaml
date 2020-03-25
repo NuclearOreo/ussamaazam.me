@@ -1,0 +1,10 @@
+version: "2"
+services:
+    myservice:
+        restart: "no"
+
+        build: .
+
+        ports:
+            - 80:80
+            - 443:433
