@@ -39,6 +39,10 @@
         name: ussamaazam.me
       become: yes
 
+    - name: Switch Directoy
+      command: bash -c "cd site"
+      become: yes
+
     - name: Docker Compose
       command: bash -c "docker-compose up -d"
       become: yes
