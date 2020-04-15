@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbar-default">
           <div class="navbar-collapse-header">
             <div class="row">
-              <div class="col-6 collapse-brand ">
+              <div class="col-6 collapse-brand">
                 <a href="index.html">
                   <span
                     class="iconify"
@@ -54,7 +54,9 @@
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
                   <i class="fa fa-user"></i>
-                  <span class="nav-link-inner--text d-lg-none">About Me</span>
+                  <span class="nav-link-inner--text nav-text-size"
+                    >About Me</span
+                  >
                 </a>
               </li>
             </router-link>
@@ -62,8 +64,8 @@
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
                   <i class="fa fa-code"></i>
-                  <span class="nav-link-inner--text d-lg-none"
-                    >Common Algorithms</span
+                  <span class="nav-link-inner--text nav-text-size"
+                    >Problems</span
                   >
                 </a>
               </li>
@@ -72,7 +74,7 @@
               <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
                   <i class="fa fa-picture-o"></i>
-                  <span class="nav-link-inner--text d-lg-none">Photos</span>
+                  <span class="nav-link-inner--text nav-text-size">Photos</span>
                 </a>
               </li>
             </router-link>
@@ -107,6 +109,10 @@
   .hide {
     display: none;
   }
+}
+
+.nav-text-size {
+  font-size: 14px;
 }
 
 /* Grow Rotate */
