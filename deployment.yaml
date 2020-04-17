@@ -36,7 +36,7 @@
       docker_image:
         build:
           path: site
-        name: ussamaazam.me
+        name: ussamaazamme_site
       become: yes
 
     - name: Switch Directoy
