@@ -38,11 +38,9 @@
           path: site
         name: ussamaazamme_site
       become: yes
-
-    - name: Switch Directoy
-      command: bash -c "cd site"
-      become: yes
-
-    - name: Docker Compose
-      command: bash -c "docker-compose up -d"
-      become: yes
+    # - name: Switch Directoy
+    #   command: bash -c "cd site"
+    #   become: yes
+    # - name: Docker Compose
+    #   command: bash -c "docker-compose up -d"
+    #   become: yes
