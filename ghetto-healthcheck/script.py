@@ -3,8 +3,13 @@ from io import BytesIO
 import smtplib
 import os
 
+# Grabing all the ENV variables
+sender = os.getenv('SENDER')
+receiver = [os.getenv('RECIEVER')]
+password = os.getenv('EMAIL_PASSWORD')
+
 b_obj = BytesIO() 
-crl = pycurl.Curl() 
+crl = pycurl.Curl()
 
 # Set URL value
 crl.setopt(crl.URL, 'https://www.ussamazam.me/')
@@ -22,20 +27,16 @@ try:
 
     crl.close()
 except:
-    sender = os.getenv('SENDER')
-    receiver = [os.getenv('RECIEVER')]
-    password = os.getenv('EMAIL_PASSWORD')
-
+    # Message of the email
     message = """
                 Your website is down.
               """
-
-
+    
+    # Setting up connection for email
     server = smtplib.SMTP('smtp.mail.yahoo.com', 587)
     server.ehlo()
     server.starttls()
     server.login(sender, password)
 
+    # Sending that email
     server.sendmail(sender, receiver, message)
-
-    crl.close()
