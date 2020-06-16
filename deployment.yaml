@@ -6,6 +6,7 @@
         path: site
         state: absent
       become: yes
+      become_user: ussamaazam
 
     - git:
         repo: https://github.com/NuclearOreo/ussamaazam.me.git
@@ -20,6 +21,7 @@
         name: site
         state: absent
       become: yes
+      become_user: ussamaazam
 
     - name: Prune everything
       docker_prune:
@@ -31,6 +33,7 @@
         volumes: yes
         builder_cache: yes
       become: yes
+      become_user: ussamaazam
 
     - name: Build images for site
       docker_image:
@@ -38,3 +41,4 @@
           path: site
         name: ussamaazamme_site
       become: yes
+      become_user: ussamaazam
