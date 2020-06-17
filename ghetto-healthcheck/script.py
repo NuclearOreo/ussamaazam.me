@@ -12,7 +12,7 @@ b_obj = BytesIO()
 crl = pycurl.Curl()
 
 # Set URL value
-crl.setopt(crl.URL, 'https://www.ussamazam.me/')
+crl.setopt(crl.URL, 'https://www.ussamaazam.me/')
 
 # Write bytes that are utf-8 encoded
 crl.setopt(crl.WRITEDATA, b_obj)
