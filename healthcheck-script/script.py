@@ -31,7 +31,7 @@ def notification():
         # Message of the email
         message = """
                     Your website is down.
-                """
+                  """
     
         # Setting up connection for email
         server = smtplib.SMTP('smtp.mail.yahoo.com', 587)
