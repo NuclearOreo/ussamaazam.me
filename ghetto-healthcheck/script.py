@@ -33,14 +33,14 @@ def notification():
                     Your website is down.
                 """
     
-    # Setting up connection for email
-    server = smtplib.SMTP('smtp.mail.yahoo.com', 587)
-    server.ehlo()
-    server.starttls()
-    server.login(sender, password)
+        # Setting up connection for email
+        server = smtplib.SMTP('smtp.mail.yahoo.com', 587)
+        server.ehlo()
+        server.starttls()
+        server.login(sender, password)
 
-    # Sending that email
-    server.sendmail(sender, receiver, message)
+        # Sending that email
+        server.sendmail(sender, receiver, message)
 
 def job(request):
     notification()
