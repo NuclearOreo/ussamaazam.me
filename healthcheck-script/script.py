@@ -42,6 +42,6 @@ def notification():
         # Sending that email
         server.sendmail(sender, receiver, message)
 
-def job(request):
+def job(request, context):
     notification()
     return "It ran"
