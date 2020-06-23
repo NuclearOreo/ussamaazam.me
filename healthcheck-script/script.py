@@ -6,7 +6,7 @@ import os
 def notification():
     # Grabing all the ENV variables
     sender = os.getenv('SENDER')
-    receiver = [os.getenv('RECIEVER')]
+    recever = [os.getenv('RECEIVER')]
     password = os.getenv('EMAIL_PASSWORD')
 
     b_obj = BytesIO() 
@@ -22,11 +22,9 @@ def notification():
         # Perform a file transfer 
         crl.perform()
         get_body = b_obj.getvalue()
-
-        # Decode the bytes stored in get_body to HTML and print the result 
-        print('Output of GET request:\n%s' % get_body.decode('utf8')) 
-
         crl.close()
+
+        return get_body
     except:
         # Message of the email
         message = """
@@ -44,4 +42,3 @@ def notification():
 
 def job(request, context):
     notification()
-    return "It ran"
