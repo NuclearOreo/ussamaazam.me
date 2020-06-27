@@ -30,5 +30,5 @@ def check_ping():
 
     return pingstatus
 
-def job(request):
+def job(event, context):
     check_ping()
