@@ -1,31 +1,18 @@
-import pycurl
-from io import BytesIO
 import smtplib
 import os
 
-def notification():
-    # Grabing all the ENV variables
-    sender = os.getenv('SENDER')
-    recever = [os.getenv('RECEIVER')]
-    password = os.getenv('EMAIL_PASSWORD')
+def check_ping():
+    hostname = "www.ussamaazam.me"
+    response = os.system("ping -c 1 " + hostname)
+    # and then check the response...
+    if response == 0:
+        pingstatus = "Network Active"
+    else:
+        # Grabing all the ENV variables
+        sender = os.getenv('SENDER')
+        receiver = [os.getenv('RECEIVER')]
+        password = os.getenv('EMAIL_PASSWORD')
 
-    b_obj = BytesIO() 
-    crl = pycurl.Curl()
-
-    # Set URL value
-    crl.setopt(crl.URL, 'https://www.ussamaazam.me/')
-
-    # Write bytes that are utf-8 encoded
-    crl.setopt(crl.WRITEDATA, b_obj)
-
-    try:
-        # Perform a file transfer 
-        crl.perform()
-        get_body = b_obj.getvalue()
-        crl.close()
-
-        return get_body
-    except:
         # Message of the email
         message = """
                     Your website is down.
@@ -39,6 +26,8 @@ def notification():
 
         # Sending that email
         server.sendmail(sender, receiver, message)
+        pingstatus = "Network Error"
 
-def job(request, context):
-    notification()
+    return pingstatus
+
+print(check_ping())
