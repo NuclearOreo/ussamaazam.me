@@ -1,13 +1,12 @@
 import smtplib
 import os
+import requests
 
-def check_ping():
-    hostname = "www.ussamaazam.me"
-    response = os.system("ping -c 1 " + hostname)
-    # and then check the response...
-    if response == 0:
+def check_website():
+    try:
+        r = requests.get('https://www.ussamaazam.me', verify=False)
         pingstatus = "Network Active"
-    else:
+    except:
         # Grabing all the ENV variables
         sender = os.getenv('SENDER')
         receiver = [os.getenv('RECEIVER')]
@@ -31,4 +30,6 @@ def check_ping():
     return pingstatus
 
 def job(event, context):
-    return check_ping()
+    return check_website()
+
+print(job("", ""))
