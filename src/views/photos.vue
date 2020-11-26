@@ -2,9 +2,9 @@
   <div v-if="pics !== null" class="container">
     <br />
     <div class="alert alert-info" role="alert">
-      <strong>Hey,</strong> this is a showcase of the photos I've taken. If you like
-      the photos you see here then checkout my unsplash account by clicking the Icon below
-       below.
+      <strong>Hey,</strong> this is a showcase of the photos I've taken. If you
+      like the photos you see here then checkout my unsplash account by clicking
+      the Icon below below.
     </div>
     <center>
       <a class="hvr-buzz" href="https://unsplash.com/@ussamaazam">
