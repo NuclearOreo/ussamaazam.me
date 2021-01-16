@@ -44,6 +44,6 @@
       become_user: ussamaazam
 
     - name: Start Container
-      command: bash -c "docker run -it -p 80:80 -d --name site --rm ussamaazamme_site"
+      command: bash -c "docker run -it -p 80:80 -p 443:443 -d --name site --rm ussamaazamme_site"
       become: yes
       become_user: ussamaazam
