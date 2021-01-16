@@ -11,7 +11,7 @@ docker build -t ussamaazamme_site .
 Run Container
 
 ```
-docker run -it -p 80:80 -p 443:443 -d --name site --rm ussamaazamme_site
+docker run -it -p 80:80 -d --name site --rm ussamaazamme_site
 ```
 
 ## Project setup

@@ -14,7 +14,7 @@
         version: production
 
     - name: Copy Important Files
-      command: bash -c "cp -r siteInfo/domain_cert siteInfo/nginx.conf siteInfo/Dockerfile siteInfo/.env.production.local site"
+      command: bash -c "cp -r siteInfo/.env.production.local site"
 
     - name: Stop a container
       docker_container:
