@@ -2,6 +2,8 @@ FROM node:16.13
 
 WORKDIR /app/
 
-COPY . .
+COPY package*.json ./
 
-RUN npm install
+RUN npm i
+
+COPY . .
