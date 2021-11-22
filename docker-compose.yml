@@ -4,8 +4,10 @@ services:
     build: .
     volumes:
       - ./src:/app/src
+      - ./package-lock.json:/app/package-lock.json
       - ./package.json:/app/package.json
     ports:
       - 3000:3000
     stdin_open: true
+    tty: true
     command: npm start
