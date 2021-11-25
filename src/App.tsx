@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import AppStyle from './App.module.css'
 import Home from './Pages/Home/Home'
 import About from './Pages/About/About'
 import PhotoGallery from './Pages/PhotoGallery/PhotoGallery'
@@ -8,7 +9,7 @@ import ErrorPage from './Pages/Error/Error'
 const App = () => {
   return (
     <Router>
-      <nav>
+      <nav className={AppStyle.styles}>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/gallery">Gallery</Link>
