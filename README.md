@@ -4,7 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Start Application
 
-If you have docker installed run: `docker-compose up`
+- Before starting application run `npm i` or `npm install`
+
+- If you have docker installed run `docker-compose up` else `npm start`
 
 ## Available Scripts
 
