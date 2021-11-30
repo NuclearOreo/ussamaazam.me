@@ -1,7 +1,7 @@
-import PhotoGalleryStyle from './PhotoGallery.module.css'
+import { style } from './PhotoGalleryStyle'
 
 const PhotoGallery = () => {
-  return <div className={PhotoGalleryStyle.test}>This is the Photo Gallery</div>
+  return <div className={style}>This is the Photo Gallery</div>
 }
 
 export default PhotoGallery

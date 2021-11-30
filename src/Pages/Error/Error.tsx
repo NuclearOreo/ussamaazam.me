@@ -1,7 +1,7 @@
-import ErrorStyle from './Error.module.css'
+import { style } from './ErrorStyle'
 
 const Error = () => {
-  return <div className={ErrorStyle.test}>This is the Error Page</div>
+  return <div className={style}>This is the Error Page</div>
 }
 
 export default Error

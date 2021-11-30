@@ -1,7 +1,7 @@
-import EssaysStyles from './Essays.module.css'
+import { style } from './EssaysStyle'
 
 const Essays = () => {
-  return <div className={EssaysStyles.test}>This is Essays</div>
+  return <div className={style}>This is Essays</div>
 }
 
 export default Essays

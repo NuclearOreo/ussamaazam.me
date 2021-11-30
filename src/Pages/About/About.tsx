@@ -1,7 +1,7 @@
-import AboutStyle from './About.module.css'
+import { style } from './AboutStyle'
 
 const About = () => {
-  return <div className={AboutStyle.test}>This is the about Page</div>
+  return <div className={style}>This is the about Page</div>
 }
 
 export default About
