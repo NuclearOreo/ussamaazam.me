@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import { style } from './AppStyles'
-import Home from './Pages/Home/Home'
-import About from './Pages/About/About'
-import PhotoGallery from './Pages/PhotoGallery/PhotoGallery'
-import Essays from './Pages/Essays/Essays'
-import ErrorPage from './Pages/Error/Error'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import PhotoGallery from './Pages/PhotoGallery'
+import Essays from './Pages/Essays'
+import ErrorPage from './Pages/Error'
 
 const App = () => {
   return (
