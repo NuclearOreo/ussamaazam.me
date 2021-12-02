@@ -5,10 +5,13 @@ import About from './Pages/About'
 import PhotoGallery from './Pages/PhotoGallery'
 import Essays from './Pages/Essays'
 import ErrorPage from './Pages/Error'
+import Icon from './Components/Icon'
 
 const App = () => {
   return (
     <Router>
+      <Icon />
+
       <nav className={style}>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
