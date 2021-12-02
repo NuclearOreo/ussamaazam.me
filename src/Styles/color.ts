@@ -1,39 +1,48 @@
-export const primary = {
-  light1: '#9de5e2',
-  light2: '#adf6f3',
-  neutral: '#85cdca',
-  dark2: '#71b8b6',
-  dark1: '#5ba29f',
+export const GunMetal = {
+  light3: '#375B6D',
+  light2: '#30505F',
+  light1: '#294551',
+  original: '#223944',
+  dark1: '#1B2E36',
+  dark2: '#152229',
+  dark3: '#0E171B',
 }
 
-export const secondary = {
-  light1: '#ffb392',
-  light2: '#ff9778',
-  neutral: '#e27d5f',
-  dark2: '#d16e52',
-  dark1: '#c05f44',
+export const Cultured = {
+  light1: '#FFFFFF',
+  original: '#EFF1F3',
+  dark1: '#E8EBED',
+  dark2: '#DCE0E5',
+  dark3: '#D0D6DC',
+  dark4: '#C5CCD3',
 }
 
-export const otherColor1 = {
-  light1: '#ffd0a2',
-  light2: '#fcb98c',
-  neutral: '#e8a87c',
-  dark2: '#d6966b',
-  dark1: '#c5875c',
+export const LightGray = {
+  light3: '#F6F4F5',
+  light2: '#EDE9EB',
+  light1: '#E3DDE1',
+  original: '#DBD3D8',
+  dark1: '#D1C7CD',
+  dark2: '#DBD3D8',
+  dark3: '#BFB0BA',
 }
 
-export const otherColor2 = {
-  light1: '#f8becf',
-  light2: '#dca5b5',
-  neutral: '#c38d9d',
-  dark2: '#a57080',
-  dark1: '#946171',
+export const DesertSand = {
+  light3: '#EDDDD4',
+  light2: '#E7D1C5',
+  light1: '#E1C6B7',
+  original: '#D8B4A0',
+  dark1: '#D6AF9A',
+  dark2: '#D0A38B',
+  dark3: '#CA987D',
 }
 
-export const otherColor3 = {
-  light1: '#7ae9d6',
-  light2: '#60d1be',
-  neutral: '#40b3a2',
-  dark2: '#209d8c',
-  dark1: '#008979',
+export const TerraCotta = {
+  light3: '#E7AD9D',
+  light2: '#E29F8D',
+  light1: '#DE927C',
+  original: '#D77A61',
+  dark1: '#D6765C',
+  dark2: '#D2694B',
+  dark3: '#CE5B3B',
 }
