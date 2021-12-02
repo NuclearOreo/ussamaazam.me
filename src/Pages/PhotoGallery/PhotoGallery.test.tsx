@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import PhotoGallery from './PhotoGallery'
+import PhotoGallery from '.'
 
 test('Render PhotoGallery Component', () => {
   render(<PhotoGallery />)
