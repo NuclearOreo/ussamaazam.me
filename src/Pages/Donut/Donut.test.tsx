@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
-import Home from '.'
+import Donut from '.'
 
 test('Render Home Component', () => {
-  render(<Home />)
+  render(<Donut />)
   const linkElement = screen.getByText(/This the home page/i)
   expect(linkElement).toBeInTheDocument()
 })
