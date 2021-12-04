@@ -1,25 +1,18 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import { style } from './AppStyles'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import About from './Pages/About'
 import PhotoGallery from './Pages/PhotoGallery'
 import Essays from './Pages/Essays'
 import ErrorPage from './Pages/Error'
 import Icon from './Components/Icon'
+import NavBar from './Components/NavBar'
 
 const App = () => {
   return (
     <Router>
       <Icon />
 
-      <nav className={style}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/gallery">Gallery</Link>
-        <Link to="/essays">Essays</Link>
-      </nav>
-
-      <br />
+      <NavBar />
 
       <Routes>
         <Route path="/" element={<Home />} />

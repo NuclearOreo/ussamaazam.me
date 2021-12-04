@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import Icon from './index'
+import Icon from '.'
 
 test('Render Icon Component', () => {
   render(<Icon />)
