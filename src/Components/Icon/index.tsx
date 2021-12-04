@@ -2,7 +2,7 @@ import { IconStyles, containerStyle } from './IconStyle'
 
 const Icon = () => (
   <div className={containerStyle}>
-    <pre className={IconStyles}>
+    <pre data-testid="GutsIcon" className={IconStyles}>
       {`
       ..    .           *     .                .,.*.    , ..                                    ..  ,  ,.  *              . .     .   .,. ,              .         .         .         
       .., ..  ,...         ,    .    .. .                            ,.   .                                             .   . , .,                          . .   .. *.*                           ..        
