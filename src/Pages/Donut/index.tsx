@@ -1,7 +1,17 @@
 import { style } from './DonutStyle'
+import { useRef, useEffect, useState } from 'react'
 
 const Donut = () => {
-  return <div className={style}>This the home page</div>
+  const [num, setNum] = useState(100)
+
+  const decreaseNum = () => setNum((prev) => prev - 1)
+
+  // setTimeout(decreaseNum, 1000)
+  return (
+    <div className={style}>
+      <div>{num}</div>
+    </div>
+  )
 }
 
 export default Donut
