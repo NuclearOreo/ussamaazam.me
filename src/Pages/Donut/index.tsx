@@ -1,19 +1,24 @@
 import { style } from './DonutStyle'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
+
+// interface DonutType {
+//   array: number[]
+//   a: number
+//   b: number
+// }
 
 const Donut = () => {
   const [seconds, setSeconds] = useState(0)
   const timerId = useRef<NodeJS.Timer>()
 
-  const startTimer = () => {
+  useEffect(() => {
     timerId.current = setInterval(() => {
       setSeconds((prev) => prev + 1)
     }, 1000)
-  }
+  }, [])
 
   return (
     <div className={style}>
-      <button onClick={startTimer}>Start</button>
       <br />
       <p>Second: {seconds}</p>
     </div>
