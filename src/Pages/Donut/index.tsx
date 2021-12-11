@@ -14,7 +14,6 @@ const Donut = () => {
 
   return (
     <div className={style}>
-      <br />
       <pre>{donut.frame}</pre>
     </div>
   )
