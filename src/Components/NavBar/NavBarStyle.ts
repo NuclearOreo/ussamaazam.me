@@ -12,6 +12,10 @@ export const styles = css`
   margin-bottom: 4vw;
   font-size: 20px;
 
+  @media screen and (max-aspect-ratio: 11/10) {
+    font-size: 15px;
+  }
+
   .link {
     text-decoration: none;
     margin-left: 1vw;

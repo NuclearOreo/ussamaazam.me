@@ -3,6 +3,6 @@ import Donut from '.'
 
 test('Render Home Component', () => {
   render(<Donut />)
-  const linkElement = screen.getByText(/This the home page/i)
+  const linkElement = screen.getByTestId('Donut')
   expect(linkElement).toBeInTheDocument()
 })

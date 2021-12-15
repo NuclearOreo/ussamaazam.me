@@ -14,7 +14,7 @@ const Donut = () => {
 
   return (
     <div className={style}>
-      <pre>{donut.frame}</pre>
+      <pre data-testid="Donut">{donut.frame}</pre>
     </div>
   )
 }
