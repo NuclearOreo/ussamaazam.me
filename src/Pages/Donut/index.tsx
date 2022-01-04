@@ -1,6 +1,7 @@
 import { style } from './DonutStyle'
 import { useRef, useState, useEffect } from 'react'
 import { donutFrame } from './donutFrame'
+import Three from './three'
 
 const Donut = () => {
   const [donut, setDonut] = useState({ frame: '', a: 0, b: 0 })
@@ -14,6 +15,7 @@ const Donut = () => {
 
   return (
     <div className={style}>
+      {/* <Three/> */}
       <pre data-testid="Donut">{donut.frame}</pre>
     </div>
   )
