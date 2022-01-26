@@ -6,6 +6,7 @@ import Three from './three'
 const Donut = () => {
   const [donut, setDonut] = useState({ frame: '', a: 0, b: 0 })
   const timerId = useRef<NodeJS.Timer>()
+  const [toggleDonut, setToggleDonut] = useState(true)
 
   useEffect(() => {
     timerId.current = setInterval(() => {
@@ -14,9 +15,8 @@ const Donut = () => {
   }, [])
 
   return (
-    <div className={style}>
-      <Three/>
-      {/* <pre data-testid="Donut">{donut.frame}</pre> */}
+    <div className={style} onClick={() => setToggleDonut(!toggleDonut)}>
+      {toggleDonut ? <Three /> : <pre data-testid="Donut">{donut.frame}</pre>}
     </div>
   )
 }
