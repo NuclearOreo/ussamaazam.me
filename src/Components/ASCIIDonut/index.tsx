@@ -1,6 +1,6 @@
 // tslint:disable: no-bitwise
 
-export const donutFrame = (
+const asciiDonut = (
   A: number,
   B: number
 ): {
@@ -44,3 +44,5 @@ export const donutFrame = (
   }
   return { frame: b.join(''), a: A, b: B }
 }
+
+export default asciiDonut

@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Mesh } from 'three'
+import { canvasStyle } from './style'
 
 const Cube = () => {
   const cube = useRef<Mesh>()
@@ -18,9 +19,9 @@ const Cube = () => {
   )
 }
 
-export default function Three() {
+export default function Donut3D() {
   return (
-    <div style={{ position: 'relative', width: 500, height: 500, background: 'white' }}>
+    <div className={canvasStyle}>
       <Canvas>
         <ambientLight intensity={1} />
         <Cube />

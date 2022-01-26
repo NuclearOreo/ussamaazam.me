@@ -1,7 +1,7 @@
 import { style } from './DonutStyle'
 import { useRef, useState, useEffect } from 'react'
-import { donutFrame } from './donutFrame'
-import Three from './three'
+import asciiDonut from '../../Components/ASCIIDonut'
+import Donut3D from '../../Components/Donut3D'
 
 const Donut = () => {
   const [donut, setDonut] = useState({ frame: '', a: 0, b: 0 })
@@ -10,13 +10,13 @@ const Donut = () => {
 
   useEffect(() => {
     timerId.current = setInterval(() => {
-      setDonut((prev) => donutFrame(prev.a, prev.b))
+      setDonut((prev) => asciiDonut(prev.a, prev.b))
     }, 50)
   }, [])
 
   return (
     <div className={style} onClick={() => setToggleDonut(!toggleDonut)}>
-      {toggleDonut ? <Three /> : <pre data-testid="Donut">{donut.frame}</pre>}
+      {toggleDonut ? <Donut3D /> : <pre data-testid="Donut">{donut.frame}</pre>}
     </div>
   )
 }
