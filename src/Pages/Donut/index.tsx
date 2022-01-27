@@ -1,7 +1,7 @@
 import { style } from './DonutStyle'
 import { useRef, useState, useEffect } from 'react'
-import asciiDonut from '../../Components/ASCIIDonut'
-import Donut3D from '../../Components/Donut3D'
+import asciiDonut from 'Components/ASCIIDonut'
+import Donut3D from 'Components/Donut3D'
 
 const Donut = () => {
   const [donut, setDonut] = useState({ frame: '', a: 0, b: 0 })
