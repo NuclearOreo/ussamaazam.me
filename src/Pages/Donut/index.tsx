@@ -15,7 +15,10 @@ const Donut = () => {
   }, [])
 
   return (
-    <div className={style} onClick={() => setToggleDonut(!toggleDonut)}>
+    <div
+      className={style({ transitionDown: toggleDonut ? 0 : 10 })}
+      onClick={() => setToggleDonut(!toggleDonut)}
+    >
       {toggleDonut ? <Donut3D /> : <pre data-testid="Donut">{donut.frame}</pre>}
     </div>
   )
