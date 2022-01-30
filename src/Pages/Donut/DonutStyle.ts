@@ -12,6 +12,7 @@ export const style = (params: StyleType) => css`
   font-size: 1.5vh;
   transform: translate(0, ${params.transitionDown}%);
   color: ${GunMetal.original};
+  cursor: pointer;
 
   @media screen and (max-aspect-ratio: 3/2) {
     font-size: 1vh;
