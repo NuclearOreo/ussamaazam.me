@@ -9,7 +9,7 @@ export default function Donut3D() {
       <Canvas>
         <ambientLight intensity={1} />
         <Suspense fallback={null}>
-          <Donut48 scale={30} />
+          <Donut48 scale={27} />
         </Suspense>
       </Canvas>
     </div>

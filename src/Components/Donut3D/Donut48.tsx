@@ -78,9 +78,9 @@ export default function Model({ ...props }: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/donut48.glb') as GLTFResult
 
   useFrame(() => {
-    group.current!.rotation.x += 0.01
-    group.current!.rotation.y += 0.01
-    group.current!.rotation.z += 0.02
+    group.current!.rotation.x += 0.002
+    group.current!.rotation.y += 0.001
+    group.current!.rotation.z += 0.007
   })
 
   return (

@@ -12,6 +12,10 @@ const Donut = () => {
     timerId.current = setInterval(() => {
       setDonut((prev) => asciiDonut(prev.a, prev.b))
     }, 50)
+
+    return () => {
+      timerId.current ?? clearInterval(timerId.current)
+    }
   }, [])
 
   return (
