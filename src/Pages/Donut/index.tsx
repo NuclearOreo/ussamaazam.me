@@ -14,7 +14,9 @@ const Donut = () => {
     }, 50)
 
     return () => {
-      timerId.current ?? clearInterval(timerId.current)
+      if (timerId.current) {
+        clearInterval(timerId.current)
+      }
     }
   }, [])
 
