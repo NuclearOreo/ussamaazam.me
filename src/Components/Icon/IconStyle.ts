@@ -3,7 +3,7 @@ import { GunMetal } from 'Styles/color'
 
 export const IconStyles = css`
   font-size: 1.5px;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
   color: ${GunMetal.dark3};
 `
 
