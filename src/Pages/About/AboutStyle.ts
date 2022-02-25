@@ -17,5 +17,11 @@ export const style = css`
     margin-top: 5vw;
     width: 40vw;
     text-align: center;
+
+    img {
+      width: 25px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
   }
 `
