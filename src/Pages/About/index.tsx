@@ -1,8 +1,8 @@
 import { style } from './AboutStyle'
-import GithubIcon from 'icons/github.svg'
-import LeetcodeIcon from 'icons/leetcode.svg'
-import LinkedinIcon from 'icons/linkedin.svg'
-import UnsplashIcon from 'icons/unsplash.svg'
+import GithubIcon from 'Icons/github.svg'
+import LeetcodeIcon from 'Icons/leetcode.svg'
+import LinkedinIcon from 'Icons/linkedin.svg'
+import UnsplashIcon from 'Icons/unsplash.svg'
 
 const About = () => {
   return (
