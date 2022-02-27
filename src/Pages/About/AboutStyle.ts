@@ -1,6 +1,6 @@
 import { css } from '@emotion/css'
 import { GunMetal } from 'Styles/color'
-import { fontFamily, } from 'Styles/fonts'
+import { fontFamily } from 'Styles/fonts'
 
 export const style = css`  
   .aboutMeStyle {
@@ -20,8 +20,9 @@ export const style = css`
 
     img {
       width: 25px;
-      margin-left: 15px;
-      margin-right: 15px;
-    }
+      margin-left: 0.5vw;
+      margin-right: 0.5vw;
+      filter: invert(29%) sepia(37%) saturate(521%) hue-rotate(155deg) brightness(97%) contrast(87%);
+    }    
   }
 `

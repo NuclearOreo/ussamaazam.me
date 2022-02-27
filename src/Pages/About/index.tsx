@@ -19,10 +19,18 @@ const About = () => {
         exciting stuff I made, like the stupid donut on my home page.{' '}
       </div>
       <div className="linksStyle">
-        <img src={GithubIcon} alt="" />
-        <img src={LeetcodeIcon} alt="" />
-        <img src={LinkedinIcon} alt="" />
-        <img src={UnsplashIcon} alt="" />
+        <a href="https://github.com/NuclearOreo">
+          <img src={GithubIcon} alt="" />
+        </a>
+        <a href="https://leetcode.com/nuclearoreo/">
+          <img src={LeetcodeIcon} alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/ussama-azam-000191180/">
+          <img src={LinkedinIcon} alt="" />
+        </a>
+        <a href="https://unsplash.com/@ussamaazam">
+          <img src={UnsplashIcon} alt="" />
+        </a>
       </div>
     </div>
   )
