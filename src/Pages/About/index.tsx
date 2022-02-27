@@ -20,16 +20,16 @@ const About = () => {
       </div>
       <div className="linksStyle">
         <a href="https://github.com/NuclearOreo">
-          <img src={GithubIcon} alt="" />
+          <img className="github" src={GithubIcon} alt="" />
         </a>
         <a href="https://leetcode.com/nuclearoreo/">
-          <img src={LeetcodeIcon} alt="" />
+          <img className="leetcode" src={LeetcodeIcon} alt="" />
         </a>
         <a href="https://www.linkedin.com/in/ussama-azam-000191180/">
-          <img src={LinkedinIcon} alt="" />
+          <img className="linkedin" src={LinkedinIcon} alt="" />
         </a>
         <a href="https://unsplash.com/@ussamaazam">
-          <img src={UnsplashIcon} alt="" />
+          <img className="unsplash" src={UnsplashIcon} alt="" />
         </a>
       </div>
     </div>
