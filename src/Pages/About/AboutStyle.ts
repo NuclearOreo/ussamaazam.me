@@ -27,6 +27,21 @@ export const style = css`
     }
   }
 
+  @media only screen and (max-width: 800px) {
+    .aboutMeStyle {
+      font-size: 9px;
+      width: 60vw;
+    }
+
+    .linksStyle {
+      img {
+        width: 15px;
+        margin-left: 1vw;
+        margin-right: 1vw;
+      }
+    }
+  }
+
   ${buzzOut}
   ${wobbleToTopRight}
   ${hang}

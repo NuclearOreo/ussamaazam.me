@@ -227,14 +227,14 @@ export const pulseShrink = `
 /* Pulse Shrink */
 @-webkit-keyframes hvr-pulse-shrink {
   to {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
   }
 }
 @keyframes hvr-pulse-shrink {
   to {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
   }
 }
 .hvr-pulse-shrink {
