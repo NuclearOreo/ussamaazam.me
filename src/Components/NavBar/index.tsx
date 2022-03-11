@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { styles } from './NavBarStyle'
 
-const NavBar = () => {
+function NavBar() {
   return (
     <div className={styles}>
       <Link to="/" className="link">

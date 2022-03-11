@@ -1,7 +1,9 @@
 import { css } from '@emotion/css'
 import { GunMetal } from 'Styles/color'
 import { fontFamily } from 'Styles/fonts'
-import { buzzOut, hang, pulseShrink, wobbleToTopRight } from './hoverAffects'
+import {
+  buzzOut, hang, pulseShrink, wobbleToTopRight,
+} from './hoverAffects'
 
 export const style = css`
   .aboutMeStyle {

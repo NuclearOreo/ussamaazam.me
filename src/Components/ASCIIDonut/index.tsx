@@ -1,8 +1,10 @@
-// tslint:disable: no-bitwise
-
+/* eslint-disable no-plusplus */
+/* eslint-disable no-bitwise */
+/* eslint-disable max-len */
+/* eslint-disable no-param-reassign */
 const asciiDonut = (
   A: number,
-  B: number
+  B: number,
 ): {
   frame: string
   a: number

@@ -1,10 +1,11 @@
 import { IconStyles, containerStyle } from './IconStyle'
 
-const Icon = () => (
-  <div className={containerStyle}>
-    <div className="hvr-grow">
-      <pre data-testid="GutsIcon" className={IconStyles}>
-        {`
+function Icon() {
+  return (
+    <div className={containerStyle}>
+      <div className="hvr-grow">
+        <pre data-testid="GutsIcon" className={IconStyles}>
+          {`
         ..    .           *     .                .,.*.    , ..                                    ..  ,  ,.  *              . .     .   .,. ,              .         .         .         
         .., ..  ,...         ,    .    .. .                            ,.   .                                             .   . , .,                          . .   .. *.*                           ..        
               ..            * ..*  .. / *  ,                      . ,.*  .                                                       . . .                            , .     . .           .  .                 . 
@@ -86,9 +87,10 @@ const Icon = () => (
         @@@&.(@@%@(%@%  .%@@* @@@@@@@@@@@@@%@@@@@/&%&/@#@@@@@@@@@@@@@@@@@@@,  *@@%(/,(@@@@@@@@@@@@@@&@@@,,@@@# (@@.,&(....#  .@@(&*  #&@@@@@@@@@&@@%@@@@@@@@@&@, . *    / .  %(%@*@%@&@@    .@@&@@@@@@@@**.   *(
         /////*/////,.    @@.@@/@@@@@@@@@@@@@@@@@(@@@@%@/@@(*.@@@@@@@@@@@@@@%&@@@@&@&#((*,%#(@@@@@@@@@@@@@@@@%@@##%%%%((&@**#@%%@&&@&&@@@%@@@@@%@@@@@@@@@%#&#,  *,..   / @.((#@&@@@@@@@@&@@@@@@@@@@@@@@@%/((.  ,(
       `}
-      </pre>
+        </pre>
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default Icon

@@ -1,6 +1,6 @@
 import { style } from './ErrorStyle'
 
-const Error = () => {
+function Error() {
   return <div className={style}>This is the Error Page</div>
 }
 

@@ -1,6 +1,6 @@
 import { style } from './BlogStyle'
 
-const Blog = () => {
+function Blog() {
   return <div className={style}>This is Blogs</div>
 }
 

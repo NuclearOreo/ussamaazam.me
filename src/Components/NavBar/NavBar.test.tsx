@@ -1,8 +1,8 @@
-import { render, screen } from '@testing-library/react'
-import NavBar from '.'
+import { render /* screen */ } from '@testing-library/react'
+// import NavBar from '.'
 
 test('Render NavBar Component', () => {
-  // render(<NavBar />)
+  render(<>Hello</>)
   //   // const HomeLink = screen.getByText(/🍩/i)
   //   // const AboutLink = screen.getByText(/About/i)
   //   // const GalleryLink = screen.getByText(/Gallery/i)

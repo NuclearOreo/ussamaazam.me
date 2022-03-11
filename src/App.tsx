@@ -7,7 +7,7 @@ import ErrorPage from 'Pages/Error'
 import Icon from 'Components/Icon'
 import NavBar from 'Components/NavBar'
 
-const App = () => {
+function App() {
   return (
     <Router>
       <Icon />
