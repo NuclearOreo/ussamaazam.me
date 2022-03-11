@@ -1,9 +1,9 @@
-import { style } from './DonutStyle'
 import { useRef, useState, useEffect } from 'react'
 import asciiDonut from 'Components/ASCIIDonut'
 import Donut3D from 'Components/Donut3D'
+import { style } from './DonutStyle'
 
-const Donut = () => {
+function Donut() {
   const [donut, setDonut] = useState({ frame: '', a: 0, b: 0 })
   const timerId = useRef<NodeJS.Timer>()
   const [toggleDonut, setToggleDonut] = useState(true)

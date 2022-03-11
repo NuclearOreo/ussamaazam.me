@@ -1,6 +1,6 @@
 import { style } from './PhotoGalleryStyle'
 
-const PhotoGallery = () => {
+function PhotoGallery() {
   return <div className={style}>This is the Photo Gallery</div>
 }
 
