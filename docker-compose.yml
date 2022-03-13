@@ -11,4 +11,4 @@ services:
       - 3000:3000
     stdin_open: true
     tty: true
-    command: npm start
+    command: sh -c "npm run prepare && npm start"
