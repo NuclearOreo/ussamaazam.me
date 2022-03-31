@@ -1,12 +1,15 @@
-import { style } from './PhotoGalleryStyle'
+import { container, colums, colum } from './PhotoGalleryStyle'
 
 function PhotoGallery() {
   return (
-    <div className={style}>
-      <img
-        src="https://assets.dicebreaker.com/berserk-manga-kentaro-miura-dragon-slayer.jpg/BROK/resize/1200x1200%3E/format/jpg/quality/70/berserk-manga-kentaro-miura-dragon-slayer.jpg"
-        alt=""
-      />
+    <div>
+      <div className={container}>
+        <div className={colums}>
+          <div className={colum}>A</div>
+          <div className={colum}>B</div>
+          <div className={colum}>C</div>
+        </div>
+      </div>
     </div>
   )
 }
