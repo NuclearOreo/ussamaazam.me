@@ -30,9 +30,15 @@ function PhotoGallery() {
     <div>
       <div className={container}>
         <div className={columns}>
-          <div className={column}>{imageArray1}</div>
-          <div className={column}>{imageArray2}</div>
-          <div className={column}>{imageArray3}</div>
+          <div key="col1" className={column}>
+            {imageArray1}
+          </div>
+          <div key="col2" className={column}>
+            {imageArray2}
+          </div>
+          <div key="col3" className={column}>
+            {imageArray3}
+          </div>
         </div>
       </div>
     </div>
