@@ -8,14 +8,14 @@ export const container = css`
   display: block;
 `
 
-export const colums = css`
+export const columns = css`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 `
 
-export const colum = css`
+export const column = css`
   width: 33.33%;
 
   img {
