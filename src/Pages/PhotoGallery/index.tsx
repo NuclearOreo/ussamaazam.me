@@ -1,5 +1,12 @@
 import { useState } from 'react'
 import { container, columns, column } from './PhotoGalleryStyle'
+import Unsplash from 'APIs/Unsplash'
+
+async function test() {
+  const testing = new Unsplash()
+  const response = await testing.getPhoto()
+  console.log(JSON.stringify(response, null, 2))
+}
 
 function PhotoGallery() {
   const [imageArray1] = useState<JSX.Element[]>([
@@ -28,17 +35,21 @@ function PhotoGallery() {
 
   return (
     <div>
+      <button
+        type="button"
+        onClick={async () => {
+          await test()
+        }}
+      >
+        Testing
+      </button>
       <div className={container}>
         <div className={columns}>
-          <div key="col1" className={column}>
-            {imageArray1}
-          </div>
-          <div key="col2" className={column}>
-            {imageArray2}
-          </div>
-          <div key="col3" className={column}>
-            {imageArray3}
-          </div>
+          {
+            [imageArray1, imageArray2, imageArray3].map((item) => {
+              return <div className={column}>{item}</div>
+            })
+          }
         </div>
       </div>
     </div>
