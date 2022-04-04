@@ -7,6 +7,7 @@ services:
       - ./package-lock.json:/app/package-lock.json
       - ./package.json:/app/package.json
       - ./.git:/app/.git
+      - ./.eslintrc.js:/app/.eslintrc.js
     ports:
       - 3000:3000
     stdin_open: true
