@@ -8,6 +8,8 @@ services:
       - ./package.json:/app/package.json
       - ./.git:/app/.git
       - ./.eslintrc.js:/app/.eslintrc.js
+    environment:
+      - REACT_APP_UNSPLASH=${UNSPLASH_CLIENT_ID}
     ports:
       - 3000:3000
     stdin_open: true

@@ -1,4 +1,5 @@
 import axios, { AxiosInstance } from 'axios'
+import { Photos } from './types'
 
 class Unsplash {
   private baseUrl: string
@@ -6,16 +7,15 @@ class Unsplash {
 
   constructor() {
     this.baseUrl = 'https://api.unsplash.com'
-    const clientID = ''
     this.service = axios.create({
       baseURL: this.baseUrl,
       headers: {
-        Authorization: `Client-ID ${clientID}`,
+        Authorization: process.env.REACT_APP_UNSPLASH ?? '',
       },
     })
   }
 
-  async getPhoto(): Promise<any> {
+  async getMyPhoto(): Promise<Photos> {
     return this.service.get('/users/ussamaazam/photos')
   }
 }
