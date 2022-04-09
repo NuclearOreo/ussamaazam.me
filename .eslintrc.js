@@ -45,6 +45,7 @@ module.exports = {
     'import/order': 'off',
     'lines-between-class-members': 'off',
     'arrow-body-style': 'off',
+    'no-restricted-syntax': 'off',
   },
   settings: {
     'import/resolver': {
