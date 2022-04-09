@@ -3,10 +3,10 @@ import { container, columns, column } from './PhotoGalleryStyle'
 import Unsplash from 'APIs/Unsplash'
 
 function PhotoGallery() {
-  const [photoIndex, setPhotoIndex] = useState(0)
   const [imageArray1, setImageArray1] = useState<JSX.Element[]>([])
   const [imageArray2, setImageArray2] = useState<JSX.Element[]>([])
   const [imageArray3, setImageArray3] = useState<JSX.Element[]>([])
+  const [photoIndex, setPhotoIndex] = useState(0)
 
   async function test() {
     const unsplash = new Unsplash()
