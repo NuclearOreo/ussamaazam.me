@@ -3,45 +3,26 @@ import { container, columns, column } from './PhotoGalleryStyle'
 import Unsplash from 'APIs/Unsplash'
 
 function PhotoGallery() {
-  const [imageArray1, setImageArray1] = useState<JSX.Element[]>([
-    <img
-      key="1"
-      src="https://images.squarespace-cdn.com/content/v1/5ace4845e17ba35c9d8eb95e/1543247944657-TX8QBZ5DKCS32LE639PS/guts+and+schierke.PNG?format=1500w"
-      alt=""
-    />,
-    <img key="2" src="https://pbs.twimg.com/media/E1zX01DWEAIP4AP?format=jpg&name=small" alt="" />,
-  ])
-
-  const [imageArray2] = useState<JSX.Element[]>([
-    <img key="1" src="https://miro.medium.com/max/1400/0*PEuJrbZc6KHh33ua.jpeg" alt="" />,
-    <img
-      key="2"
-      src="https://i.pinimg.com/736x/3d/44/a4/3d44a4fa5a7fb42d98ba7f5afd577a72.jpg"
-      alt=""
-    />,
-  ])
-
-  const [imageArray3] = useState<JSX.Element[]>([
-    <img
-      key="1"
-      src="https://i.pinimg.com/originals/01/20/1a/01201aaec7e50ce6a4bde0b6d082e700.jpg"
-      alt=""
-    />,
-    <img
-      key="2"
-      src="https://assets.dicebreaker.com/berserk-manga-kentaro-miura-dragon-slayer.jpg/BROK/resize/1200x1200%3E/format/jpg/quality/70/berserk-manga-kentaro-miura-dragon-slayer.jpg"
-      alt=""
-    />,
-  ])
+  const [photoIndex, setPhotoIndex] = useState(0)
+  const [imageArray1, setImageArray1] = useState<JSX.Element[]>([])
+  const [imageArray2, setImageArray2] = useState<JSX.Element[]>([])
+  const [imageArray3, setImageArray3] = useState<JSX.Element[]>([])
 
   async function test() {
-    const testing = new Unsplash()
-    const response = await testing.getMyPhoto()
+    const unsplash = new Unsplash()
+    const cols = [imageArray1, imageArray2, imageArray3]
+    const response = await unsplash.getMyPhoto()
 
+    let index = photoIndex
     response.data.forEach((item) => {
-      imageArray1.push(<img src={item.urls.regular} alt="" />)
-      setImageArray1([...imageArray1])
+      cols[index % 3].push(<img key={index} src={item.urls.regular} alt="" />)
+      index += 1
     })
+
+    setPhotoIndex(index)
+    setImageArray1([...imageArray1])
+    setImageArray2([...imageArray2])
+    setImageArray3([...imageArray3])
   }
 
   return (
