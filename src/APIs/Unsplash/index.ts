@@ -15,8 +15,8 @@ class Unsplash {
     })
   }
 
-  async getMyPhoto(pageNumber = 1): Promise<Photos> {
-    return this.service.get(`/users/ussamaazam/photos?page=${pageNumber}`)
+  async getMyPhoto(pageNumber = 1, prePage = 10): Promise<Photos> {
+    return this.service.get(`/users/ussamaazam/photos?page=${pageNumber}&per_page=${prePage}`)
   }
 }
 

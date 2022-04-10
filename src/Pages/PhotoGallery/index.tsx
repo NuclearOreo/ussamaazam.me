@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { container, columns, column } from './PhotoGalleryStyle'
 import Unsplash from 'APIs/Unsplash'
 
@@ -12,7 +12,7 @@ function PhotoGallery() {
   async function grabPhoto() {
     const unsplash = new Unsplash()
     const cols = [imageArray1, imageArray2, imageArray3]
-    const response = await unsplash.getMyPhoto(pageNumber)
+    const response = await unsplash.getMyPhoto(pageNumber, 30)
     let index = photoIndex
 
     response.data.forEach((item) => {
@@ -27,20 +27,12 @@ function PhotoGallery() {
     setImageArray3([...imageArray3])
   }
 
-  // window.addEventListener('scroll', (e) => {
-  //   test()
-  // })
+  useEffect(() => {
+    grabPhoto()
+  }, [pageNumber])
 
   return (
     <div>
-      <button
-        type="button"
-        onClick={async () => {
-          await grabPhoto()
-        }}
-      >
-        Testing
-      </button>
       <div className={container}>
         <div className={columns}>
           {[imageArray1, imageArray2, imageArray3].map((item, index) => {
