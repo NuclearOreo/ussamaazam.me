@@ -12,7 +12,7 @@ function PhotoGallery() {
   async function grabPhoto() {
     const unsplash = new Unsplash()
     const cols = [imageArray1, imageArray2, imageArray3]
-    const response = await unsplash.getMyPhoto(pageNumber, 30)
+    const response = await unsplash.getMyPhoto(pageNumber)
     let index = photoIndex
 
     response.data.forEach((item) => {
