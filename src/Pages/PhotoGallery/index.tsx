@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { container, columns, column } from './PhotoGalleryStyle'
-import Unsplash from 'APIs/Unsplash'
+// import Unsplash from 'APIs/Unsplash'
+import { getPhoto } from 'CustomHooks/UnsplashHooks'
 
 function PhotoGallery() {
   const [imageArray1, setImageArray1] = useState<JSX.Element[]>([])
@@ -9,30 +10,42 @@ function PhotoGallery() {
   const [pageNumber, setPageNumber] = useState(1)
   const [photoIndex, setPhotoIndex] = useState(0)
 
-  async function grabPhoto() {
-    const unsplash = new Unsplash()
-    const cols = [imageArray1, imageArray2, imageArray3]
-    const response = await unsplash.getMyPhoto(pageNumber)
-    let index = photoIndex
+  // async function grabPhoto() {
+  //   const unsplash = new Unsplash()
+  //   const cols = [imageArray1, imageArray2, imageArray3]
+  //   const response = await unsplash.getMyPhoto(pageNumber)
+  //   let index = photoIndex
 
-    for (const item of response.data) {
-      cols[index % 3].push(<img key={index} src={item.urls.regular} alt="" loading="lazy" />)
-      index += 1
-    }
+  //   for (const item of response.data) {
+  //     cols[index % 3].push(<img key={index} src={item.urls.regular} alt="" loading="lazy" />)
+  //     index += 1
+  //   }
 
-    setPhotoIndex(photoIndex + 1)
-    setPageNumber(pageNumber + 1)
-    setImageArray1([...imageArray1])
-    setImageArray2([...imageArray2])
-    setImageArray3([...imageArray3])
-  }
+  //   setPhotoIndex(photoIndex + 1)
+  //   setPageNumber(pageNumber + 1)
+  //   setImageArray1([...imageArray1])
+  //   setImageArray2([...imageArray2])
+  //   setImageArray3([...imageArray3])
+  // }
 
-  useEffect(() => {
-    grabPhoto()
-  }, [])
+  // useEffect(() => {
+  //   grabPhoto()
+  // }, [])
+
+  const { images } = getPhoto(pageNumber)
+
+  console.log(images)
 
   return (
     <div>
+      <button
+        onClick={() => {
+          setPageNumber(pageNumber + 1)
+        }}
+        type="button"
+      >
+        Hello
+      </button>
       <div className={container}>
         <div className={columns}>
           {[imageArray1, imageArray2, imageArray3].map((item, index) => {
