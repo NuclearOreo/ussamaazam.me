@@ -15,12 +15,12 @@ function PhotoGallery() {
     const response = await unsplash.getMyPhoto(pageNumber)
     let index = photoIndex
 
-    response.data.forEach((item) => {
-      cols[index % 3].push(<img key={index} src={item.urls.regular} alt="" />)
+    for (const item of response.data) {
+      cols[index % 3].push(<img key={index} src={item.urls.regular} alt="" loading="lazy" />)
       index += 1
-    })
+    }
 
-    setPhotoIndex(index)
+    setPhotoIndex(photoIndex + 1)
     setPageNumber(pageNumber + 1)
     setImageArray1([...imageArray1])
     setImageArray2([...imageArray2])
@@ -29,7 +29,7 @@ function PhotoGallery() {
 
   useEffect(() => {
     grabPhoto()
-  }, [pageNumber])
+  }, [])
 
   return (
     <div>
