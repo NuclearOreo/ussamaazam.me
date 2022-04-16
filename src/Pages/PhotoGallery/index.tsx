@@ -1,56 +1,44 @@
-import { useState, useEffect } from 'react'
+/* eslint-disable react/no-array-index-key */
+import { useState, useRef, useCallback } from 'react'
 import { container, columns, column } from './PhotoGalleryStyle'
-// import Unsplash from 'APIs/Unsplash'
-import { getPhoto } from 'CustomHooks/UnsplashHooks'
+import { photoPagination } from 'CustomHooks/UnsplashHooks'
 
 function PhotoGallery() {
-  const [imageArray1, setImageArray1] = useState<JSX.Element[]>([])
-  const [imageArray2, setImageArray2] = useState<JSX.Element[]>([])
-  const [imageArray3, setImageArray3] = useState<JSX.Element[]>([])
+  const imageCols: JSX.Element[][] = [[], [], []]
   const [pageNumber, setPageNumber] = useState(1)
-  const [photoIndex, setPhotoIndex] = useState(0)
+  const { images, loading, error } = photoPagination(pageNumber, 30)
 
-  // async function grabPhoto() {
-  //   const unsplash = new Unsplash()
-  //   const cols = [imageArray1, imageArray2, imageArray3]
-  //   const response = await unsplash.getMyPhoto(pageNumber)
-  //   let index = photoIndex
+  const observer = useRef<IntersectionObserver>()
+  const lastImageElementRef = useCallback(
+    (node) => {
+      if (loading) return
+      if (observer.current) observer.current.disconnect()
+      observer.current = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !error) {
+          setPageNumber((prev) => prev + 1)
+        }
+      })
+      if (node) observer.current.observe(node)
+    },
+    [loading],
+  )
 
-  //   for (const item of response.data) {
-  //     cols[index % 3].push(<img key={index} src={item.urls.regular} alt="" loading="lazy" />)
-  //     index += 1
-  //   }
-
-  //   setPhotoIndex(photoIndex + 1)
-  //   setPageNumber(pageNumber + 1)
-  //   setImageArray1([...imageArray1])
-  //   setImageArray2([...imageArray2])
-  //   setImageArray3([...imageArray3])
-  // }
-
-  // useEffect(() => {
-  //   grabPhoto()
-  // }, [])
-
-  const { images } = getPhoto(pageNumber)
-
-  console.log(images)
+  images.forEach((image, index) => {
+    if (index + 1 === images.length) {
+      imageCols[index % 3].push(
+        <img ref={lastImageElementRef} key={index} src={image.urls.regular} alt="" />,
+      )
+    } else {
+      imageCols[index % 3].push(<img key={index} src={image.urls.regular} alt="" />)
+    }
+  })
 
   return (
     <div>
-      <button
-        onClick={() => {
-          setPageNumber(pageNumber + 1)
-        }}
-        type="button"
-      >
-        Hello
-      </button>
       <div className={container}>
         <div className={columns}>
-          {[imageArray1, imageArray2, imageArray3].map((item, index) => {
+          {imageCols.map((item, index) => {
             return (
-              // eslint-disable-next-line react/no-array-index-key
               <div key={index} className={column}>
                 {item}
               </div>

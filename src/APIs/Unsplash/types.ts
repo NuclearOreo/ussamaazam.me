@@ -48,7 +48,7 @@ interface Headers {
   'x-total': string
 }
 
-interface Datum {
+export interface Datum {
   id: string
   created_at: string
   updated_at: string

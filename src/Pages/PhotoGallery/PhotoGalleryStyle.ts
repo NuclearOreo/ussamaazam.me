@@ -1,8 +1,7 @@
 import { css } from '@emotion/css'
 
 export const container = css`
-  width: 80vw;
-  // background-color: white;
+  width: 70vw;
   margin-left: auto;
   margin-right: auto;
   display: block;

@@ -1,6 +1,11 @@
 import axios, { AxiosInstance } from 'axios'
 import { Photos } from './types'
 
+interface getPhotoType {
+  pageNumber?: number
+  perPage?: number
+}
+
 class Unsplash {
   private baseUrl: string
   private service: AxiosInstance
@@ -15,8 +20,10 @@ class Unsplash {
     })
   }
 
-  async getMyPhoto(pageNumber = 1): Promise<Photos> {
-    return this.service.get(`/users/ussamaazam/photos?page=${pageNumber}`)
+  async getMyPhoto({ pageNumber, perPage }: getPhotoType): Promise<Photos> {
+    return this.service.get(
+      `/users/ussamaazam/photos?page=${pageNumber ?? 1}&per_page=${perPage ?? 10}`,
+    )
   }
 }
 
