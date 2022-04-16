@@ -1,10 +1,10 @@
-/* eslint-disable react/no-array-index-key */
 import { useState, useRef, useCallback } from 'react'
 import { container, columns, column } from './PhotoGalleryStyle'
 import { photoPagination } from 'CustomHooks/UnsplashHooks'
 
 function PhotoGallery() {
   const imageCols: JSX.Element[][] = [[], [], []]
+  const colsHeights = [0, 0, 0]
   const [pageNumber, setPageNumber] = useState(1)
   const { images, loading, error } = photoPagination(pageNumber, 30)
 
@@ -20,30 +20,35 @@ function PhotoGallery() {
       })
       if (node) observer.current.observe(node)
     },
-    [loading],
+    [loading, error],
   )
 
   images.forEach((image, index) => {
+    const minIndex = colsHeights.indexOf(Math.min(...colsHeights))
     if (index + 1 === images.length) {
-      imageCols[index % 3].push(
-        <img ref={lastImageElementRef} key={index} src={image.urls.regular} alt="" />,
+      imageCols[minIndex].push(
+        <img ref={lastImageElementRef} key={image.id} src={image.urls.regular} alt="" />,
       )
     } else {
-      imageCols[index % 3].push(<img key={index} src={image.urls.regular} alt="" />)
+      imageCols[minIndex].push(<img key={image.id} src={image.urls.regular} alt="" />)
     }
+    colsHeights[minIndex] += image.height
   })
 
   return (
     <div>
       <div className={container}>
         <div className={columns}>
-          {imageCols.map((item, index) => {
-            return (
-              <div key={index} className={column}>
-                {item}
-              </div>
-            )
-          })}
+          <div key="col1" className={column}>
+            {imageCols[0]}
+          </div>
+          <div key="col2" className={column}>
+            {imageCols[1]}
+          </div>
+          <div key="col3" className={column}>
+            {imageCols[2]}
+          </div>
+          <div>{loading ?? 'Loading...'}</div>
         </div>
       </div>
     </div>

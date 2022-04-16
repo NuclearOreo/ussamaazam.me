@@ -1,4 +1,4 @@
-export interface Photos {
+export interface PhotosResponse {
   data: Datum[]
   status: number
   statusText: string
