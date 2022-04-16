@@ -27,10 +27,22 @@ function PhotoGallery() {
     const minIndex = colsHeights.indexOf(Math.min(...colsHeights))
     if (index + 1 === images.length) {
       imageCols[minIndex].push(
-        <img ref={lastImageElementRef} key={image.id} src={image.urls.regular} alt="" />,
+        <a href={image.links.html}>
+          <img
+            ref={lastImageElementRef}
+            key={image.id}
+            className="hvr-grow"
+            src={image.urls.regular}
+            alt=""
+          />
+        </a>,
       )
     } else {
-      imageCols[minIndex].push(<img key={image.id} src={image.urls.regular} alt="" />)
+      imageCols[minIndex].push(
+        <a href={image.links.html}>
+          <img key={image.id} className="hvr-grow" src={image.urls.regular} alt="" />
+        </a>,
+      )
     }
     colsHeights[minIndex] += image.height
   })
