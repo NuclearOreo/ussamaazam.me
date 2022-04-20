@@ -1,6 +1,8 @@
 import { useState, useRef, useCallback } from 'react'
-import { container, columns, column } from './PhotoGalleryStyle'
+// eslint-disable-next-line object-curly-newline
+import { container, columns, column, loadingStyle } from './PhotoGalleryStyle'
 import { photoPagination } from 'CustomHooks/UnsplashHooks'
+import loadingAnimation from 'Icons/three-dots.svg'
 
 function PhotoGallery() {
   const imageCols: JSX.Element[][] = [[], [], []]
@@ -14,13 +16,13 @@ function PhotoGallery() {
       if (loading) return
       if (observer.current) observer.current.disconnect()
       observer.current = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting && !error) {
+        if (entries[0].isIntersecting) {
           setPageNumber((prev) => prev + 1)
         }
       })
       if (node) observer.current.observe(node)
     },
-    [loading, error],
+    [loading],
   )
 
   images.forEach((image, index) => {
@@ -33,7 +35,7 @@ function PhotoGallery() {
             key={image.id}
             className="hvr-grow"
             src={image.urls.regular}
-            alt=""
+            alt="Unsplash/Ussama Azam"
           />
         </a>,
       )
@@ -60,7 +62,11 @@ function PhotoGallery() {
           <div key="col3" className={column}>
             {imageCols[2]}
           </div>
-          <div>{loading ?? 'Loading...'}</div>
+          {loading && (
+            <div className={loadingStyle}>
+              <img src={loadingAnimation} alt="Loading SVG" />
+            </div>
+          )}
         </div>
       </div>
     </div>

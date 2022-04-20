@@ -41,3 +41,10 @@ export const column = css`
     box-shadow: 2px 5px 9px #888888;
   }
 `
+
+export const loadingStyle = css`
+  width: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+`
