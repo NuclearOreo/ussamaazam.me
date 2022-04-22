@@ -6,7 +6,7 @@ WORKDIR /app/
 
 COPY . .
 
-RUN npm i
+RUN npm install
 
 ENTRYPOINT ["tail"]
 CMD [ "-f", "/dev/null" ]

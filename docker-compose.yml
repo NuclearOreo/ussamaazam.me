@@ -1,12 +1,16 @@
-version: "3.9"
+version: '3.9'
 services:
   app:
     build: .
     volumes:
       - ./:/app/
+      - node_modules:/app/node_modules
     environment:
       - REACT_APP_UNSPLASH=${UNSPLASH_CLIENT_ID}
     ports:
       - 3000:3000
     stdin_open: true
     tty: true
+
+volumes:
+  node_modules:
