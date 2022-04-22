@@ -8,6 +8,7 @@ function PhotoGallery() {
   const imageCols: JSX.Element[][] = [[], [], []]
   const colsHeights = [0, 0, 0]
   const [pageNumber, setPageNumber] = useState(1)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { images, loading, error } = photoPagination(pageNumber, 30)
 
   const observer = useRef<IntersectionObserver>()

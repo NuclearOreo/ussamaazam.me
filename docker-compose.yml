@@ -3,11 +3,7 @@ services:
   app:
     build: .
     volumes:
-      - ./src:/app/src
-      - ./package-lock.json:/app/package-lock.json
-      - ./package.json:/app/package.json
-      - ./.git:/app/.git
-      - ./.eslintrc.js:/app/.eslintrc.js
+      - ./:/app/
     environment:
       - REACT_APP_UNSPLASH=${UNSPLASH_CLIENT_ID}
     ports:
