@@ -41,6 +41,12 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
+    'class-methods-use-this': 'off',
+    'import/order': 'off',
+    'lines-between-class-members': 'off',
+    'arrow-body-style': 'off',
+    'no-restricted-syntax': 'off',
+    'object-curly-newline': 'off',
   },
   settings: {
     'import/resolver': {

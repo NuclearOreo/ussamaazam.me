@@ -4,8 +4,9 @@ RUN apk add git
 
 WORKDIR /app/
 
-COPY package*.json ./
-
-RUN npm i
-
 COPY . .
+
+RUN npm install
+
+ENTRYPOINT ["tail"]
+CMD [ "-f", "/dev/null" ]
