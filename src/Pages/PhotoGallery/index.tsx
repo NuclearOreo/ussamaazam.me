@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from 'react'
 import { container, columns, column, loadingStyle } from './PhotoGalleryStyle'
-import { photoPagination } from 'CustomHooks/UnsplashHooks'
+import { photoPagination } from 'APIs/Unsplash'
 import loadingAnimation from 'Icons/three-dots.svg'
 
 function PhotoGallery() {

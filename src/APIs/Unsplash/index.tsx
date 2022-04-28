@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Unsplash from 'APIs/Unsplash'
+import Unsplash from 'APIs/Unsplash/Unsplash'
 import { Datum } from 'APIs/Unsplash/types'
 import { AxiosError } from 'axios'
 
