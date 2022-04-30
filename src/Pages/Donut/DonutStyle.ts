@@ -18,6 +18,5 @@ export const style = ({ transitionDown, toggle }: StyleType) => css`
   @media screen and (max-aspect-ratio: 3/2) {
     font-size: 1vh;
     transform: translate(0, ${toggle ? 20 : 40}%);
-    background: green;
   }
 `
