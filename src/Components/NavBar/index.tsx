@@ -14,9 +14,9 @@ function NavBar() {
         <Link to="/gallery" className="link">
           Gallery
         </Link>
-        <Link to="/blog" className="link">
+        {/* <Link to="/blog" className="link">
           Blog
-        </Link>
+        </Link> */}
       </div>
       <Outlet />
     </>
