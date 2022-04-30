@@ -24,6 +24,11 @@ function PhotoGallery() {
     [loading, endOfPage, error],
   )
 
+  if (error) {
+    // eslint-disable-next-line no-alert
+    window.alert('Error Fetching Photo')
+  }
+
   images.forEach((image, index) => {
     const minIndex = colsHeights.indexOf(Math.min(...colsHeights))
     if (index + 1 === images.length) {
