@@ -22,7 +22,7 @@ function Donut() {
 
   return (
     <div
-      className={style({ transitionDown: toggleDonut ? 0 : 10 })}
+      className={style({ transitionDown: toggleDonut ? 0 : 10, toggle: toggleDonut })}
       onClick={() => setToggleDonut(!toggleDonut)}
     >
       {toggleDonut ? <Donut3D /> : <pre data-testid="Donut">{donut.frame}</pre>}
