@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
-import Error from '.'
+import { ErrorPage } from '.'
 
 test('Render Error Component', () => {
-  render(<Error />)
+  render(<ErrorPage />)
   const linkElement = screen.getByText(/This is the Error Page/i)
   expect(linkElement).toBeInTheDocument()
 })

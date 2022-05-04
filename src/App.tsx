@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Donut from 'Pages/Donut'
-import About from 'Pages/About'
-import PhotoGallery from 'Pages/PhotoGallery'
+import { About } from 'Pages/About'
+import { PhotoGallery } from 'Pages/PhotoGallery'
 // import Blog from 'Pages/Blog'
-import ErrorPage from 'Pages/Error'
-import Header from 'Components/Header'
+import { ErrorPage } from 'Pages/Error'
+import { Header } from 'Components/Header'
 
 function App() {
   return (

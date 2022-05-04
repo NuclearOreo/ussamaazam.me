@@ -1,6 +1,6 @@
 import { IconStyles, containerStyle } from './styles'
 
-function Icon() {
+export function Icon() {
   return (
     <div className={containerStyle}>
       <div className="hvr-grow">
@@ -92,5 +92,3 @@ function Icon() {
     </div>
   )
 }
-
-export default Icon

@@ -4,7 +4,7 @@ import LinkedinIcon from 'Icons/linkedin.svg'
 import UnsplashIcon from 'Icons/unsplash.svg'
 import { style } from './styles'
 
-function About() {
+export function About() {
   return (
     <div className={style}>
       <div className="aboutMeStyle">
@@ -35,5 +35,3 @@ function About() {
     </div>
   )
 }
-
-export default About

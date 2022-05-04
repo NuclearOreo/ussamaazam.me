@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
-import Blogs from '.'
+import { BlogPage } from '.'
 
 test('Render Essays Component', () => {
-  render(<Blogs />)
+  render(<BlogPage />)
   const linkElement = screen.getByText(/This is Blogs/i)
   expect(linkElement).toBeInTheDocument()
 })

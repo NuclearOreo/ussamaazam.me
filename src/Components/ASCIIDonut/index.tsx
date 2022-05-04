@@ -2,7 +2,7 @@
 /* eslint-disable no-bitwise */
 /* eslint-disable max-len */
 /* eslint-disable no-param-reassign */
-const asciiDonut = (
+export const asciiDonut = (
   A: number,
   B: number,
 ): {
@@ -46,5 +46,3 @@ const asciiDonut = (
   }
   return { frame: b.join(''), a: A, b: B }
 }
-
-export default asciiDonut

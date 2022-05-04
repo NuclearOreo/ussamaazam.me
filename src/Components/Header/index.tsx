@@ -1,7 +1,7 @@
-import NavBar from 'Components/NavBar'
-import Icon from 'Components/Icon'
+import { NavBar } from 'Components/NavBar'
+import { Icon } from 'Components/Icon'
 
-function Header() {
+export function Header() {
   return (
     <>
       <Icon />
@@ -9,5 +9,3 @@ function Header() {
     </>
   )
 }
-
-export default Header

@@ -1,7 +1,7 @@
 import { Link, Outlet } from 'react-router-dom'
 import { styles } from './styles'
 
-function NavBar() {
+export function NavBar() {
   return (
     <>
       <div className={styles}>
@@ -22,5 +22,3 @@ function NavBar() {
     </>
   )
 }
-
-export default NavBar

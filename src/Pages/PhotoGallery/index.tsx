@@ -3,7 +3,7 @@ import { container, columns, column, loadingStyle } from './styles'
 import { photoPagination } from 'APIs/Unsplash'
 import loadingAnimation from 'Icons/three-dots.svg'
 
-function PhotoGallery() {
+export function PhotoGallery() {
   const imageCols: JSX.Element[][] = [[], [], []]
   const colsHeights = [0, 0, 0]
   const [pageNumber, setPageNumber] = useState(1)
@@ -76,5 +76,3 @@ function PhotoGallery() {
     </div>
   )
 }
-
-export default PhotoGallery

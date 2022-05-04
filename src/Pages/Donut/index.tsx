@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
-import asciiDonut from 'Components/ASCIIDonut'
-import Donut3D from 'Components/Donut3D'
+import { asciiDonut } from 'Components/ASCIIDonut'
+import { Donut3D } from 'Components/Donut3D'
 import { style } from './styles'
 
 function Donut() {
