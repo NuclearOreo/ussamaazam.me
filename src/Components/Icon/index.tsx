@@ -1,4 +1,4 @@
-import { IconStyles, containerStyle } from './IconStyle'
+import { IconStyles, containerStyle } from './styles'
 
 function Icon() {
   return (
