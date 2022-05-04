@@ -4,7 +4,7 @@ import LinkedinIcon from 'Icons/linkedin.svg'
 import UnsplashIcon from 'Icons/unsplash.svg'
 import { style } from './styles'
 
-export function About() {
+export function AboutPage() {
   return (
     <div className={style}>
       <div className="aboutMeStyle">

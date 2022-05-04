@@ -3,7 +3,7 @@ import { asciiDonut } from 'Components/ASCIIDonut'
 import { Donut3D } from 'Components/Donut3D'
 import { style } from './styles'
 
-function Donut() {
+export function DonutPage() {
   const [donut, setDonut] = useState({ frame: '', a: 0, b: 0 })
   const timerId = useRef<NodeJS.Timer>()
   const [toggleDonut, setToggleDonut] = useState(true)
@@ -29,5 +29,3 @@ function Donut() {
     </div>
   )
 }
-
-export default Donut

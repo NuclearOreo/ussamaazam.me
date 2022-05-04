@@ -1,7 +1,7 @@
 import { render /* screen */ } from '@testing-library/react'
-import { About } from '.'
+import { AboutPage } from '.'
 
-test('Render About Component', () => {
-  render(<About />)
+test('Render AboutPage Component', () => {
+  render(<AboutPage />)
   expect(2).toEqual(2)
 })
