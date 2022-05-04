@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback } from 'react'
-import { container, columns, column, loadingStyle } from './PhotoGalleryStyle'
+import { container, columns, column, loadingStyle } from './styles'
 import { photoPagination } from 'APIs/Unsplash'
 import loadingAnimation from 'Icons/three-dots.svg'
 

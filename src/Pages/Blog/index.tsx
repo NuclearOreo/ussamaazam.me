@@ -1,4 +1,4 @@
-import { style } from './BlogStyle'
+import { style } from './styles'
 
 function Blog() {
   return <div className={style}>This is Blogs</div>
