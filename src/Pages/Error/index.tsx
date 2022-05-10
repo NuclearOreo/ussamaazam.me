@@ -1,7 +1,5 @@
-import { style } from './ErrorStyle'
+import { style } from './styles'
 
-function Error() {
+export function ErrorPage() {
   return <div className={style}>This is the Error Page</div>
 }
-
-export default Error

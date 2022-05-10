@@ -1,8 +1,8 @@
 import { render /* screen */ } from '@testing-library/react'
-import PhotoGallery from '.'
+import { PhotoGalleryPage } from '.'
 
 test('Render PhotoGallery Component', () => {
-  render(<PhotoGallery />)
+  render(<PhotoGalleryPage />)
   // const linkElement = screen.getByText(/This is the Photo Gallery/i)
   expect(2 + 3).toEqual(5)
 })

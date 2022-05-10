@@ -1,9 +1,9 @@
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { canvasStyle } from './style'
+import { canvasStyle } from './styles'
 import Donut48 from './Donut48'
 
-export default function Donut3D() {
+export function Donut3D() {
   return (
     <div className={canvasStyle}>
       <Canvas>

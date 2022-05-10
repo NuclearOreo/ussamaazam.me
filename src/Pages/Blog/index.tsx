@@ -1,7 +1,5 @@
-import { style } from './BlogStyle'
+import { style } from './styles'
 
-function Blog() {
+export function BlogPage() {
   return <div className={style}>This is Blogs</div>
 }
-
-export default Blog

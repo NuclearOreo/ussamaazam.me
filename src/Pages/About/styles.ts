@@ -1,9 +1,7 @@
 import { css } from '@emotion/css'
 import { GunMetal } from 'Styles/color'
 import { fontFamily } from 'Styles/fonts'
-import {
-  buzzOut, hang, pulseShrink, wobbleToTopRight,
-} from './hoverAffects'
+import { buzzOut, hang, pulseShrink, wobbleToTopRight } from './hoverAffects'
 
 export const style = css`
   .aboutMeStyle {
@@ -11,7 +9,7 @@ export const style = css`
     font-family: ${fontFamily.Poppins};
     font-size: 18px;
     margin: auto;
-    width: 40vw;
+    width: 50vw;
     letter-spacing: 0.3px;
   }
 

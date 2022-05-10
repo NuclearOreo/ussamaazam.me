@@ -1,9 +1,9 @@
 import { useState, useRef, useCallback } from 'react'
-import { container, columns, column, loadingStyle } from './PhotoGalleryStyle'
-import { photoPagination } from 'CustomHooks/UnsplashHooks'
+import { container, columns, column, loadingStyle } from './styles'
+import { photoPagination } from 'APIs/Unsplash'
 import loadingAnimation from 'Icons/three-dots.svg'
 
-function PhotoGallery() {
+export function PhotoGalleryPage() {
   const imageCols: JSX.Element[][] = [[], [], []]
   const colsHeights = [0, 0, 0]
   const [pageNumber, setPageNumber] = useState(1)
@@ -23,6 +23,11 @@ function PhotoGallery() {
     },
     [loading, endOfPage, error],
   )
+
+  if (error) {
+    // eslint-disable-next-line no-alert
+    window.alert('Error Fetching Photo')
+  }
 
   images.forEach((image, index) => {
     const minIndex = colsHeights.indexOf(Math.min(...colsHeights))
@@ -71,5 +76,3 @@ function PhotoGallery() {
     </div>
   )
 }
-
-export default PhotoGallery

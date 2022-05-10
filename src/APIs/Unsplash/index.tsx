@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
-import Unsplash from 'APIs/Unsplash'
+import Unsplash from 'APIs/Unsplash/Unsplash'
 import { Datum } from 'APIs/Unsplash/types'
-import { AxiosError } from 'axios'
 
 const unsplash = new Unsplash()
 
@@ -18,12 +17,13 @@ export function photoPagination(pageNumber?: number, perPage?: number) {
       .getMyPhoto({ pageNumber, perPage })
       .then((res) => {
         setLoading(false)
-        setImages([...images, ...res.data])
-      })
-      .catch((errorRes: AxiosError) => {
-        if (errorRes.message === 'Request failed with status code 403') {
+        if (res.data.length > 0) {
+          setImages([...images, ...res.data])
+        } else {
           setEndOfPage(true)
         }
+      })
+      .catch(() => {
         setLoading(false)
         setError(true)
       })
