@@ -79,9 +79,9 @@ export default function Model({ ...props }: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/donut48.glb') as GLTFResult
 
   useEffect(() => {
-    const randomX = Math.random()
-    const randomY = Math.random()
-    const randomZ = Math.random()
+    const getSign = () => (Math.random() < 0.5 ? -1 : 1)
+    const getRandom = () => Math.random() * getSign()
+    const [randomX, randomY, randomZ] = [getRandom(), getRandom(), getRandom()]
 
     group.current!.rotation.x = randomX
     group.current!.rotation.y = randomY
