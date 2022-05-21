@@ -1,6 +1,8 @@
+// Where to find Present: https://github.com/matteobruni/tsparticles/tree/main/website/presets
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
 import { Engine } from 'tsparticles-engine'
+import { Cultured } from 'Styles/color'
 
 export function ErrorPage() {
   const particlesInit = async (main: Engine) => {
@@ -34,7 +36,11 @@ export function ErrorPage() {
             value: '#ffffff',
           },
           shape: {
-            type: 'circle',
+            type: 'char',
+            character: {
+              value: ['🍩', '🍪', '🥑', '🥞', '🧇', '🥐', '🥞', '🍰'],
+              fill: true,
+            },
           },
           opacity: {
             value: 1,
@@ -47,7 +53,7 @@ export function ErrorPage() {
             },
           },
           size: {
-            value: 3,
+            value: 12,
             random: true,
             anim: {
               enable: false,
@@ -117,9 +123,7 @@ export function ErrorPage() {
         },
         retina_detect: true,
         background: {
-          color: '#232741',
-          image:
-            "url('http://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1237px-NASA_logo.svg.png')",
+          color: Cultured.original,
           position: '50% 50%',
           repeat: 'no-repeat',
           size: '20%',
