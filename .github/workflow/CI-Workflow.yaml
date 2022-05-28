@@ -2,7 +2,9 @@ name: Website CI
 
 on:
   push:
-    branch: deployment
+    branches: [deployment]
+
+  workflow_dispatch:
 
 jobs:
   build:
