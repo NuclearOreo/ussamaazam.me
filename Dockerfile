@@ -8,5 +8,7 @@ COPY . .
 
 RUN npm install
 
+RUN npm run prepare
+
 ENTRYPOINT ["tail"]
 CMD [ "-f", "/dev/null" ]
