@@ -2,7 +2,7 @@ name: Website CI
 
 on:
   push:
-    branches: [deployment]
+    branch: deployment
 
 jobs:
   build:
