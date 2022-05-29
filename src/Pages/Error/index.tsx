@@ -12,7 +12,7 @@ export function ErrorPage() {
   // const particlesLoaded = async (container: unknown) => {
   //   // eslint-disable-next-line no-console
   //   console.log(container)
-  //}
+  // }
 
   return (
     <div>Hello</div>
