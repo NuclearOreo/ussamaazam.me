@@ -1,14 +1,10 @@
-FROM node:16-alpine
-
-RUN apk add git
-
-WORKDIR /app/
-
+FROM node:16-alpine as builder
+WORKDIR /app
 COPY . .
+RUN npm install && npm run build
 
-RUN npm install
-
-RUN npm run prepare
-
-ENTRYPOINT ["tail"]
-CMD [ "-f", "/dev/null" ]
+FROM nginx:alpine
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
+COPY --from=builder /app/build .
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
