@@ -6,7 +6,7 @@ services:
     volumes:
       - ./:/app/
       - node_modules:/app/node_modules
-      - .husky:/app/.husky
+      - husky:/app/.husky/_
     environment:
       - REACT_APP_UNSPLASH=${REACT_APP_UNSPLASH}
     ports:
@@ -16,4 +16,4 @@ services:
 
 volumes:
   node_modules:
-  .husky:
+  husky:
