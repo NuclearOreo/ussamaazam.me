@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: 16.x
           cache: 'npm'
+      - run: node --version
       - run: npm install
       - run: npm run lint
       - run: npm run test -- --coverage --watchAll=false
+      - run: npm run build
