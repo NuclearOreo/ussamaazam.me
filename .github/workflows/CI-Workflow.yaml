@@ -17,8 +17,12 @@ jobs:
         with:
           node-version: 16.15.1
           cache: 'npm'
-      - run: node --version
       - run: npm install
       - run: npm run lint
       - run: npm run test -- --coverage --watchAll=false
       - run: npm run build
+
+  deploy:
+    runs-on: ubuntu-latest
+      - uses: actions/checkout@v3
+      - run: ls
