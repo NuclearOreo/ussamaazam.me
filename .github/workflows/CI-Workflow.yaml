@@ -17,8 +17,11 @@ jobs:
         with:
           node-version: 16.15.1
           cache: 'npm'
+      name: NPM Install
       - run: npm install
+      name: Run Linter
       - run: npm run lint
+      name: Run Unit Tests
       - run: npm run test -- --coverage --watchAll=false
+      name: Build Site
       - run: npm run build
-      - run: ls
