@@ -9,7 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js 16.15.1
@@ -17,11 +16,11 @@ jobs:
         with:
           node-version: 16.15.1
           cache: 'npm'
-      name: NPM Install
-      - run: npm install
-      name: Run Linter
-      - run: npm run lint
-      name: Run Unit Tests
-      - run: npm run test -- --coverage --watchAll=false
-      name: Build Site
-      - run: npm run build
+      - name: NPM Install
+        run: npm install
+      - name: Run Linter
+        run: npm run lint
+      - name: Run Unit Tests
+        run: npm run test -- --coverage --watchAll=false
+      - name: Build Site
+        run: npm run build
