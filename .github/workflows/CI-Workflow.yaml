@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: google-github-actions/setup-gcloud@main
+      - uses: google-github-actions/setup-gcloud@v0
         with:
           service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
           project_id: ${{ env.PROJECT_ID }}
@@ -29,7 +29,7 @@ jobs:
           node-version: 16.15.1
           cache: 'npm'
 
-      - name: NPM Install
+      - name: Install Packages
         run: npm install
 
       - name: Run Linter
@@ -48,10 +48,6 @@ jobs:
         run: gcloud auth configure-docker --quiet
 
       - name: Push Docker Image to Container Registry (GCR)
-        env:
-          GIT_TAG: v0.1.0
         run: |-
           docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
-          docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG
           docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
-          docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG
