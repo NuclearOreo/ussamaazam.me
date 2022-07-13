@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  deploy-site:
     runs-on: ubuntu-latest
 
     env:
@@ -52,15 +52,5 @@ jobs:
           docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
           docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
 
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: google-github-actions/setup-gcloud@v0
-        with:
-          service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
-          project_id: ${{ env.PROJECT_ID }}
-          export_default_credentials: true
-
-      - name:
-        run: gcloud ls
+      - name: SSH
+        run: gcloud compute ssh root@website
