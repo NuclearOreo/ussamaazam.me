@@ -51,6 +51,3 @@ jobs:
         run: |-
           docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
           docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
-
-      - name: SSH
-        run: gcloud compute ssh root@website
