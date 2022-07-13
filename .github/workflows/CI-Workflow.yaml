@@ -53,9 +53,9 @@ jobs:
           docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
 
   deploy:
+    runs-on: ubuntu-latest
+
     steps:
-      runs-on: ubuntu-latest
-      
       - uses: google-github-actions/setup-gcloud@v0
         with:
           service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
