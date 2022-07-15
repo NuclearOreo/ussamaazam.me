@@ -51,3 +51,10 @@ jobs:
         run: |-
           docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
           docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
+
+      - name: 'compute-ssh'
+        uses: 'google-github-actions/ssh-compute@v0'
+        with:
+          instance_name: 'website'
+          zone: 'us-east1-b'
+          command: 'echo Hello world'
