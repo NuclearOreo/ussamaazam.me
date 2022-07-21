@@ -58,4 +58,4 @@ jobs:
           instance_name: website
           zone: us-east1-b
           ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
-          command: 'echo Hello world'
+          command: docker images
