@@ -59,4 +59,4 @@ jobs:
           zone: us-east1-b
           ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
           command: |-
-            sudo docker pull $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
+            sudo docker pull gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
