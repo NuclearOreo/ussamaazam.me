@@ -60,7 +60,22 @@ jobs:
           zone: us-east1-b
           ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
           user: root
-          command: |-
-            docker pull gcr.io/website-353503/site:latest
-            docker stop $(docker ps -a -q)
-            docker run gcr.io/website-353503/site -d -p 80:80
+          command: docker pull gcr.io/website-353503/site:latest
+
+      - name: Devrdtg
+        uses: google-github-actions/ssh-compute@v0
+        with:
+          instance_name: website
+          zone: us-east1-b
+          ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
+          user: root
+          command: docker stop $(docker ps -a -q)
+
+      - name: Devrdtgewvr
+        uses: google-github-actions/ssh-compute@v0
+        with:
+          instance_name: website
+          zone: us-east1-b
+          ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
+          user: root
+          command: docker run gcr.io/website-353503/site -d -p 80:80
