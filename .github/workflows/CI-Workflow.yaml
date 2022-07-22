@@ -22,56 +22,56 @@ jobs:
 
       - uses: google-github-actions/setup-gcloud@v0
 
-      # - name: Use Node.js 16.15.1
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 16.15.1
-      #     cache: 'npm'
+      - name: Use Node.js 16.15.1
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.1
+          cache: 'npm'
 
-      # - name: Install Packages
-      #   run: npm install
+      - name: Install Packages
+        run: npm install
 
-      # - name: Run Linter
-      #   run: npm run lint
+      - name: Run Linter
+        run: npm run lint
 
-      # - name: Run Unit Tests
-      #   run: npm run test -- --coverage --watchAll=false
+      - name: Run Unit Tests
+        run: npm run test -- --coverage --watchAll=false
 
-      # - name: Build Project
-      #   run: |-
-      #     export REACT_APP_UNSPLASH=$UNSPLASH
-      #     npm run build
+      - name: Build Project
+        run: |-
+          export REACT_APP_UNSPLASH=$UNSPLASH
+          npm run build
 
-      # - name: Build Docker Image
-      #   run: docker build -t site:latest .
+      - name: Build Docker Image
+        run: docker build -t site:latest .
 
-      # - name: Configure Docker Client
-      #   run: gcloud auth configure-docker --quiet
+      - name: Configure Docker Client
+        run: gcloud auth configure-docker --quiet
 
-      # - name: Push Docker Image to Container Registry (GCR)
-      #   run: |-
-      #     docker tag site:latest gcr.io/website-353503/site:latest
-      #     docker push gcr.io/website-353503/site:latest
+      - name: Push Docker Image to Container Registry (GCR)
+        run: |-
+          docker tag site:latest gcr.io/website-353503/site:latest
+          docker push gcr.io/website-353503/site:latest
 
-      # - name: Deploy Site
-      #   uses: google-github-actions/ssh-compute@v0
-      #   with:
-      #     instance_name: website
-      #     zone: us-east1-b
-      #     ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
-      #     user: root
-      #     command: docker pull gcr.io/website-353503/site:latest
+      - name: Pull Image
+        uses: google-github-actions/ssh-compute@v0
+        with:
+          instance_name: website
+          zone: us-east1-b
+          ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
+          user: root
+          command: docker pull gcr.io/website-353503/site:latest
 
-      # - name: Devrdtg
-      #   uses: google-github-actions/ssh-compute@v0
-      #   with:
-      #     instance_name: website
-      #     zone: us-east1-b
-      #     ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
-      #     user: root
-      #     command: docker stop $(docker ps -a -q)
+      - name: Stop Containers
+        uses: google-github-actions/ssh-compute@v0
+        with:
+          instance_name: website
+          zone: us-east1-b
+          ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
+          user: root
+          command: docker stop $(docker ps -a -q)
 
-      - name: Devrdtgewvr
+      - name: Deploy Site
         uses: google-github-actions/ssh-compute@v0
         with:
           instance_name: website
