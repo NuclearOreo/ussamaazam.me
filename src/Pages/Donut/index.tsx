@@ -6,7 +6,7 @@ import { style } from './styles'
 export function DonutPage() {
   const [donut, setDonut] = useState({ frame: '', a: 0, b: 0 })
   const timerId = useRef<NodeJS.Timer>()
-  const [toggleDonut, setToggleDonut] = useState(true)
+  const [toggleDonut, setToggleDonut] = useState(false)
 
   useEffect(() => {
     timerId.current = setInterval(() => {
