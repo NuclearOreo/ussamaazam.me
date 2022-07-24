@@ -1,7 +1,7 @@
 name: Website CI/CD
 
 on:
-  pull_request:
+  push:
     branches: [version-2]
 
   workflow_dispatch:
