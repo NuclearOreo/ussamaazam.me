@@ -1,9 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { DonutPage } from 'Pages/Donut'
 import { AboutPage } from 'Pages/About'
 import { PhotoGalleryPage } from 'Pages/PhotoGallery'
 // import Blog from 'Pages/Blog'
-import { ErrorPage } from 'Pages/Error'
 import { Header } from 'Components/Header'
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
           <Route path="gallery" element={<PhotoGalleryPage />} />
           {/* <Route path="blog" element={<Blog />} /> */}
         </Route>
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   )
