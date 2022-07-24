@@ -1,8 +1,8 @@
-name: Website CI
+name: Website CI/CD
 
 on:
-  push:
-    branches: [deployment]
+  pull_request:
+    branches: [version-2]
 
   workflow_dispatch:
 
