@@ -1,10 +1,12 @@
 version: '3.9'
 services:
   app:
-    build: 
+    build:
+      context: .
       dockerfile: Dockerfile.local
     volumes:
       - ./:/app/
+      - git:/app/.git
       - node_modules:/app/node_modules
       - husky:/app/.husky/_
     environment:
@@ -17,3 +19,4 @@ services:
 volumes:
   node_modules:
   husky:
+  git:
