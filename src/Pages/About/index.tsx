@@ -8,15 +8,15 @@ export function AboutPage() {
   return (
     <div className={style}>
       <div className="aboutMeStyle">
-        Hey, my name is Ussama Azam, and I&apos;m a young software engineer early in my career. I
-        have many interests that range from photography to random technical stuff to more random
-        technical stuff. It seems to me that I&apos;m a lifelong learner cause I can&apos;t seem to
-        stop reading Hacker News and trying random projects, an obsession fueled by boredom. Ever
-        since I learned about Y Combinator and constantly reading the great blogs that always pop up
-        on the site, I&apos;ve decided to attempt writing blogs. The whole goal of this website is
-        to motivate me to start writing blogs (hopefully become a better writer in the process) and
-        showcase my photos from my photography venture. Maybe I&apos;ll decide to go out of my way
-        to showcase the exciting stuff I made, like the stupid donut on my home page.
+        I&apos;m a Software Engineer trying to figure out what to delve into in life. Ever since I
+        stumbled onto Hacker News, I&apos;ve been obsessively reading countless blogs and essays
+        I&apos;ve come across, and it got me inspired. To see so many people actively investigating,
+        exploring, and furthering their education in an unfettered sense got me thinking I should do
+        the same. So the whole point of this website is to host blogs I write up in the hopes of
+        becoming a better writer, communicator, and thinker. Writing has always been my weak point
+        throughout my life, and I have always been self-conscious about how I came off, so
+        hopefully, I&apos;ll be pushing out of my comfort zone and producing thoughts that catch
+        people&apos;s attention.
       </div>
       <div className="linksStyle">
         <a href="https://github.com/NuclearOreo">
