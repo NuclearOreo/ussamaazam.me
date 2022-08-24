@@ -76,7 +76,9 @@ type GLTFResult = GLTF & {
 
 export default function Model({ ...props }: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>()
-  const { nodes, materials } = useGLTF('/donut48.glb') as GLTFResult
+  const { nodes, materials } = useGLTF(
+    'https://storage.googleapis.com/ussamazam-assets/donut48.glb',
+  ) as GLTFResult
 
   useEffect(() => {
     const getSign = () => (Math.random() < 0.5 ? -1 : 1)
@@ -443,4 +445,4 @@ export default function Model({ ...props }: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/donut48.glb')
+useGLTF.preload('https://storage.googleapis.com/ussamazam-assets/donut48.glb')
