@@ -68,7 +68,7 @@ export function PhotoGalleryPage() {
           </div>
           {loading && (
             <div className={loadingStyle}>
-              <img src={loadingAnimation} alt="Loading SVG" />
+              <img src={loadingAnimation} alt="Loading SVG" loading="lazy" />
             </div>
           )}
         </div>
