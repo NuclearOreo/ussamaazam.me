@@ -20,3 +20,7 @@ export const style = ({ transitionDown, toggle }: StyleType) => css`
     transform: translate(0, ${toggle ? 20 : 40}%);
   }
 `
+
+export const asciiDonutStyle = css`
+  padding: 1vw;
+`
