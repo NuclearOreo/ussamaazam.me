@@ -10,7 +10,7 @@ export const styles = css`
   font-weight: 500;
   margin-top: 1.5vw;
   margin-bottom: 4vw;
-  font-size: clamp(1.5rem, 2vw, 5rem);
+  font-size: clamp(1.3rem, 1.5vw, 5rem);
 
   .link {
     text-decoration: none;
