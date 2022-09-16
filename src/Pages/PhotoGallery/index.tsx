@@ -4,8 +4,15 @@ import { photoPagination } from 'APIs/Unsplash'
 import loadingAnimation from 'Icons/three-dots.svg'
 
 export function PhotoGalleryPage() {
-  const imageCols: JSX.Element[][] = [[], [], []]
-  const colsHeights = [0, 0, 0]
+  const numOfCols = window.screen.width <= 767 ? 1 : 3
+  const imageCols: JSX.Element[][] = []
+  const colsHeights: number[] = []
+
+  for (let i = 0; i < numOfCols; i += 1) {
+    imageCols.push([])
+    colsHeights.push(0)
+  }
+
   const [pageNumber, setPageNumber] = useState(1)
   const { images, loading, endOfPage, error } = photoPagination(pageNumber, 30)
 

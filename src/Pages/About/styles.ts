@@ -30,21 +30,29 @@ export const style = css`
     font-size: 12px;
     margin-top: 30px;
     .aboutMeStyle {
-      margin-top: 40px;
-      margin-bottom: 40px;
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
     .linksStyle {
       img {
-        width: 15px;
+        width: 20px;
+        margin-left: 1vw;
+        margin-right: 1vw;
       }
     }
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
     font-size: 18px;
+    .aboutMeStyle {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
     .linksStyle {
       img {
-        width: 20px;
+        width: 30px;
+        margin-left: 1vw;
+        margin-right: 1vw;
       }
     }
   }

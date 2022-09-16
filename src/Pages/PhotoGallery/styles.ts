@@ -17,6 +17,10 @@ export const columns = css`
 export const column = css`
   width: 33.33%;
 
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+
   img {
     width: 95%;
     margin: 10px;
