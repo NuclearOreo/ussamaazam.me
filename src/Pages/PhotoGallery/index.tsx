@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback } from 'react'
-import { container, columns, column, loadingStyle } from './styles'
+import { container, columnsStyles, columnStyles, loadingStyle } from './styles'
 import { photoPagination } from 'APIs/Unsplash'
 import loadingAnimation from 'Icons/three-dots.svg'
 
@@ -63,14 +63,14 @@ export function PhotoGalleryPage() {
   return (
     <div>
       <div className={container}>
-        <div className={columns}>
-          <div key="col1" className={column}>
+        <div className={columnsStyles}>
+          <div key="col1" className={columnStyles}>
             {imageCols[0]}
           </div>
-          <div key="col2" className={column}>
+          <div key="col2" className={columnStyles}>
             {imageCols[1]}
           </div>
-          <div key="col3" className={column}>
+          <div key="col3" className={columnStyles}>
             {imageCols[2]}
           </div>
           {loading && (
