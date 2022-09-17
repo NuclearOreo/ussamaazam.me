@@ -10,11 +10,7 @@ export const styles = css`
   font-weight: 500;
   margin-top: 1.5vw;
   margin-bottom: 4vw;
-  font-size: 20px;
-
-  @media screen and (max-aspect-ratio: 11/10) {
-    font-size: 15px;
-  }
+  font-size: clamp(1.3rem, 1.5vw, 5rem);
 
   .link {
     text-decoration: none;

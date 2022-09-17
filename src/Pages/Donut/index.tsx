@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import { asciiDonut } from 'Components/ASCIIDonut'
 import { Donut3D } from 'Components/Donut3D'
-import { style } from './styles'
+import { style, asciiDonutStyle } from './styles'
 
 export function DonutPage() {
   const [donut, setDonut] = useState({ frame: '', a: 0, b: 0 })
@@ -25,7 +25,13 @@ export function DonutPage() {
       className={style({ transitionDown: toggleDonut ? 0 : 10, toggle: toggleDonut })}
       onClick={() => setToggleDonut(!toggleDonut)}
     >
-      {toggleDonut ? <Donut3D /> : <pre data-testid="Donut">{donut.frame}</pre>}
+      {toggleDonut ? (
+        <Donut3D />
+      ) : (
+        <pre className={asciiDonutStyle} data-testid="Donut">
+          {donut.frame}
+        </pre>
+      )}
     </div>
   )
 }

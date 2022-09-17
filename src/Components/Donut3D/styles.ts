@@ -5,8 +5,18 @@ export const canvasStyle = css`
   width: 30vw;
   height: 30vw;
 
-  @media screen and (max-aspect-ratio: 3/2) {
+  @media (max-width: 767px) {
     width: 100vw;
     height: 100vw;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  @media (min-width: 1024px) {
+    width: 30vw;
+    height: 30vw;
   }
 `

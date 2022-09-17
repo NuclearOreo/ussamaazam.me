@@ -7,15 +7,19 @@ export const container = css`
   display: block;
 `
 
-export const columns = css`
+export const columnsStyles = css`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 `
 
-export const column = css`
+export const columnStyles = css`
   width: 33.33%;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 
   img {
     width: 95%;

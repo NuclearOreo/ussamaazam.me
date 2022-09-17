@@ -7,7 +7,6 @@ export const style = css`
   .aboutMeStyle {
     color: ${GunMetal.light3};
     font-family: ${fontFamily.Poppins};
-    font-size: 18px;
     margin: auto;
     width: 50vw;
     letter-spacing: 0.3px;
@@ -27,17 +26,42 @@ export const style = css`
     }
   }
 
-  @media only screen and (max-width: 800px) {
+  @media (max-width: 767px) {
+    font-size: 12px;
+    margin-top: 30px;
     .aboutMeStyle {
-      font-size: 9px;
-      width: 60vw;
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
-
     .linksStyle {
       img {
-        width: 15px;
+        width: 20px;
         margin-left: 1vw;
         margin-right: 1vw;
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 18px;
+    .aboutMeStyle {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .linksStyle {
+      img {
+        width: 30px;
+        margin-left: 1vw;
+        margin-right: 1vw;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+    .linksStyle {
+      img {
+        width: 30px;
       }
     }
   }
