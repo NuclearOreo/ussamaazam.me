@@ -19,7 +19,7 @@ class Unsplash {
 
   async getMyPhoto({ pageNumber, perPage }: getPhotoType): Promise<PhotosResponse> {
     return this.service.get(
-      `/unsplash/get_photos?page=${pageNumber ?? 1}&per_page=${perPage ?? 10}`,
+      `/unsplash/get_photos?page_number=${pageNumber ?? 1}&per_page=${perPage ?? 10}`,
     )
   }
 }
