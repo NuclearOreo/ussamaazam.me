@@ -11,7 +11,7 @@ class Unsplash {
   private service: AxiosInstance
 
   constructor() {
-    this.baseUrl = 'https://api.unsplash.com'
+    this.baseUrl = 'https://unsplash-api-dsoicsjfka-uc.a.run.app'
     this.service = axios.create({
       baseURL: this.baseUrl,
       headers: {
@@ -22,7 +22,7 @@ class Unsplash {
 
   async getMyPhoto({ pageNumber, perPage }: getPhotoType): Promise<PhotosResponse> {
     return this.service.get(
-      `/users/ussamaazam/photos?page=${pageNumber ?? 1}&per_page=${perPage ?? 10}`,
+      `/unsplash/get_photos?page=${pageNumber ?? 1}&per_page=${perPage ?? 10}`,
     )
   }
 }
