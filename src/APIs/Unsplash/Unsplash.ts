@@ -14,9 +14,6 @@ class Unsplash {
     this.baseUrl = 'https://unsplash-api-dsoicsjfka-uc.a.run.app'
     this.service = axios.create({
       baseURL: this.baseUrl,
-      headers: {
-        Authorization: process.env.REACT_APP_UNSPLASH ?? '',
-      },
     })
   }
 
