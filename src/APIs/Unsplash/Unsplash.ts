@@ -1,5 +1,5 @@
-import axios, { AxiosInstance } from 'axios'
-import { PhotosResponse } from './types'
+import axios, { AxiosInstance, AxiosResponse } from 'axios'
+import { UnsplashType } from './types'
 
 interface getPhotoType {
   pageNumber?: number
@@ -17,10 +17,11 @@ class Unsplash {
     })
   }
 
-  async getMyPhoto({ pageNumber, perPage }: getPhotoType): Promise<PhotosResponse> {
-    return this.service.get(
+  async getMyPhoto({ pageNumber, perPage }: getPhotoType): Promise<AxiosResponse<UnsplashType[]>> {
+    const response = this.service.get(
       `/unsplash/get_photos?page_number=${pageNumber ?? 1}&per_page=${perPage ?? 10}`,
     )
+    return response
   }
 }
 
