@@ -9,12 +9,8 @@ services:
       - git:/app/.git
       - node_modules:/app/node_modules
       - husky:/app/.husky/_
-    environment:
-      - REACT_APP_UNSPLASH=${REACT_APP_UNSPLASH}
     ports:
       - 3000:3000
-    stdin_open: true
-    tty: true
 
 volumes:
   node_modules:

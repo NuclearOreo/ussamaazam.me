@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 import Unsplash from 'APIs/Unsplash/Unsplash'
-import { Datum } from 'APIs/Unsplash/types'
+import { UnsplashType } from 'APIs/Unsplash/types'
 
 const unsplash = new Unsplash()
 
 export function photoPagination(pageNumber?: number, perPage?: number) {
-  const [images, setImages] = useState<Datum[]>([])
+  const [images, setImages] = useState<UnsplashType[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
   const [endOfPage, setEndOfPage] = useState<boolean>(false)

@@ -1,5 +1,5 @@
-import axios, { AxiosInstance } from 'axios'
-import { PhotosResponse } from './types'
+import axios, { AxiosInstance, AxiosResponse } from 'axios'
+import { UnsplashType } from './types'
 
 interface getPhotoType {
   pageNumber?: number
@@ -11,19 +11,17 @@ class Unsplash {
   private service: AxiosInstance
 
   constructor() {
-    this.baseUrl = 'https://api.unsplash.com'
+    this.baseUrl = 'https://unsplash-api-dsoicsjfka-uc.a.run.app'
     this.service = axios.create({
       baseURL: this.baseUrl,
-      headers: {
-        Authorization: process.env.REACT_APP_UNSPLASH ?? '',
-      },
     })
   }
 
-  async getMyPhoto({ pageNumber, perPage }: getPhotoType): Promise<PhotosResponse> {
-    return this.service.get(
-      `/users/ussamaazam/photos?page=${pageNumber ?? 1}&per_page=${perPage ?? 10}`,
+  async getMyPhoto({ pageNumber, perPage }: getPhotoType): Promise<AxiosResponse<UnsplashType[]>> {
+    const response = this.service.get(
+      `/unsplash/get_photos?page_number=${pageNumber ?? 1}&per_page=${perPage ?? 10}`,
     )
+    return response
   }
 }
 
