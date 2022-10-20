@@ -4,7 +4,8 @@ import { photoPagination } from 'APIs/Unsplash'
 import loadingAnimation from 'Icons/three-dots.svg'
 
 export function PhotoGalleryPage() {
-  const numOfCols = window.screen.width <= 767 ? 1 : 3
+  const mobileWidth = 767
+  const numOfCols = window.screen.width <= mobileWidth ? 1 : 3
   const imageCols: JSX.Element[][] = []
   const colsHeights: number[] = []
 
@@ -63,6 +64,7 @@ export function PhotoGalleryPage() {
   return (
     <div>
       <div className={container}>
+        <div>This is my gallery</div>
         <div className={columnsStyles}>
           <div key="col1" className={columnStyles}>
             {imageCols[0]}
