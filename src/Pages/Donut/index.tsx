@@ -4,6 +4,7 @@ import { Donut3D } from 'Components/Donut3D'
 import { style, asciiDonutStyle } from './styles'
 
 export function DonutPage() {
+  const isMobile = window.screen.width <= 768
   const [donut, setDonut] = useState({ frame: '', a: 0, b: 0 })
   const timerId = useRef<NodeJS.Timer>()
   const [toggleDonut, setToggleDonut] = useState(false)
@@ -23,7 +24,7 @@ export function DonutPage() {
   return (
     <div
       className={style({ transitionDown: toggleDonut ? 0 : 10, toggle: toggleDonut })}
-      onClick={() => setToggleDonut(!toggleDonut)}
+      onClick={!isMobile ? () => setToggleDonut(!toggleDonut) : undefined}
     >
       {toggleDonut ? (
         <Donut3D />
