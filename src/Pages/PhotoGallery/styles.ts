@@ -1,4 +1,6 @@
 import { css } from '@emotion/css'
+import { GunMetal } from 'Styles/color'
+import { fontFamily } from 'Styles/fonts'
 
 export const container = css`
   width: 70vw;
@@ -17,7 +19,7 @@ export const columnsStyles = css`
 export const columnStyles = css`
   width: 33.33%;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 
@@ -47,8 +49,84 @@ export const columnStyles = css`
 `
 
 export const loadingStyle = css`
-  width: 30px;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
   display: block;
+`
+
+export const descriptionStyle = css`
+  color: ${GunMetal.light3};
+  font-family: ${fontFamily.Poppins};
+  text-align: center;
+  margin: auto;
+  width: 50vw;
+  letter-spacing: 0.3px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 18px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+    padding-bottom: 50px;
+  }
+`
+
+export const errorContainer = css`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+`
+
+export const errorImgStyle = css`
+  @media (max-width: 768px) {
+    img {
+      width: 125px;
+      margin-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    img {
+      width: 250px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    img {
+      width: 500px;
+    }
+  }
+`
+
+export const errorTextStyle = css`
+  color: ${GunMetal.light3};
+  font-family: ${fontFamily.Poppins};
+  font-size: 20px;
+  letter-spacing: 0.3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+    margin-bottom: 200px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 `

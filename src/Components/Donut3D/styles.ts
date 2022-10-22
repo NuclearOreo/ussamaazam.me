@@ -5,7 +5,7 @@ export const canvasStyle = css`
   width: 30vw;
   height: 30vw;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     width: 100vw;
     height: 100vw;
   }
