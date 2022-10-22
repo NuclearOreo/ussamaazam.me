@@ -79,7 +79,13 @@ export function PhotoGalleryPage() {
             </div>
           )}
           {error && (
-            <img src="https://media0.giphy.com/media/u2wg2uXJbHzkXkPphr/giphy360p.mp4" alt="" />
+            <>
+              <img
+                src="https://media3.giphy.com/media/wUmp8UfCWdOA4BOZqT/giphy.gif?cid=ecf05e47miwxqt3lhy84thvepxl9twq65akiku7j4xbanja4&rid=giphy.gif&ct=g"
+                alt=""
+              />
+              <div>Something went wrong : (</div>
+            </>
           )}
         </div>
       </div>
