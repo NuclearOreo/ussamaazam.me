@@ -58,15 +58,14 @@ export const loadingStyle = css`
 export const descriptionStyle = css`
   color: ${GunMetal.light3};
   font-family: ${fontFamily.Poppins};
-  font-size: 20px;
   text-align: center;
   margin: auto;
   width: 50vw;
   letter-spacing: 0.3px;
 
-  @media (max-width: 768x) {
-    font-size: 12px;
-    padding-bottom: 20px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding-bottom: 30px;
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -118,7 +117,7 @@ export const errorTextStyle = css`
 
   @media (max-width: 768px) {
     font-size: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 200px;
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
