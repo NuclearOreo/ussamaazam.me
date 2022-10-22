@@ -1,5 +1,14 @@
 import { useState, useRef, useCallback } from 'react'
-import { container, columnsStyles, columnStyles, loadingStyle, descriptionStyle } from './styles'
+import {
+  container,
+  columnsStyles,
+  columnStyles,
+  loadingStyle,
+  descriptionStyle,
+  errorImgStyle,
+  errorTextStyle,
+  errorContainer,
+} from './styles'
 import { photoPagination } from 'APIs/Unsplash'
 import loadingAnimation from 'Icons/three-dots.svg'
 
@@ -79,13 +88,12 @@ export function PhotoGalleryPage() {
             </div>
           )}
           {error && (
-            <>
-              <img
-                src="https://media3.giphy.com/media/wUmp8UfCWdOA4BOZqT/giphy.gif?cid=ecf05e47miwxqt3lhy84thvepxl9twq65akiku7j4xbanja4&rid=giphy.gif&ct=g"
-                alt=""
-              />
-              <div>Something went wrong : (</div>
-            </>
+            <div className={errorContainer}>
+              <div className={errorImgStyle}>
+                <img src="https://storage.googleapis.com/ussamazam-assets/error_gif.webp" alt="" />
+              </div>
+              <div className={errorTextStyle}>Something Went Wrong : (</div>
+            </div>
           )}
         </div>
       </div>

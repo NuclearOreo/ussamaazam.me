@@ -49,7 +49,7 @@ export const columnStyles = css`
 `
 
 export const loadingStyle = css`
-  width: 30px;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -77,5 +77,57 @@ export const descriptionStyle = css`
   @media (min-width: 1024px) {
     font-size: 20px;
     padding-bottom: 50px;
+  }
+`
+
+export const errorContainer = css`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+`
+
+export const errorImgStyle = css`
+  @media (max-width: 767px) {
+    img {
+      width: 125px;
+      margin-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    img {
+      width: 250px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    img {
+      width: 500px;
+    }
+  }
+`
+
+export const errorTextStyle = css`
+  color: ${GunMetal.light3};
+  font-family: ${fontFamily.Poppins};
+  font-size: 20px;
+  letter-spacing: 0.3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 `
