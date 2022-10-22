@@ -11,7 +11,7 @@ class Unsplash {
   private service: AxiosInstance
 
   constructor() {
-    this.baseUrl = 'http://unsplash-api-dsoicsjfka-uc.a.run.app'
+    this.baseUrl = 'https://nsplash-api-dsoicsjfka-uc.a.run.app'
     this.service = axios.create({
       baseURL: this.baseUrl,
     })
