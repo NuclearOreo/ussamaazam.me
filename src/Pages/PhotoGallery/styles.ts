@@ -19,7 +19,7 @@ export const columnsStyles = css`
 export const columnStyles = css`
   width: 33.33%;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 
@@ -64,7 +64,7 @@ export const descriptionStyle = css`
   width: 50vw;
   letter-spacing: 0.3px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768x) {
     font-size: 12px;
     padding-bottom: 20px;
   }
@@ -87,7 +87,7 @@ export const errorContainer = css`
 `
 
 export const errorImgStyle = css`
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     img {
       width: 125px;
       margin-top: 20px;
@@ -116,7 +116,7 @@ export const errorTextStyle = css`
   margin-top: 20px;
   margin-bottom: 20px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     font-size: 15px;
     margin-bottom: 20px;
   }

@@ -13,10 +13,13 @@ import { photoPagination } from 'APIs/Unsplash'
 import loadingAnimation from 'Icons/three-dots.svg'
 
 export function PhotoGalleryPage() {
-  const mobileWidth = 767
+  const mobileWidth = 768
   const numOfCols = window.screen.width <= mobileWidth ? 1 : 3
   const imageCols: JSX.Element[][] = []
   const colsHeights: number[] = []
+
+  // Reload change when window resizes
+  window.addEventListener('resize', () => window.location.reload())
 
   for (let i = 0; i < numOfCols; i += 1) {
     imageCols.push([])
