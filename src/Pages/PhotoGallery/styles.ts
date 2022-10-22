@@ -1,4 +1,6 @@
 import { css } from '@emotion/css'
+import { GunMetal } from 'Styles/color'
+import { fontFamily } from 'Styles/fonts'
 
 export const container = css`
   width: 70vw;
@@ -51,4 +53,29 @@ export const loadingStyle = css`
   margin-left: auto;
   margin-right: auto;
   display: block;
+`
+
+export const descriptionStyle = css`
+  color: ${GunMetal.light3};
+  font-family: ${fontFamily.Poppins};
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+  width: 50vw;
+  letter-spacing: 0.3px;
+
+  @media (max-width: 767px) {
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 18px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+    padding-bottom: 50px;
+  }
 `

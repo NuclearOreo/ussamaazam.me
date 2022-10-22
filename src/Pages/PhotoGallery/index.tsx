@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback } from 'react'
-import { container, columnsStyles, columnStyles, loadingStyle } from './styles'
+import { container, columnsStyles, columnStyles, loadingStyle, descriptionStyle } from './styles'
 import { photoPagination } from 'APIs/Unsplash'
 import loadingAnimation from 'Icons/three-dots.svg'
 
@@ -32,10 +32,10 @@ export function PhotoGalleryPage() {
     [loading, endOfPage, error],
   )
 
-  if (error) {
-    // eslint-disable-next-line no-alert
-    window.alert('Error Fetching Photo')
-  }
+  // if (error) {
+  //   // eslint-disable-next-line no-alert
+  //   window.alert('Error Fetching Photo')
+  // }
 
   images.forEach((image, index) => {
     const minIndex = colsHeights.indexOf(Math.min(...colsHeights))
@@ -47,7 +47,7 @@ export function PhotoGalleryPage() {
             key={image.id}
             className="hvr-grow"
             src={image.urls.regular}
-            alt="Unsplash/Ussama Azam"
+            alt="Unsplash"
           />
         </a>,
       )
@@ -64,7 +64,10 @@ export function PhotoGalleryPage() {
   return (
     <div>
       <div className={container}>
-        <div>This is my gallery</div>
+        <div className={descriptionStyle}>
+          I&apos;m a hobbyist photographer outside of work and pushing myself to come up with with
+          creative work. Hope you enjoy my photos us much as I do!
+        </div>
         <div className={columnsStyles}>
           <div key="col1" className={columnStyles}>
             {imageCols[0]}
@@ -75,10 +78,13 @@ export function PhotoGalleryPage() {
           <div key="col3" className={columnStyles}>
             {imageCols[2]}
           </div>
-          {loading && (
+          {loading && !error && (
             <div className={loadingStyle}>
               <img src={loadingAnimation} alt="Loading SVG" loading="lazy" />
             </div>
+          )}
+          {error && (
+            <img src="https://media0.giphy.com/media/u2wg2uXJbHzkXkPphr/giphy360p.mp4" alt="" />
           )}
         </div>
       </div>
