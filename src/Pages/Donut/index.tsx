@@ -3,8 +3,13 @@ import { asciiDonut } from 'Components/ASCIIDonut'
 import { Donut3D } from 'Components/Donut3D'
 import { style, asciiDonutStyle } from './styles'
 
-export function DonutPage() {
-  const isMobile = window.screen.width <= 768
+interface DonutPageProp {
+  // eslint-disable-next-line react/require-default-props
+  disableMobile?: boolean
+}
+
+export function DonutPage({ disableMobile }: DonutPageProp) {
+  const isMobile = !disableMobile ? window.screen.width <= 768 : false
   const [donut, setDonut] = useState({ frame: '', a: 0, b: 0 })
   const timerId = useRef<NodeJS.Timer>()
   const [toggleDonut, setToggleDonut] = useState(false)
@@ -23,6 +28,7 @@ export function DonutPage() {
 
   return (
     <div
+      data-testid="Wrapper"
       className={style({ transitionDown: toggleDonut ? 0 : 10, toggle: toggleDonut })}
       onClick={!isMobile ? () => setToggleDonut(!toggleDonut) : undefined}
     >
