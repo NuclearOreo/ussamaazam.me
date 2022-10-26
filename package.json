@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@emotion/css": "^11.5.0",
+    "@juggle/resize-observer": "^3.4.0",
     "@react-three/drei": "^8.8.0",
     "@react-three/fiber": "^7.0.24",
     "@testing-library/jest-dom": "^5.15.0",
