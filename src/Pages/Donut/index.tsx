@@ -4,7 +4,6 @@ import { Donut3D } from 'Components/Donut3D'
 import { style, asciiDonutStyle } from './styles'
 
 interface DonutPageProp {
-  // eslint-disable-next-line react/require-default-props
   disableMobile?: boolean
 }
 
