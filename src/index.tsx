@@ -2,11 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 
-export const ReactDomRender = (A = App) => {
-  ReactDOM.render(
-    <React.StrictMode>
-      <A />
-    </React.StrictMode>,
-    document.getElementById('root') || document.createElement('div'),
-  )
-}
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root') || document.createElement('div'),
+)

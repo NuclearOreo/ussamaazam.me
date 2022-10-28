@@ -68,6 +68,12 @@
         "lines": 0,
         "statements": 0
       }
-    }
+    },
+    "collectCoverageFrom": [
+      "!src/index.tsx",
+      "!react-app-env.d.ts",
+      "!src/Components/Donut3D/Donut48.tsx",
+      "!src/**/*.svg"
+    ]
   }
 }
