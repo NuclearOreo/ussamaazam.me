@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { render, screen } from '@testing-library/react'
 import { NavBar } from '.'
+import React from 'react'
 
 test('Render NavBar Component', () => {
   render(

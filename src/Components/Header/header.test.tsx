@@ -1,7 +1,9 @@
 import { render /* screen */ } from '@testing-library/react'
-// import NavBar from '.'
+import React from 'react'
+import { Header } from '.'
 
 test('Render NavBar Component', () => {
-  render(<>Hello</>)
+  // render(<Header />)
+
   expect(2 + 2).toEqual(4)
 })
