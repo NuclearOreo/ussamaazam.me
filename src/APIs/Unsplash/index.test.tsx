@@ -25,7 +25,7 @@ describe('Testing Photo Pagination hook', () => {
 
     expect(unsplash.getMyPhoto).toBeCalledWith({ pageNumber: 0, perPage: 0 })
   })
-  test('Testing loading', async () => {
+  test('Test loading', async () => {
     const { deferred, promise } = getControlledPromise()
 
     unsplash.getMyPhoto = jest.fn(() => promise)
@@ -38,5 +38,20 @@ describe('Testing Photo Pagination hook', () => {
     await waitForNextUpdate()
 
     expect(result.current.loading).toEqual(false)
+  })
+  test('Test Error', async () => {
+    const { deferred, promise } = getControlledPromise()
+    unsplash.getMyPhoto = jest.fn(() => promise)
+
+    const { result, waitForNextUpdate } = renderHook(photoPagination)
+
+    expect(result.current.loading).toEqual(true)
+    expect(result.current.error).toEqual(false)
+
+    deferred.reject()
+    await waitForNextUpdate()
+
+    expect(result.current.loading).toEqual(false)
+    expect(result.current.error).toEqual(true)
   })
 })
