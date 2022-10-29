@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Unsplash from './Unsplash'
 import axios from 'axios'
 
@@ -10,6 +11,15 @@ describe('Test for Unsplash Endpoints', () => {
     expect(axios.create).toBeCalledWith({ baseURL: 'https://unsplash-api-dsoicsjfka-uc.a.run.app' })
   })
   test('Testing getMyPhoto', () => {
-    expect(1).toEqual(1)
+    const resolver = jest.fn()
+
+    axios.create = jest.fn(() => {
+      return { get: resolver }
+    })
+
+    const unsplash = new Unsplash()
+    unsplash.getMyPhoto({})
+
+    expect(resolver).toBeCalled()
   })
 })
