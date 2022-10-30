@@ -19,9 +19,7 @@ export function DonutPage({ disableMobile }: DonutPageProp) {
     }, 50)
 
     return () => {
-      if (timerId.current) {
-        clearInterval(timerId.current)
-      }
+      clearInterval(timerId.current)
     }
   }, [])
 
