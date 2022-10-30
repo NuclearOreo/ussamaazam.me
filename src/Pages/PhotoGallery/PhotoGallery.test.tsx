@@ -24,4 +24,21 @@ describe('Render PhotoGallery Component', () => {
 
     expect(window.location.reload).toBeCalled()
   })
+  test('d', () => {
+    const mockIntersectionObserver = jest.fn()
+    mockIntersectionObserver.mockReturnValue({
+      observe: () => {
+        current: 'Hw'
+      },
+      unobserve: () => null,
+      disconnect: () => null,
+    })
+    window.IntersectionObserver = mockIntersectionObserver
+
+    jest.spyOn(React, 'useCallback').mockImplementation((f) => f())
+
+    render(<PhotoGalleryPage />)
+
+    expect(1).toEqual(1)
+  })
 })
