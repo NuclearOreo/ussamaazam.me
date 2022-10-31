@@ -1,9 +1,46 @@
-import { render /* screen */ } from '@testing-library/react'
-// import Donut from '.'
+import { render, screen } from '@testing-library/react'
+import React from 'react'
+import { act } from 'react-dom/test-utils'
+import { DonutPage } from '.'
 
-test('Render Home Component', () => {
-  render(<>Hello</>)
-  // const linkElement = screen.getByTestId('Donut')
-  // expect(linkElement).toBeInTheDocument()
-  expect(4).toEqual(4)
+const doAsync = (c: any) => {
+  setTimeout(() => {
+    c(true)
+  }, 3000)
+}
+
+jest.useFakeTimers()
+
+describe('Home Page', () => {
+  test('Render Home Page', () => {
+    const disableMobile = true
+    render(<DonutPage disableMobile={disableMobile} />)
+    const donut = screen.getByTestId('Donut')
+    const wrapper = screen.getByTestId('Wrapper')
+
+    expect(donut).toBeInTheDocument()
+    expect(wrapper).toBeInTheDocument()
+
+    act(() => {
+      wrapper.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+    })
+
+    const canvas = screen.getByTestId('Canvas')
+    expect(canvas).toBeInTheDocument()
+  })
+  test('Test Set interval', () => {
+    const disableMobile = true
+    render(<DonutPage disableMobile={disableMobile} />)
+
+    act(() => {
+      jest.advanceTimersByTime(50)
+
+      const callback1 = () => {
+        expect(screen.getByTestId('Donut')).toBeInTheDocument()
+      }
+
+      doAsync(callback1)
+      jest.useRealTimers()
+    })
+  })
 })

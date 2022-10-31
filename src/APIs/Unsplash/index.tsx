@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Unsplash from 'APIs/Unsplash/Unsplash'
 import { UnsplashType } from 'APIs/Unsplash/types'
 
-const unsplash = new Unsplash()
+export const unsplash = new Unsplash()
 
 export function photoPagination(pageNumber?: number, perPage?: number) {
   const [images, setImages] = useState<UnsplashType[]>([])
