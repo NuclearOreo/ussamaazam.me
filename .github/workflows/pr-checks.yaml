@@ -1,11 +1,8 @@
 name: Website CI/CD
 
 on:
-  push:
   pull_request:
     branches: [version-2]
-
-  workflow_dispatch:
 
 jobs:
   pull-request-checks:
@@ -21,9 +18,6 @@ jobs:
         with:
           node-version: 16.15.1
           cache: 'npm'
-
-      - name: Install Packages
-        run: npm ci
 
       - name: Run Linter
         run: npm run lint
