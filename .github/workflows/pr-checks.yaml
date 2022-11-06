@@ -1,0 +1,29 @@
+name: Website CI/CD
+
+on:
+  pull_request:
+    branches: [version-2]
+
+jobs:
+  pull-request-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: google-github-actions/setup-gcloud@v0
+
+      - name: Use Node.js 18.12.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.12.0
+          cache: 'npm'
+
+      - name: Install Packages
+        run: npm ci
+
+      - name: Run Linter
+        run: npm run lint
+
+      - name: Run Unit Tests
+        run: npm run test -- --coverage --watchAll=false
