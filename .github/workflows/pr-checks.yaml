@@ -19,6 +19,9 @@ jobs:
           node-version: 16.15.1
           cache: 'npm'
 
+      - name: Install Packages
+        run: npm ci
+
       - name: Run Linter
         run: npm run lint
 
