@@ -19,10 +19,10 @@ jobs:
 
       - uses: google-github-actions/setup-gcloud@v0
 
-      - name: Use Node.js 16.15.1
+      - name: Use Node.js 18.12.0
         uses: actions/setup-node@v3
         with:
-          node-version: 16.15.1
+          node-version: 18.12.0
           cache: 'npm'
 
       - name: Install Packages
