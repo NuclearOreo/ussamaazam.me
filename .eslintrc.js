@@ -21,7 +21,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
-    semi: 'off',
+    semi: ['warn', 'never'],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
