@@ -7,8 +7,6 @@ on:
       - ./src
       - ./public
 
-  workflow_dispatch:
-
 jobs:
   deploy-site:
     runs-on: ubuntu-latest
