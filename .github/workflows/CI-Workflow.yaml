@@ -2,10 +2,10 @@ name: Website CI/CD
 
 on:
   push:
-    branches: [version-2]
-    paths:
-      - ./src
-      - ./public
+    # branches: [version-2]
+    # paths:
+    #   - ./src
+    #   - ./public
 
   workflow_dispatch:
 
@@ -51,29 +51,9 @@ jobs:
           docker tag site:latest gcr.io/website-353503/site:latest
           docker push gcr.io/website-353503/site:latest
 
-      - name: Pull Image
-        uses: google-github-actions/ssh-compute@v0
+      - name: Deploy
+        uses: 'google-github-actions/deploy-cloudrun@v0'
         with:
-          instance_name: website
-          zone: us-east1-b
-          ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
-          user: root
-          command: docker pull gcr.io/website-353503/site:latest
-
-      - name: Stop Containers
-        uses: google-github-actions/ssh-compute@v0
-        with:
-          instance_name: website
-          zone: us-east1-b
-          ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
-          user: root
-          command: docker stop $(docker ps -a -q)
-
-      - name: Deploy Site
-        uses: google-github-actions/ssh-compute@v0
-        with:
-          instance_name: website
-          zone: us-east1-b
-          ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
-          user: root
-          command: docker run -it -p 80:80 -d gcr.io/website-353503/site
+          image: 'gcr.io/website-353503/site:latest'
+          region: 'us-east1'
+          service: 'unsplash-api'
