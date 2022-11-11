@@ -56,4 +56,4 @@ jobs:
         with:
           image: 'gcr.io/website-353503/site:latest'
           region: 'us-east1'
-          service: 'unsplash-api'
+          service: 'personal-website'
