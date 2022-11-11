@@ -2,10 +2,10 @@ name: Website CI/CD
 
 on:
   push:
-    # branches: [version-2]
-    # paths:
-    #   - ./src
-    #   - ./public
+    branches: [version-2]
+    paths:
+      - ./src
+      - ./public
 
   workflow_dispatch:
 
