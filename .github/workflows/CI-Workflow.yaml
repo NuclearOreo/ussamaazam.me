@@ -6,8 +6,7 @@ on:
     paths:
       - ./src
       - ./public
-
-  workflow_dispatch:
+      - './*.json'
 
 jobs:
   deploy-site:
