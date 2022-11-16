@@ -6,6 +6,7 @@ on:
     paths:
       - ./src
       - ./public
+      - ./package*
 
 jobs:
   deploy-site:
