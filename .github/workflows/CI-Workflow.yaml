@@ -51,4 +51,4 @@ jobs:
         with:
           image: 'gcr.io/website-353503/site:latest'
           region: 'us-east1'
-          service: 'personal-website'
+          service: 'personal-site'
