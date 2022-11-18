@@ -6,7 +6,6 @@ on:
     paths:
       - ./src
       - ./public
-      - './*.json'
 
 jobs:
   deploy-site:
