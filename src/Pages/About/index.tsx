@@ -1,7 +1,7 @@
-import GithubIcon from 'Icons/github.svg'
-import LeetcodeIcon from 'Icons/leetcode.svg'
-import LinkedinIcon from 'Icons/linkedin.svg'
-import UnsplashIcon from 'Icons/unsplash.svg'
+import GithubIcon from '@/Icons/github.svg'
+import LeetcodeIcon from '@/Icons/leetcode.svg'
+import LinkedinIcon from '@/Icons/linkedin.svg'
+import UnsplashIcon from '@/Icons/unsplash.svg'
 import { style } from './styles'
 
 export function AboutPage() {

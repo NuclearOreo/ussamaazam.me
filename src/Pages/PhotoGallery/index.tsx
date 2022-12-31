@@ -9,8 +9,8 @@ import {
   errorTextStyle,
   errorContainer,
 } from './styles'
-import { photoPagination } from 'APIs/Unsplash'
-import loadingAnimation from 'Icons/three-dots.svg'
+import { photoPagination } from '@/APIs/Unsplash'
+import loadingAnimation from '@/Icons/three-dots.svg'
 
 export function PhotoGalleryPage() {
   const mobileWidth = 768
