@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import Unsplash from 'APIs/Unsplash/Unsplash'
-import { UnsplashType } from 'APIs/Unsplash/types'
+import Unsplash from '@/APIs/Unsplash/Unsplash'
+import { UnsplashType } from '@/APIs/Unsplash/types'
 
 export const unsplash = new Unsplash()
 

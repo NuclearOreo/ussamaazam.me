@@ -30,7 +30,7 @@ jobs:
         run: npm run lint
 
       - name: Run Unit Tests
-        run: npm run test -- --coverage --watchAll=false
+        run: npm run coverage
 
       - name: Build Project
         run: npm run build
