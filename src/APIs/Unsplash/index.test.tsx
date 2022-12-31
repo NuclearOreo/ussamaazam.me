@@ -2,8 +2,9 @@ import { act, renderHook } from '@testing-library/react-hooks'
 import { AxiosResponse } from 'axios'
 import { UnsplashType } from './types'
 import { photoPagination, unsplash } from '.'
+import { vi } from 'vitest'
 
-jest.mock('./Unsplash')
+vi.mock('./Unsplash')
 
 const getControlledPromise = () => {
   let deferred
@@ -28,7 +29,7 @@ describe('Testing Photo Pagination hook', () => {
   test('Test loading', async () => {
     const { deferred, promise } = getControlledPromise()
 
-    unsplash.getMyPhoto = jest.fn(() => promise)
+    unsplash.getMyPhoto = vi.fn(() => promise)
 
     const { result, waitForNextUpdate } = renderHook(photoPagination)
 
@@ -41,7 +42,7 @@ describe('Testing Photo Pagination hook', () => {
   })
   test('Test Error', async () => {
     const { deferred, promise } = getControlledPromise()
-    unsplash.getMyPhoto = jest.fn(() => promise)
+    unsplash.getMyPhoto = vi.fn(() => promise)
 
     const { result, waitForNextUpdate } = renderHook(photoPagination)
 
@@ -56,7 +57,7 @@ describe('Testing Photo Pagination hook', () => {
   })
   test('Test Receiving Data', async () => {
     const { deferred, promise } = getControlledPromise()
-    unsplash.getMyPhoto = jest.fn(() => promise)
+    unsplash.getMyPhoto = vi.fn(() => promise)
 
     const { result, waitForNextUpdate } = renderHook(photoPagination)
 
@@ -71,7 +72,7 @@ describe('Testing Photo Pagination hook', () => {
   })
   test('Test End of Page', async () => {
     const { deferred, promise } = getControlledPromise()
-    unsplash.getMyPhoto = jest.fn(() => promise)
+    unsplash.getMyPhoto = vi.fn(() => promise)
 
     const { result, waitForNextUpdate } = renderHook(photoPagination)
 
