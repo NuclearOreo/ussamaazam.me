@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
-import { Icon } from 'Components/Icon'
+import { Icon } from '@/Components/Icon'
 import { headerStyle, wrapper } from './styles'
 
-export function BlogPage() {
+export function Blog() {
   const navigate = useNavigate()
   const routerChange = (path: string) => {
     navigate(path)

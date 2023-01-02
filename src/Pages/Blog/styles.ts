@@ -1,5 +1,5 @@
-import { fontFamily } from 'Styles/fonts'
-import { GunMetal } from 'Styles/color'
+import { fontFamily } from '@/Styles/fonts'
+import { GunMetal } from '@/Styles/color'
 import { css } from '@emotion/css'
 
 export const wrapper = css`

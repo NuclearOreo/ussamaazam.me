@@ -13,10 +13,10 @@ jobs:
 
       - uses: google-github-actions/setup-gcloud@v0
 
-      - name: Use Node.js 18.12.0
+      - name: Use Node.js 18.12.1
         uses: actions/setup-node@v3
         with:
-          node-version: 18.12.0
+          node-version: 18.12.1
           cache: 'npm'
 
       - name: Install Packages
@@ -26,4 +26,4 @@ jobs:
         run: npm run lint
 
       - name: Run Unit Tests
-        run: npm run test -- --coverage --watchAll=false
+        run: npm run coverage

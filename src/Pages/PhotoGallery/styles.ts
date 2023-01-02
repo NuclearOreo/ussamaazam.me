@@ -1,6 +1,6 @@
 import { css } from '@emotion/css'
-import { GunMetal } from 'Styles/color'
-import { fontFamily } from 'Styles/fonts'
+import { GunMetal } from '@/Styles/color'
+import { fontFamily } from '@/Styles/fonts'
 
 export const container = css`
   width: 70vw;

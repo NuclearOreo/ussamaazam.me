@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react'
 import React from 'react'
 import { act } from 'react-dom/test-utils'
 import { DonutPage } from '.'
+import { vi } from 'vitest'
 
 const doAsync = (c: any) => {
   setTimeout(() => {
@@ -9,7 +10,7 @@ const doAsync = (c: any) => {
   }, 3000)
 }
 
-jest.useFakeTimers()
+vi.useFakeTimers()
 
 describe('Home Page', () => {
   test('Render Home Page', () => {
@@ -33,14 +34,14 @@ describe('Home Page', () => {
     render(<DonutPage disableMobile={disableMobile} />)
 
     act(() => {
-      jest.advanceTimersByTime(50)
+      vi.advanceTimersByTime(50)
 
       const callback1 = () => {
         expect(screen.getByTestId('Donut')).toBeInTheDocument()
       }
 
       doAsync(callback1)
-      jest.useRealTimers()
+      vi.useRealTimers()
     })
   })
 })
