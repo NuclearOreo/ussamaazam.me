@@ -3,6 +3,7 @@ import { DonutPage } from '@/Pages/Donut'
 import { AboutPage } from '@/Pages/About'
 import { PhotoGalleryPage } from '@/Pages/PhotoGallery'
 import { Blog } from '@/Pages/Blog'
+import { BlogHome } from './Pages/Blog/Pages/BlogHome'
 import { Header } from '@/Components/Header'
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
           <Route path="gallery" element={<PhotoGalleryPage />} />
         </Route>
         <Route path="thoughts" element={<Blog />}>
-          <Route path="" element={<AboutPage />} />
+          <Route path="" element={<BlogHome />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
