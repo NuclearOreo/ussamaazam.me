@@ -11,6 +11,6 @@ test('Render Essays Component', () => {
       </Routes>
     </Router>,
   )
-  const linkElement = screen.getByText(/Here are some of my thoughts:/i)
+  const linkElement = screen.getByTestId('GutsIcon')
   expect(linkElement).toBeInTheDocument()
 })
