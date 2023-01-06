@@ -4,6 +4,7 @@ import { AboutPage } from '@/Pages/About'
 import { PhotoGalleryPage } from '@/Pages/PhotoGallery'
 import { Blog } from '@/Pages/Blog'
 import { BlogHome } from './Pages/Blog/Pages/BlogHome'
+import { AwayFromSmoking } from './Pages/Blog/Pages/AwayFromSmoking'
 import { Header } from '@/Components/Header'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         </Route>
         <Route path="thoughts" element={<Blog />}>
           <Route path="" element={<BlogHome />} />
+          <Route path="away-from-smoking" element={<AwayFromSmoking />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

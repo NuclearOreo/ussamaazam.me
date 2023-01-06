@@ -14,3 +14,9 @@ export const headerStyle = css`
   font-family: ${fontFamily.Poppins};
   color: ${GunMetal.light3};
 `
+
+export const listStyle = css`
+  font-size: 20px;
+  font-family: ${fontFamily.Poppins};
+  color: ${GunMetal.light3};
+`
