@@ -1,10 +1,14 @@
 import { css } from '@emotion/css'
 import { GunMetal } from '@/Styles/color'
+import { fontFamily } from '@/Styles/fonts'
 
 export const IconStyles = css`
-  font-size: 1.5px;
-  letter-spacing: -0.3px;
+  font-size: 1.1px;
+  font-family: ${fontFamily.menlo};
   color: ${GunMetal.dark3};
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 `
 
 export const containerStyle = css`
