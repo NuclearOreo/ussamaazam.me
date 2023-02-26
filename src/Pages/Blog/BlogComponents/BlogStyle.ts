@@ -7,11 +7,11 @@ export const blogStyle = css`
     color: ${GunMetal.light3};
     font-family: ${fontFamily.Poppins};
     margin: auto;
-    width: 50vw;
+    width: 55vw;
     letter-spacing: 0.3px;
   }
 
-  h1 {
+  h2 {
     text-align: center;
   }
 
@@ -30,7 +30,11 @@ export const blogStyle = css`
   }
 
   @media (max-width: 768px) {
-    font-size: 12px;
+    div {
+      font-size: 12px;
+      margin-top: 5vw;
+      margin-bottom: 5vw;
+    }
     margin-top: 30px;
     .paragraphStyle {
       margin-top: 50px;
@@ -46,7 +50,11 @@ export const blogStyle = css`
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    font-size: 18px;
+    div {
+      font-size: 18px;
+      margin-top: 3vw;
+      margin-bottom: 3vw;
+    }
     .paragraphStyle {
       margin-top: 50px;
       margin-bottom: 50px;
@@ -61,7 +69,11 @@ export const blogStyle = css`
   }
 
   @media (min-width: 1024px) {
-    font-size: 20px;
+    div {
+      font-size: 18px;
+      margin-top: 1.5vw;
+      margin-bottom: 1.5vw;
+    }
     .linksStyle {
       img {
         width: 30px;
