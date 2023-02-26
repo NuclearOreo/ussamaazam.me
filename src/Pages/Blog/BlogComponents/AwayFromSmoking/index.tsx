@@ -1,4 +1,4 @@
-import { blogStyle } from './BlogStyle'
+import { blogStyle } from '../BlogStyle'
 
 export function AwayFromSmoking(): JSX.Element {
   return (

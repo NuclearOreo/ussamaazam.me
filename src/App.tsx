@@ -3,7 +3,7 @@ import { DonutPage } from '@/Pages/Donut'
 import { AboutPage } from '@/Pages/About'
 import { PhotoGalleryPage } from '@/Pages/PhotoGallery'
 import { Blog } from '@/Pages/Blog'
-import { BlogHome } from '@/Pages/Blog/BlogComponents/BlogHome/BlogHome'
+import { BlogHome } from '@/Pages/Blog/BlogComponents/BlogHome'
 import { AwayFromSmoking } from '@/Pages/Blog/BlogComponents/AwayFromSmoking'
 import { Header } from '@/Components/Header'
 
