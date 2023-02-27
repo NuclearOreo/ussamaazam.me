@@ -4,7 +4,7 @@ My own personal site
 
 ## Prerequisite
 
- - node version `18.12.1`
+ - node version `18.14.2`
 
 ## Start Application
 
