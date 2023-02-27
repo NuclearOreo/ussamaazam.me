@@ -5,11 +5,12 @@ export function BlogHome(): JSX.Element {
   return (
     <div className={wrapper}>
       <div className={headerStyle}>
-        Had some thoughts, throughts fashions into and better for worst listed below:
+        I had some thoughts, and those eventually became words; for better or for worst, I listed
+        them below:
       </div>
       <ul className={listStyle}>
         <Link to="/thoughts/away-from-smoking">
-          <li>(2023-02-26) My Journey away from smoking 🚭</li>
+          <li>(2023-02-27) My Journey away from smoking 🚭</li>
         </Link>
       </ul>
     </div>
