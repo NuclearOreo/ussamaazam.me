@@ -3,12 +3,9 @@ import { Icon } from '@/Components/Icon'
 
 export function Blog() {
   const navigate = useNavigate()
-  const routerChange = (path: string) => {
-    navigate(path)
-  }
   return (
     <>
-      <div onClick={() => routerChange('/')}>
+      <div onClick={() => navigate('/')}>
         <Icon />
       </div>
       <Outlet />

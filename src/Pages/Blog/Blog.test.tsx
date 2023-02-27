@@ -12,5 +12,6 @@ test('Render Essays Component', () => {
     </Router>,
   )
   const linkElement = screen.getByTestId('GutsIcon')
+  linkElement.click()
   expect(linkElement).toBeInTheDocument()
 })

@@ -10,7 +10,7 @@ export const wrapper = css`
 `
 
 export const headerStyle = css`
-  font-size: 25px;
+  font-size: 20px;
   font-family: ${fontFamily.Poppins};
   color: ${GunMetal.light3};
 `
