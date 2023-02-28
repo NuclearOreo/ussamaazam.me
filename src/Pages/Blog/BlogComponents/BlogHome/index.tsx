@@ -10,7 +10,7 @@ export function BlogHome(): JSX.Element {
       </div>
       <ul className={listStyle}>
         <Link to="/thoughts/away-from-smoking">
-          <li>(2023-02-27) My Journey away from smoking 🚭</li>
+          <li>(2023-02-28) My Journey away from smoking 🚭</li>
         </Link>
       </ul>
     </div>
