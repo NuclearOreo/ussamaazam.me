@@ -4,5 +4,5 @@ export const fontFamily = {
   Karla: 'Karla',
   DMSans: "'DM Sans'",
   Poppins: 'Poppins',
-  menlo: 'Menlo',
+  RobotoMono: "'Roboto Mono'",
 }

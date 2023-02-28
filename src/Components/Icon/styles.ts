@@ -3,7 +3,7 @@ import { fontFamily } from '@/Styles/fonts'
 
 export const IconStyles = css`
   font-size: 1.1px;
-  font-family: ${fontFamily.menlo};
+  font-family: ${fontFamily.RobotoMono};
   color: black;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
