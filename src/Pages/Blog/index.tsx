@@ -1,5 +1,14 @@
-import { style } from './styles'
+import { useNavigate, Outlet } from 'react-router-dom'
+import { Icon } from '@/Components/Icon'
 
-export function BlogPage() {
-  return <div className={style}>This is Blogs</div>
+export function Blog() {
+  const navigate = useNavigate()
+  return (
+    <>
+      <div onClick={() => navigate('/')}>
+        <Icon />
+      </div>
+      <Outlet />
+    </>
+  )
 }

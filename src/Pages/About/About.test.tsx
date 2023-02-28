@@ -1,8 +1,12 @@
-import { render /* screen */ } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import React from 'react'
 import { AboutPage } from '.'
 
 test('Render AboutPage Component', () => {
   render(<AboutPage />)
-  expect(2).toEqual(2)
+  const links = screen.getAllByRole('link')
+
+  links.forEach((link) => {
+    expect(link).toBeInTheDocument()
+  })
 })

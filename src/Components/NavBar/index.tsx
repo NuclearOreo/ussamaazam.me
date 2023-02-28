@@ -14,9 +14,9 @@ export function NavBar() {
         <Link to="/gallery" className="link">
           Gallery
         </Link>
-        {/* <Link to="/blog" className="link">
-          Blog
-        </Link> */}
+        <Link to="/thoughts" className="link">
+          Thoughts
+        </Link>
       </div>
       <Outlet />
     </>

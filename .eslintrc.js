@@ -42,6 +42,7 @@ module.exports = {
     'object-curly-newline': 'off',
     'react/require-default-props': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'react/no-unescaped-entities': 'off',
   },
   settings: {
     'import/resolver': {
