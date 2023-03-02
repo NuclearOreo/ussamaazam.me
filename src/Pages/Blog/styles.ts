@@ -59,3 +59,7 @@ export const wrapper = css`
     }
   }
 `
+
+export const iconStyle = css`
+  cursor: pointer;
+`
