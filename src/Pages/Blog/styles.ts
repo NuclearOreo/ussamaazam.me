@@ -8,6 +8,15 @@ export const wrapper = css`
   margin-top: 3vw;
   display: block;
 
+  .footer {
+    font-family: ${fontFamily.Poppins};
+    text-align: center;
+    img {
+      margin-top: 10vw;
+      width: 25px;
+    }
+  }
+
   @media (max-width: 768px) {
     .headerStyle {
       font-size: 15px;
