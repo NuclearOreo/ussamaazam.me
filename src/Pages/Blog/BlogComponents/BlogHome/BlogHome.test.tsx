@@ -12,10 +12,10 @@ test('Render AboutPage Component', () => {
     </Router>,
   )
   const list = screen.getByRole('list')
-  const link = screen.getByRole('link')
+  const links = screen.getAllByRole('link')
   const listitem = screen.getByRole('listitem')
 
-  expect(link).toBeInTheDocument()
+  links.forEach((link) => expect(link).toBeInTheDocument())
   expect(listitem).toBeInTheDocument()
   expect(list).toBeInTheDocument()
 })

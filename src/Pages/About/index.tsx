@@ -8,15 +8,15 @@ export function AboutPage() {
   return (
     <div className={style}>
       <div className="aboutMeStyle">
-        I&apos;m a Software Engineer trying to figure out what to delve into in life. Ever since I
-        stumbled onto Hacker News, I&apos;ve been obsessively reading countless blogs and essays
-        I&apos;ve come across, and it got me inspired. To see so many people actively investigating,
+        I'm a Software Engineer trying to figure out what to delve into in life. Ever since I
+        stumbled onto Hacker News, I've been obsessively reading countless blogs and essays I've
+        come across, and it got me inspired. To see so many people actively investigating,
         exploring, and furthering their education in an unfettered sense got me thinking I should do
         the same. So the whole point of this website is to host blogs I write up in the hopes of
         becoming a better writer, communicator, and thinker. Writing has always been my weak point
         throughout my life, and I have always been self-conscious about how I came off, so
-        hopefully, I&apos;ll be pushing out of my comfort zone and producing thoughts that catch
-        people&apos;s attention.
+        hopefully, I'll be pushing out of my comfort zone and producing thoughts that catch people's
+        attention.
       </div>
       <div className="linksStyle">
         <a href="https://github.com/NuclearOreo">
