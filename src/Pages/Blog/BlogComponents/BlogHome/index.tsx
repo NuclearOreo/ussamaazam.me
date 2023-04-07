@@ -10,6 +10,10 @@ export function BlogHome(): JSX.Element {
         them below:
       </div>
       <ul className="listStyle">
+        <Link to="/thoughts/why-1000000007">
+          <li>(yyyy-mm-dd) Why 1000000007</li>
+        </Link>
+        <br />
         <Link to="/thoughts/away-from-smoking">
           <li>(2023-02-28) My Journey away from smoking 🚭</li>
         </Link>
