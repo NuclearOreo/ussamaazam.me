@@ -8,7 +8,7 @@ export function Why1000000007(): JSX.Element {
         <div>
           If you ever participated in any competitive programming like Leetcode, Code Forces, Top
           Coder etc., you've probably had problems asking you to mod the answer by 1,000,000,007.
-          But why 1,000,000,0007? What makes that number so unique or valuable? So I did a bunch of
+          But why 1,000,000,007? What makes that number so unique or valuable? So I did a bunch of
           Google searches, and these are the two reasons I always get back:
         </div>
         <ul>

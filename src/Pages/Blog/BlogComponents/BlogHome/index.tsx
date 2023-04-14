@@ -11,7 +11,7 @@ export function BlogHome(): JSX.Element {
       </div>
       <ul className="listStyle">
         <Link to="/thoughts/why-1000000007">
-          <li>(yyyy-mm-dd) Why 1000000007</li>
+          <li>(2023-04-13) Why 1000000007</li>
         </Link>
         <br />
         <Link to="/thoughts/away-from-smoking">
