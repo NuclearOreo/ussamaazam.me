@@ -13,9 +13,9 @@ test('Render AboutPage Component', () => {
   )
   const list = screen.getByRole('list')
   const links = screen.getAllByRole('link')
-  const listitem = screen.getByRole('listitem')
+  const listItems = screen.getAllByRole('listitem')
 
-  links.forEach((link) => expect(link).toBeInTheDocument())
-  expect(listitem).toBeInTheDocument()
   expect(list).toBeInTheDocument()
+  links.forEach((link) => expect(link).toBeInTheDocument())
+  listItems.forEach((item) => expect(item).toBeInTheDocument())
 })
