@@ -7,6 +7,7 @@ import { BlogHome } from '@/Pages/Blog/BlogComponents/BlogHome'
 import { AwayFromSmoking } from '@/Pages/Blog/BlogComponents/AwayFromSmoking'
 import { Why1000000007 } from './Pages/Blog/BlogComponents/Why1000000007'
 import { Header } from '@/Components/Header'
+import { SpinningBox } from '@/Pages/SpinningBox'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="" element={<DonutPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="gallery" element={<PhotoGalleryPage />} />
+          <Route path="spinning-box" element={<SpinningBox />} />
         </Route>
         <Route path="thoughts" element={<Blog />}>
           <Route path="" element={<BlogHome />} />
