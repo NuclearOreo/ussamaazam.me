@@ -1,6 +1,13 @@
 import { blogStyle } from '../BlogStyle'
 
 export function BinarySearch(): JSX.Element {
+  const urls = {
+    'binary-search': 'https://storage.googleapis.com/ussamazam-assets/binary_search.png',
+    array: 'https://storage.googleapis.com/ussamazam-assets/bisect_left.png',
+    'bisect-left': 'https://storage.googleapis.com/ussamazam-assets/bisect_left.png',
+    'bisect-right': 'https://storage.googleapis.com/ussamazam-assets/bisect_right.png',
+    bisect: 'https://github.com/python/cpython/blob/3.11/Lib/bisect.py',
+  }
   return (
     <div className={blogStyle}>
       <div className="paragraphStyle">
@@ -12,7 +19,7 @@ export function BinarySearch(): JSX.Element {
         </div>
         <img
           style={{ width: '35vw', paddingLeft: '10vw', paddingRight: '10vw' }}
-          src="https://storage.googleapis.com/ussamazam-assets/binary_search.png"
+          src={urls['binary-search']}
           alt=""
         />
         <div>
@@ -22,7 +29,7 @@ export function BinarySearch(): JSX.Element {
         </div>
         <img
           style={{ width: '35vw', paddingLeft: '10vw', paddingRight: '10vw' }}
-          src="https://storage.googleapis.com/ussamazam-assets/bisect_left.png"
+          src={urls['bisect-left']}
           alt=""
         />
         <div>
@@ -33,7 +40,7 @@ export function BinarySearch(): JSX.Element {
         </div>
         <img
           style={{ width: '35vw', paddingLeft: '10vw', paddingRight: '10vw' }}
-          src="https://storage.googleapis.com/ussamazam-assets/array.png"
+          src={urls.array}
           alt=""
         />
         <div>
@@ -58,14 +65,15 @@ export function BinarySearch(): JSX.Element {
         <div>With a bit of tinkering, you can turn “bisect_left” into “bisect_right”:</div>
         <img
           style={{ width: '35vw', paddingLeft: '10vw', paddingRight: '10vw' }}
-          src="https://storage.googleapis.com/ussamazam-assets/bisect_right.png"
+          src={urls['bisect-left']}
           alt=""
         />
         <div>
           It’s not too different from “bisect_left”, but now instead of getting the leftmost index
           of a repeated sequence, you get the rightmost plus one. It still behaves the same when a
           value is not found by providing you with the insertion point. This all can be found here
-          in bisect. It’s part of Python’s standard library, so it’s not hard to find.
+          in <a href={urls.bisect}>bisect</a>. It’s part of Python’s standard library, so it’s not
+          hard to find.
         </div>
         <div>
           Maybe people knew about this much earlier than I but after years of programming and
