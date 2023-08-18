@@ -43,6 +43,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'import/no-extraneous-dependencies': 'off',
     'react/no-unescaped-entities': 'off',
+    'react/jsx-one-expression-per-line': 'off',
   },
   settings: {
     'import/resolver': {
