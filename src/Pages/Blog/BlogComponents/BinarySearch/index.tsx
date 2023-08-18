@@ -3,7 +3,7 @@ import { blogStyle } from '../BlogStyle'
 export function BinarySearch(): JSX.Element {
   const urls = {
     'binary-search': 'https://storage.googleapis.com/ussamazam-assets/binary_search.png',
-    array: 'https://storage.googleapis.com/ussamazam-assets/bisect_left.png',
+    array: 'https://storage.googleapis.com/ussamazam-assets/array.png',
     'bisect-left': 'https://storage.googleapis.com/ussamazam-assets/bisect_left.png',
     'bisect-right': 'https://storage.googleapis.com/ussamazam-assets/bisect_right.png',
     bisect: 'https://github.com/python/cpython/blob/3.11/Lib/bisect.py',
@@ -65,7 +65,7 @@ export function BinarySearch(): JSX.Element {
         <div>With a bit of tinkering, you can turn “bisect_left” into “bisect_right”:</div>
         <img
           style={{ width: '35vw', paddingLeft: '10vw', paddingRight: '10vw' }}
-          src={urls['bisect-left']}
+          src={urls['bisect-right']}
           alt=""
         />
         <div>

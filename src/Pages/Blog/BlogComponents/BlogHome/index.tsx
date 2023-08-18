@@ -11,7 +11,7 @@ export function BlogHome(): JSX.Element {
       </div>
       <ul className="listStyle">
         <Link to="/thoughts/binary-search">
-          <li>(2023-_-_) Binary Search is Simple and Beautiful</li>
+          <li>(2023-08-18) Binary Search is Simple and Beautiful</li>
         </Link>
         <br />
         <Link to="/thoughts/why-1000000007">
