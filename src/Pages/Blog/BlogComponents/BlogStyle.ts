@@ -29,6 +29,12 @@ export const blogStyle = css`
     }
   }
 
+  img {
+    width: 35vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
   @media (max-width: 768px) {
     div {
       font-size: 12px;
@@ -46,6 +52,12 @@ export const blogStyle = css`
         margin-left: 1vw;
         margin-right: 1vw;
       }
+    }
+
+    img {
+      width: 58vw;
+      padding-left: 0vw;
+      padding-right: 0vw;
     }
   }
 
