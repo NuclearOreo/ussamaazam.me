@@ -17,32 +17,20 @@ export function BinarySearch(): JSX.Element {
           If you remember your undergraduate years in CS, at some point, you're introduced to Binary
           Search, and it looked something like this:
         </div>
-        <img
-          style={{ width: '35vw', paddingLeft: '10vw', paddingRight: '10vw' }}
-          src={urls['binary-search']}
-          alt=""
-        />
+        <img src={urls['binary-search']} alt="" />
         <div>
           It's a simple algorithm, and maybe it wowed you or not; I definitely didn't think too much
           about it back then. But years later, on my gruelling Leetcode grind. I found a different
           Binary Search, a Binary Search that I saw many competitive programmers use:
         </div>
-        <img
-          style={{ width: '35vw', paddingLeft: '10vw', paddingRight: '10vw' }}
-          src={urls['bisect-left']}
-          alt=""
-        />
+        <img src={urls['bisect-left']} alt="" />
         <div>
           Honestly, the simplicity of it floored me. Maybe with a bit of serious adjustments, I
           could have gotten to this concise version that you see here, but visually, it's a
           beautiful algorithm and also behaves beautifully too. Let's use this array to showcase how
           bisect_left works:
         </div>
-        <img
-          style={{ width: '35vw', paddingLeft: '10vw', paddingRight: '10vw' }}
-          src={urls.array}
-          alt=""
-        />
+        <img src={urls.array} alt="" />
         <div>
           Here, it's a normally sorted array with a few repeated elements. Let's try to find “4” by
           setting the parameters like this: bisect_left(array, 4). You'll get index 8, but what's
@@ -63,11 +51,7 @@ export function BinarySearch(): JSX.Element {
           number somewhere inside the range.
         </div>
         <div>With a bit of tinkering, you can turn “bisect_left” into “bisect_right”:</div>
-        <img
-          style={{ width: '35vw', paddingLeft: '10vw', paddingRight: '10vw' }}
-          src={urls['bisect-right']}
-          alt=""
-        />
+        <img src={urls['bisect-right']} alt="" />
         <div>
           It’s not too different from “bisect_left”, but now instead of getting the leftmost index
           of a repeated sequence, you get the rightmost plus one. It still behaves the same when a

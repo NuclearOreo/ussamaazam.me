@@ -35,10 +35,10 @@ export default defineConfig({
     setupFiles: './src/setupTests.ts',
     coverage: {
       reporter: ['text', 'json', 'html'],
-      lines: 75,
+      lines: 81,
       functions: 80,
       branches: 90,
-      statements: 75,
+      statements: 81,
     },
   },
 })
