@@ -66,6 +66,7 @@ export function BinarySearch(): JSX.Element {
           problems.
         </div>
       </div>
+      <br />
     </div>
   )
 }
