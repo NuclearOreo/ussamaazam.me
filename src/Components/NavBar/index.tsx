@@ -17,6 +17,9 @@ export function NavBar() {
         <Link to="/thoughts" className="link">
           Thoughts
         </Link>
+        <Link to="/tiny-thoughts" className="link">
+          TinyThoughts
+        </Link>
       </div>
       <Outlet />
     </>
