@@ -4,9 +4,6 @@ import { TinyThoughts } from '.'
 
 test('Render AboutPage Component', () => {
   render(<TinyThoughts />)
-  //   const links = screen.getAllByRole('link')
-
-  //   links.forEach((link) => {
-  //     expect(link).toBeInTheDocument()
-  //   })
+  const lists = screen.getAllByRole('list')
+  lists.forEach((list) => expect(list).toBeInTheDocument())
 })
