@@ -22,4 +22,8 @@ export const styles = css`
   .link:hover {
     text-decoration: underline;
   }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `

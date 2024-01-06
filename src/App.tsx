@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { DonutPage } from '@/Pages/Donut'
 import { AboutPage } from '@/Pages/About'
 import { PhotoGalleryPage } from '@/Pages/PhotoGallery'
+import { TinyThoughts } from '@/Pages/TinyThoughts'
 import { Blog } from '@/Pages/Blog'
 import { BlogHome } from '@/Pages/Blog/BlogComponents/BlogHome'
 import { AwayFromSmoking } from '@/Pages/Blog/BlogComponents/AwayFromSmoking'
@@ -17,6 +18,7 @@ function App() {
           <Route path="" element={<DonutPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="gallery" element={<PhotoGalleryPage />} />
+          <Route path="tiny-thoughts" element={<TinyThoughts />} />
         </Route>
         <Route path="thoughts" element={<Blog />}>
           <Route path="" element={<BlogHome />} />

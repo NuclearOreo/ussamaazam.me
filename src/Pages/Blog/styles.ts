@@ -26,13 +26,13 @@ export const wrapper = css`
 
   @media (max-width: 768px) {
     .headerStyle {
-      font-size: 15px;
+      font-size: 12px;
       font-family: ${fontFamily.Poppins};
       color: ${GunMetal.light3};
     }
 
     .listStyle {
-      font-size: 15px;
+      font-size: 12px;
       font-family: ${fontFamily.Poppins};
       color: ${GunMetal.light3};
       a {
