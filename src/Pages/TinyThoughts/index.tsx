@@ -9,6 +9,16 @@ export function TinyThoughts() {
       </div>
       <ul>
         <li>
+          01-08-2024
+          <ul>
+            <li>
+              Solving problems and creating scalable solutions is probably the best way to avoid war
+              and infighting. After that is avoiding zero sum mentality.
+            </li>
+            <li>Zero sum is just thievery put in a cute mathy way.</li>
+          </ul>
+        </li>
+        <li>
           01-05-2024
           <ul>
             <li>
