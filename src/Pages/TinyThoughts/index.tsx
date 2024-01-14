@@ -9,6 +9,15 @@ export function TinyThoughts() {
       </div>
       <ul>
         <li>
+          01-09-2024
+          <ul>
+            <li>
+              You need good stories to have a good spirit and you need to solve problems to have a
+              good life.
+            </li>
+          </ul>
+        </li>
+        <li>
           01-08-2024
           <ul>
             <li>
