@@ -25,7 +25,7 @@ export function AboutPage() {
         <a href="https://leetcode.com/nuclearoreo/">
           <img className="leetcode" src={LeetcodeIcon} alt="" />
         </a>
-        <a href="https://www.linkedin.com/in/ussama-azam-000191180/">
+        <a href="https://www.linkedin.com/in/ussama-a-000191180/">
           <img className="linkedin" src={LinkedinIcon} alt="" />
         </a>
         <a href="https://unsplash.com/@ussamaazam">
