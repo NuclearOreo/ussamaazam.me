@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 
 import { defineConfig } from 'vite'
+import { configDefaults } from 'vitest/config'
 import reactRefresh from '@vitejs/plugin-react'
 import svgrPlugin from 'vite-plugin-svgr'
 import path from 'path'
@@ -33,6 +34,7 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/setupTests.ts',
+    exclude: [...configDefaults.exclude],
     coverage: {
       reporter: ['text', 'json', 'html'],
       lines: 81,
