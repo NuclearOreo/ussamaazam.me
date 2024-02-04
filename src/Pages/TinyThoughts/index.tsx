@@ -9,6 +9,24 @@ export function TinyThoughts() {
       </div>
       <ul>
         <li>
+          01-23-2024
+          <ul>
+            <li>
+              Rigorous learning is one the ways to combat social media. Try to learn something that
+              requires you putting in work.
+            </li>
+          </ul>
+        </li>
+        <li>
+          01-14-2024
+          <ul>
+            <li>
+              Affirmation of ideas leaves no room for creativity, being a memetic issue. Focused on
+              being right but missing the bigger picture.
+            </li>
+          </ul>
+        </li>
+        <li>
           01-09-2024
           <ul>
             <li>
