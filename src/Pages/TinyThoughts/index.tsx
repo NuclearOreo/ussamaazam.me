@@ -9,6 +9,15 @@ export function TinyThoughts() {
       </div>
       <ul>
         <li>
+          02-05-2024
+          <ul>
+            <li>
+              Two things I have to keep relearning: it's never that serious, and stay in the present
+              to be your best self.
+            </li>
+          </ul>
+        </li>
+        <li>
           01-23-2024
           <ul>
             <li>
