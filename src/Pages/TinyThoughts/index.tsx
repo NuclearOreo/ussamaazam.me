@@ -9,6 +9,18 @@ export function TinyThoughts() {
       </div>
       <ul>
         <li>
+          03-04-2024
+          <ul>
+            <li>Maybe unsuccessful people want success and successful people want friends.</li>
+          </ul>
+        </li>
+        <li>
+          03-02-2024
+          <ul>
+            <li>Good taste in art is one of those qualities that makes you respect someone.</li>
+          </ul>
+        </li>
+        <li>
           02-05-2024
           <ul>
             <li>
