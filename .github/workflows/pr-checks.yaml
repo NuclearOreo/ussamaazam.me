@@ -9,11 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: google-github-actions/setup-gcloud@v2
+      - uses: actions/setup-node@v3
 
       - name: Use Node.js 20.10.0
-        uses: actions/setup-node@v3
         with:
           node-version: 20.10.0
           cache: 'npm'
