@@ -9,6 +9,32 @@ export function TinyThoughts() {
       </div>
       <ul>
         <li>
+          03-27-2024
+          <ul>Know yourself, Be yourself, Love yourself.</ul>
+        </li>
+        <li>
+          03-22-2024
+          <ul>Cure to burn out is whole heartedness.</ul>
+        </li>
+        <li>
+          03-21-2024
+          <ul>
+            Not everyone is your friend and the people you once loved could become your worst
+            nightmare.
+          </ul>
+        </li>
+        <li>
+          03-19-2024
+          <ul>
+            Taking life too seriously then we all suffer for it but if not taken seriously enough we
+            still all suffer for it.
+          </ul>
+        </li>
+        <li>
+          03-18-2024
+          <ul>No amount of education will stop you from being a naive person.</ul>
+        </li>
+        <li>
           03-04-2024
           <ul>
             <li>Maybe unsuccessful people want success and successful people want friends.</li>
