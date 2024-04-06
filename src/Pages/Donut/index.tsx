@@ -30,14 +30,14 @@ export function DonutPage({ disableMobile }: DonutPageProp) {
       className={style({ transitionDown: toggleDonut ? 0 : 10, toggle: toggleDonut })}
       onClick={!isMobile ? () => setToggleDonut(!toggleDonut) : undefined}
     >
-      {/* {toggleDonut ? (
+      {toggleDonut ? (
         <Donut3D />
       ) : (
         <pre className={asciiDonutStyle} data-testid="Donut">
           {donut.frame}
         </pre>
-      )} */}
-      <Grid />
+      )}
+      {/* <Grid /> */}
     </div>
   )
 }
