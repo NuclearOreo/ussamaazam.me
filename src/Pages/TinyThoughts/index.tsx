@@ -9,6 +9,13 @@ export function TinyThoughts() {
       </div>
       <ul>
         <li>
+          04-19-2024
+          <ul>
+            Nothing and literally nothing messes with your mental health more than losing a loving
+            relationship.
+          </ul>
+        </li>
+        <li>
           03-27-2024
           <ul>Know yourself, Be yourself, Love yourself.</ul>
         </li>
