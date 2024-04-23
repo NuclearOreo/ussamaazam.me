@@ -72,8 +72,8 @@ export function PhotoGalleryPage() {
     <div>
       <div className={container}>
         <div className={descriptionStyle}>
-          I&apos;m a hobbyist photographer outside of work and pushing myself to come up with with
-          creative work. Hope you enjoy my photos us much as I do!
+          I&apos;m a hobbyist photographer outside of work and pushing myself to come up with
+          creatively. Hope you enjoy my photos as much as I do!
         </div>
         <div className={columnsStyles}>
           <div key="col1" className={columnStyles}>
