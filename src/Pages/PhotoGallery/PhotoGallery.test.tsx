@@ -6,7 +6,7 @@ describe('Render PhotoGallery Component', () => {
   test('Check if my description is present', () => {
     render(<PhotoGalleryPage />)
     const description = screen.getByText(
-      /I'm a hobbyist photographer outside of work and pushing myself to come up with with creative work. Hope you enjoy my photos us much as I do!/i,
+      /I'm a hobbyist photographer outside of work and pushing myself to come up with creatively. Hope you enjoy my photos as much as I do!/i,
     )
     expect(description).toEqual(description)
   })
