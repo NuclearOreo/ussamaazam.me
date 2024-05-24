@@ -9,6 +9,28 @@ export function TinyThoughts() {
       </div>
       <ul>
         <li>
+          05-13-2024
+          <ul>
+            <li>Being an adult is less about age and more about character.</li>
+            <li>Getting someone to respect you is a mountain.</li>
+            <li>Be the person you can love and move towards the things that inspire you .</li>
+          </ul>
+        </li>
+        <li>
+          05-06-2024
+          <ul>
+            Always treat it like a problem or puzzle, don't get your emotions invested, that's the
+            right might mindset to find leverage.
+          </ul>
+        </li>
+        <li>
+          04-26-2024
+          <ul>
+            Asking someone to deny what's most real to them like beauty, meaning, music but have
+            them accept science, math, logic. It's a bit strange.
+          </ul>
+        </li>
+        <li>
           04-19-2024
           <ul>
             Nothing and literally nothing messes with your mental health more than losing a loving
