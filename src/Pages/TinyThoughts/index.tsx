@@ -9,6 +9,30 @@ export function TinyThoughts() {
       </div>
       <ul>
         <li>
+          06-30-2024
+          <ul>The stories you tell yourself will be the monster you become.</ul>
+        </li>
+        <li>
+          06-20-2024
+          <ul>Can you build systems without causality?</ul>
+        </li>
+        <li>
+          06-13-2024
+          <ul>Democratization is great but we need to teach people about leverage.</ul>
+        </li>
+        <li>
+          06-11-2024
+          <ul>A relationship is not a definition, you actually have to work to maintain it.</ul>
+        </li>
+        <li>
+          06-05-2024
+          <ul>"Paying it forward" is a beautiful way to live life.</ul>
+        </li>
+        <li>
+          05-26-2024
+          <ul>Life will get better for everyone but not for you, you gotta do that yourself.</ul>
+        </li>
+        <li>
           05-13-2024
           <ul>
             <li>Being an adult is less about age and more about character.</li>
