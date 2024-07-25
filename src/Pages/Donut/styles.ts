@@ -1,5 +1,5 @@
 import { css } from '@emotion/css'
-import { GunMetal } from '../../Styles/color'
+import { GunMetal } from '@/Styles/color'
 
 interface StyleType {
   transitionDown: number

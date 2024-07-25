@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from 'react'
 import { asciiDonut } from '@/Components/ASCIIDonut'
 import { Donut3D } from '@/Components/Donut3D'
 import { style, asciiDonutStyle } from './styles'
-import { Grid } from '@/Components/GameOfLife'
+import { CheckeredGrid } from '@/Components/GameOfLife'
 
 interface DonutPageProp {
   disableMobile?: boolean
@@ -31,13 +31,15 @@ export function DonutPage({ disableMobile }: DonutPageProp) {
       onClick={!isMobile ? () => setToggleDonut(!toggleDonut) : undefined}
     >
       {toggleDonut ? (
-        <Donut3D />
+        <div>
+          <Donut3D />
+          <CheckeredGrid />
+        </div>
       ) : (
         <pre className={asciiDonutStyle} data-testid="Donut">
           {donut.frame}
         </pre>
       )}
-      {/* <Grid /> */}
     </div>
   )
 }

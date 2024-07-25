@@ -6,8 +6,8 @@ import { TinyThoughts } from '@/Pages/TinyThoughts'
 import { Blog } from '@/Pages/Blog'
 import { BlogHome } from '@/Pages/Blog/BlogComponents/BlogHome'
 import { AwayFromSmoking } from '@/Pages/Blog/BlogComponents/AwayFromSmoking'
-import { Why1000000007 } from './Pages/Blog/BlogComponents/Why1000000007'
-import { BinarySearch } from './Pages/Blog/BlogComponents/BinarySearch'
+import { Why1000000007 } from '@/Pages/Blog/BlogComponents/Why1000000007'
+import { BinarySearch } from '@/Pages/Blog/BlogComponents/BinarySearch'
 import { Header } from '@/Components/Header'
 
 function App() {
