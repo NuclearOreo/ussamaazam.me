@@ -1,7 +1,7 @@
-import { useRef, useState, useEffect } from 'react'
-import { asciiDonut } from '@/Components/ASCIIDonut'
+import { useState } from 'react'
+import { AsciiDonut } from '@/Components/ASCIIDonut'
 import { Donut3D } from '@/Components/Donut3D'
-import { style, asciiDonutStyle } from './styles'
+import { style } from './styles'
 import { CheckeredGrid } from '@/Components/GameOfLife'
 
 interface DonutPageProp {
@@ -10,19 +10,7 @@ interface DonutPageProp {
 
 export function DonutPage({ disableMobile }: DonutPageProp) {
   const isMobile = !disableMobile ? window.screen.width <= 768 : false
-  const [donut, setDonut] = useState({ frame: '', a: 0, b: 0 })
-  const timerId = useRef<NodeJS.Timer>()
   const [toggleDonut, setToggleDonut] = useState(false)
-
-  useEffect(() => {
-    timerId.current = setInterval(() => {
-      setDonut((prev) => asciiDonut(prev.a, prev.b))
-    }, 50)
-
-    return () => {
-      clearInterval(timerId.current)
-    }
-  }, [])
 
   return (
     <div
@@ -32,13 +20,11 @@ export function DonutPage({ disableMobile }: DonutPageProp) {
     >
       {toggleDonut ? (
         <div>
-          <Donut3D />
           <CheckeredGrid />
+          <Donut3D />
         </div>
       ) : (
-        <pre className={asciiDonutStyle} data-testid="Donut">
-          {donut.frame}
-        </pre>
+        <AsciiDonut />
       )}
     </div>
   )

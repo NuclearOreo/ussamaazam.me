@@ -1,4 +1,4 @@
-import { asciiDonut } from '.'
+import { asciiDonut } from './renderFrames'
 
 test('Test Ascii Donut', () => {
   const { frame: frame1, a: a1, b: b1 } = asciiDonut(0, 0)
