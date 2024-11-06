@@ -9,6 +9,68 @@ export function TinyThoughts() {
       </div>
       <ul>
         <li>
+          10-17-2024
+          <ul>Hatred is a place where a man who can't sadness goes.</ul>
+        </li>
+        <li>
+          10-16-2024
+          <ul>Many bad mistake come from lack of trust or misreading intent.</ul>
+        </li>
+        <li>
+          10-15-2024
+          <ul>Having something to focus on feels like a gift to the mind.</ul>
+        </li>
+        <li>
+          09-30-2024
+          <ul>
+            Maybe I don't have any aim but follow anything that allows me to grow and be a stronger
+            and better me.
+          </ul>
+        </li>
+        <li>
+          09-24-2024
+          <ul>Music is a catalyst for thought and reflection</ul>
+        </li>
+        <li>
+          09-23-2024
+          <ul>Care about your craft, know what good looks like.</ul>
+        </li>
+        <li>
+          09-21-2024
+          <ul>
+            In public or in private, the man has one face. It must be quite an experience to live as
+            he does.
+          </ul>
+        </li>
+        <li>
+          09-03-2024
+          <ul>The absence of magic in life is the absence of attention.</ul>
+        </li>
+        <li>
+          08-13-2024
+          <ul>Divided loyalties is a basic fact of the human condition.</ul>
+        </li>
+        <li>
+          08-12-2024
+          <ul>There are no solutions just trade-offs.</ul>
+        </li>
+        <li>
+          08-07-2024
+          <ul>What gets measured, gets managed.</ul>
+        </li>
+        <li>
+          07-18-2024
+          <ul>Nothing gets you more hate or respect than results.</ul>
+        </li>
+        <li>
+          07-12-2024
+          <ul>Always look up, never side to side.</ul>
+        </li>
+        <li>
+          07-08-2024
+          <ul>Simplicity is the only razor you need.</ul>
+        </li>
+        <li>
           06-30-2024
           <ul>The stories you tell yourself will be the monster you become.</ul>
         </li>
