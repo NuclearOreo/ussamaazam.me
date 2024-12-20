@@ -10,11 +10,11 @@ export function TinyThoughts() {
       <ul>
         <li>
           10-17-2024
-          <ul>Hatred is a place where a man who can't sadness goes.</ul>
+          <ul>Hatred is a place where a man who can't stand sadness goes.</ul>
         </li>
         <li>
           10-16-2024
-          <ul>Many bad mistake come from lack of trust or misreading intent.</ul>
+          <ul>Many bad mistakes come from lack of trust or misreading intent.</ul>
         </li>
         <li>
           10-15-2024
