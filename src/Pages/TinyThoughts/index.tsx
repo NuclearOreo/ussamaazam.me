@@ -5,7 +5,7 @@ export function TinyThoughts() {
     <div className={wrapper}>
       <div>
         Just some of my tiny thoughts, take them as shower thoughts, not worth taking too seriously
-        but something to play with.
+        but something to play with. Some of these thoughts are my own and some are from my readings.
       </div>
       <ul>
         <li>
