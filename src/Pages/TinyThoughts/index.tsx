@@ -9,6 +9,59 @@ export function TinyThoughts() {
       </div>
       <ul>
         <li>
+          02-12-2025
+          <ul>
+            <li>The purpose of art is washing the dust of our daily life off our souls.</li>
+          </ul>
+        </li>
+        <li>
+          01-31-2025
+          <ul>
+            <li>Friends come and go, but enemies accumulate.</li>
+          </ul>
+        </li>
+        <li>
+          01-29-2025
+          <ul>
+            <li>Success is being excited to go to work and being excited to come home.</li>
+            <li>Like any tool, it requires skill, judgment, and respect.</li>
+          </ul>
+        </li>
+        <li>
+          01-11-2025
+          <ul>
+            <li>Never delegate understanding.</li>
+            <li>
+              We collect statistics in "the Village of Happy People", but not about real life.
+            </li>
+          </ul>
+        </li>
+        <li>
+          12-23-2024
+          <ul>
+            <li>The dose makes the poison.</li>
+          </ul>
+        </li>
+        <li>
+          12-22-2024
+          <ul>
+            <li>If you're thinking without writing, you only think you're thinking</li>
+          </ul>
+        </li>
+        <li>
+          12-15-2024
+          <ul>
+            <li>But there is no absolute — that's always been an illusion.</li>
+          </ul>
+        </li>
+        <li>
+          11-15-2024
+          <ul>
+            <li>In a self help world, it pays to selfish.</li>
+            <li>For every neck, there're two hands you choke it.</li>
+          </ul>
+        </li>
+        <li>
           10-17-2024
           <ul>Hatred is a place where a man who can't stand sadness goes.</ul>
         </li>
