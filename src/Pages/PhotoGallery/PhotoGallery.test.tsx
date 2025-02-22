@@ -10,35 +10,26 @@ describe('Render PhotoGallery Component', () => {
     )
     expect(description).toEqual(description)
   })
-  // test('Resize window research', () => {
-  //   render(<PhotoGalleryPage />)
-  //   Object.defineProperty(window, 'location', {
-  //     configurable: true,
-  //     value: { reload: jest.fn() },
-  //   })
 
-  //   act(() => {
-  //     global.innerWidth = 500
-  //     global.dispatchEvent(new Event('resize'))
-  //   })
+  test('Handles window resize', () => {
+    let reloadCalled = false
+    render(<PhotoGalleryPage />)
 
-  //   expect(window.location.reload).toBeCalled()
-  // })
-  // test('d', () => {
-  //   const mockIntersectionObserver = jest.fn()
-  //   mockIntersectionObserver.mockReturnValue({
-  //     observe: () => {
-  //       current: 'Hw'
-  //     },
-  //     unobserve: () => null,
-  //     disconnect: () => null,
-  //   })
-  //   window.IntersectionObserver = mockIntersectionObserver
+    // Create a simple reload tracker
+    Object.defineProperty(window, 'location', {
+      configurable: true,
+      value: {
+        reload: () => {
+          reloadCalled = true
+        },
+      },
+    })
 
-  //   jest.spyOn(React, 'useCallback').mockImplementation((f) => f())
+    act(() => {
+      global.innerWidth = 500
+      global.dispatchEvent(new Event('resize'))
+    })
 
-  //   render(<PhotoGalleryPage />)
-
-  //   expect(1).toEqual(1)
-  // })
+    expect(reloadCalled).toBe(true)
+  })
 })
