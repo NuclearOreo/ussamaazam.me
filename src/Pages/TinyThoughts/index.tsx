@@ -5,9 +5,177 @@ export function TinyThoughts() {
     <div className={wrapper}>
       <div>
         Just some of my tiny thoughts, take them as shower thoughts, not worth taking too seriously
-        but something to play with.
+        but something to play with. Some of these thoughts are my own and some are from my readings.
       </div>
       <ul>
+        <li>
+          02-12-2025
+          <ul>
+            <li>The purpose of art is washing the dust of our daily life off our souls.</li>
+          </ul>
+        </li>
+        <li>
+          01-31-2025
+          <ul>
+            <li>Friends come and go, but enemies accumulate.</li>
+          </ul>
+        </li>
+        <li>
+          01-29-2025
+          <ul>
+            <li>Success is being excited to go to work and being excited to come home.</li>
+            <li>Like any tool, it requires skill, judgment, and respect.</li>
+          </ul>
+        </li>
+        <li>
+          01-11-2025
+          <ul>
+            <li>Never delegate understanding.</li>
+            <li>
+              We collect statistics in "the Village of Happy People", but not about real life.
+            </li>
+          </ul>
+        </li>
+        <li>
+          12-23-2024
+          <ul>
+            <li>The dose makes the poison.</li>
+          </ul>
+        </li>
+        <li>
+          12-22-2024
+          <ul>
+            <li>If you're thinking without writing, you only think you're thinking</li>
+          </ul>
+        </li>
+        <li>
+          12-15-2024
+          <ul>
+            <li>But there is no absolute — that's always been an illusion.</li>
+          </ul>
+        </li>
+        <li>
+          11-15-2024
+          <ul>
+            <li>In a self help world, it pays to selfish.</li>
+            <li>For every neck, there're two hands you choke it.</li>
+          </ul>
+        </li>
+        <li>
+          10-17-2024
+          <ul>Hatred is a place where a man who can't stand sadness goes.</ul>
+        </li>
+        <li>
+          10-16-2024
+          <ul>Many bad mistakes come from lack of trust or misreading intent.</ul>
+        </li>
+        <li>
+          10-15-2024
+          <ul>Having something to focus on feels like a gift to the mind.</ul>
+        </li>
+        <li>
+          09-30-2024
+          <ul>
+            Maybe I don't have any aim but follow anything that allows me to grow and be a stronger
+            and better me.
+          </ul>
+        </li>
+        <li>
+          09-24-2024
+          <ul>Music is a catalyst for thought and reflection</ul>
+        </li>
+        <li>
+          09-23-2024
+          <ul>Care about your craft, know what good looks like.</ul>
+        </li>
+        <li>
+          09-21-2024
+          <ul>
+            In public or in private, the man has one face. It must be quite an experience to live as
+            he does.
+          </ul>
+        </li>
+        <li>
+          09-03-2024
+          <ul>The absence of magic in life is the absence of attention.</ul>
+        </li>
+        <li>
+          08-13-2024
+          <ul>Divided loyalties is a basic fact of the human condition.</ul>
+        </li>
+        <li>
+          08-12-2024
+          <ul>There are no solutions just trade-offs.</ul>
+        </li>
+        <li>
+          08-07-2024
+          <ul>What gets measured, gets managed.</ul>
+        </li>
+        <li>
+          07-18-2024
+          <ul>Nothing gets you more hate or respect than results.</ul>
+        </li>
+        <li>
+          07-12-2024
+          <ul>Always look up, never side to side.</ul>
+        </li>
+        <li>
+          07-08-2024
+          <ul>Simplicity is the only razor you need.</ul>
+        </li>
+        <li>
+          06-30-2024
+          <ul>The stories you tell yourself will be the monster you become.</ul>
+        </li>
+        <li>
+          06-20-2024
+          <ul>Can you build systems without causality?</ul>
+        </li>
+        <li>
+          06-13-2024
+          <ul>Democratization is great but we need to teach people about leverage.</ul>
+        </li>
+        <li>
+          06-11-2024
+          <ul>A relationship is not a definition, you actually have to work to maintain it.</ul>
+        </li>
+        <li>
+          06-05-2024
+          <ul>"Paying it forward" is a beautiful way to live life.</ul>
+        </li>
+        <li>
+          05-26-2024
+          <ul>Life will get better for everyone but not for you, you gotta do that yourself.</ul>
+        </li>
+        <li>
+          05-13-2024
+          <ul>
+            <li>Being an adult is less about age and more about character.</li>
+            <li>Getting someone to respect you is a mountain.</li>
+            <li>Be the person you can love and move towards the things that inspire you .</li>
+          </ul>
+        </li>
+        <li>
+          05-06-2024
+          <ul>
+            Always treat it like a problem or puzzle, don't get your emotions invested, that's the
+            right might mindset to find leverage.
+          </ul>
+        </li>
+        <li>
+          04-26-2024
+          <ul>
+            Asking someone to deny what's most real to them like beauty, meaning, music but have
+            them accept science, math, logic. It's a bit strange.
+          </ul>
+        </li>
+        <li>
+          04-19-2024
+          <ul>
+            Nothing and literally nothing messes with your mental health more than losing a loving
+            relationship.
+          </ul>
+        </li>
         <li>
           03-27-2024
           <ul>Know yourself, Be yourself, Love yourself.</ul>

@@ -15,10 +15,10 @@ jobs:
         with:
           credentials_json: ${{ secrets.SERVICE_ACCOUNT_KEY  }}
 
-      - name: Use Node.js 20.10.0
+      - name: Use Node.js 22.14.0
         uses: actions/setup-node@v3
         with:
-          node-version: 20.10.0
+          node-version: 22.14.0
           cache: 'npm'
 
       - name: Install Packages
