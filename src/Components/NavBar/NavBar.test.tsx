@@ -11,7 +11,7 @@ test('Render NavBar Component', () => {
       </Routes>
     </Router>,
   )
-  const HomeLink = screen.getByText(/🍩/i)
+  const HomeLink = screen.getByText(/🏠/i)
   const AboutLink = screen.getByText(/About/i)
   const GalleryLink = screen.getByText(/Gallery/i)
   expect(HomeLink).toBeInTheDocument()

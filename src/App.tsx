@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import { DonutPage } from '@/Pages/Donut'
+import { HomePage } from '@/Pages/Home'
 import { AboutPage } from '@/Pages/About'
 import { PhotoGalleryPage } from '@/Pages/PhotoGallery'
 import { TinyThoughts } from '@/Pages/TinyThoughts'
@@ -15,7 +15,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Header />}>
-          <Route path="" element={<DonutPage />} />
+          <Route path="" element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="gallery" element={<PhotoGalleryPage />} />
           <Route path="tiny-thoughts" element={<TinyThoughts />} />

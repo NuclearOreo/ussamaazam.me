@@ -6,7 +6,7 @@ export function NavBar() {
     <>
       <div className={styles}>
         <Link to="/" className="link">
-          🍩
+          🏠
         </Link>
         <Link to="/about" className="link">
           About
