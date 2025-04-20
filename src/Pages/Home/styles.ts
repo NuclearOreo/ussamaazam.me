@@ -1,5 +1,5 @@
 import { css } from '@emotion/css'
-import { GunMetal } from '../../Styles/color'
+import { GunMetal } from '@/Styles/color'
 
 interface StyleType {
   transitionDown: number
@@ -25,8 +25,4 @@ export const style = ({ transitionDown, toggle }: StyleType) => css`
     font-size: 1vh;
     transform: translate(0, ${toggle ? 15 : 45}%);
   }
-`
-
-export const asciiDonutStyle = css`
-  padding: 1vw;
 `

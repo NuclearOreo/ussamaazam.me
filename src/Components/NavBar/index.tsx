@@ -5,7 +5,7 @@ export function NavBar() {
   return (
     <div className={styles}>
       <Link to="/" className="link">
-        🍩
+        🏠
       </Link>
       <Link to="/about" className="link">
         About

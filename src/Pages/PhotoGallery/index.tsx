@@ -14,7 +14,7 @@ import loadingAnimation from '@/Icons/three-dots.svg'
 
 export function PhotoGalleryPage() {
   const mobileWidth = 768
-  const numOfCols = window.screen.width <= mobileWidth ? 1 : 3
+  const numOfCols = window.innerWidth <= mobileWidth ? 1 : 3
   const imageCols: JSX.Element[][] = []
   const colsHeights: number[] = []
 
