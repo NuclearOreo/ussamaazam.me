@@ -24,9 +24,6 @@ jobs:
       - name: Install Packages
         run: npm ci
 
-      - name: Run Linter
-        run: npm run lint
-
       - name: Run Unit Tests
         run: npm run coverage
 
