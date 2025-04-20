@@ -15,7 +15,6 @@ export function HomePage({ disableMobile }: DonutPageProp) {
   const cycleDisplayMode = () => {
     setDisplayMode((prev) => (prev + 1) % 3)
   }
-  console.log(isMobile, window.innerWidth)
 
   return (
     <div
