@@ -14,35 +14,6 @@ const ANIMATION_SPEED = 100
 
 type Grid = number[][]
 
-// Interesting patterns to initialize the grid
-const patterns = {
-  glider: [
-    [0, 1, 0],
-    [0, 0, 1],
-    [1, 1, 1]
-  ],
-  blinker: [
-    [0, 1, 0],
-    [0, 1, 0],
-    [0, 1, 0]
-  ],
-  toad: [
-    [0, 0, 0, 0],
-    [0, 1, 1, 1],
-    [1, 1, 1, 0],
-    [0, 0, 0, 0]
-  ],
-  random: () => {
-    const grid = createEmptyGrid()
-    for (let i = 0; i < GRID_SIZE; i++) {
-      for (let j = 0; j < GRID_SIZE; j++) {
-        grid[i][j] = Math.random() > 0.8 ? 1 : 0
-      }
-    }
-    return grid
-  }
-}
-
 // Create an empty grid filled with 0s
 const createEmptyGrid = (): Grid => {
   return Array.from({ length: GRID_SIZE }, () => 
@@ -50,8 +21,42 @@ const createEmptyGrid = (): Grid => {
   )
 }
 
+// Interesting patterns to initialize the grid
+const patterns = {
+  glider: [
+    [0, 1, 0],
+    [0, 0, 1],
+    [1, 1, 1],
+  ],
+  blinker: [
+    [0, 1, 0],
+    [0, 1, 0],
+    [0, 1, 0],
+  ],
+  toad: [
+    [0, 0, 0, 0],
+    [0, 1, 1, 1],
+    [1, 1, 1, 0],
+    [0, 0, 0, 0],
+  ],
+  random: () => {
+    const grid = createEmptyGrid()
+    for (let i = 0; i < GRID_SIZE; i += 1) {
+      for (let j = 0; j < GRID_SIZE; j += 1) {
+        grid[i][j] = Math.random() > 0.8 ? 1 : 0
+      }
+    }
+    return grid
+  },
+}
+
 // Add a pattern to the grid at specified position
-const addPatternToGrid = (grid: Grid, pattern: number[][], rowStart: number, colStart: number): Grid => {
+const addPatternToGrid = (
+  grid: Grid, 
+  pattern: number[][], 
+  rowStart: number, 
+  colStart: number
+): Grid => {
   const newGrid = JSON.parse(JSON.stringify(grid))
   pattern.forEach((row, i) => {
     row.forEach((cell, j) => {
@@ -72,17 +77,19 @@ export function GameOfLife(): JSX.Element {
   })
 
   // Count live neighbors for a cell
-  const countNeighbors = (grid: Grid, row: number, col: number): number => {
+  const countNeighbors = (currentGrid: Grid, row: number, col: number): number => {
     let count = 0
-    for (let i = -1; i <= 1; i++) {
-      for (let j = -1; j <= 1; j++) {
-        if (i === 0 && j === 0) continue // Skip the cell itself
+    for (let i = -1; i <= 1; i += 1) {
+      for (let j = -1; j <= 1; j += 1) {
+        if (i === 0 && j === 0) {
+          continue
+        }
         
         // Handle edges by wrapping around (toroidal grid)
         const r = (row + i + GRID_SIZE) % GRID_SIZE
         const c = (col + j + GRID_SIZE) % GRID_SIZE
         
-        count += grid[r][c]
+        count += currentGrid[r][c]
       }
     }
     return count
@@ -92,8 +99,8 @@ export function GameOfLife(): JSX.Element {
   const computeNextGeneration = useCallback((currentGrid: Grid): Grid => {
     const newGrid = createEmptyGrid()
     
-    for (let row = 0; row < GRID_SIZE; row++) {
-      for (let col = 0; col < GRID_SIZE; col++) {
+    for (let row = 0; row < GRID_SIZE; row += 1) {
+      for (let col = 0; col < GRID_SIZE; col += 1) {
         const neighbors = countNeighbors(currentGrid, row, col)
         const cell = currentGrid[row][col]
         
@@ -117,7 +124,7 @@ export function GameOfLife(): JSX.Element {
   // Animation loop - start immediately
   useEffect(() => {
     const timer = setInterval(() => {
-      setGrid(currentGrid => computeNextGeneration(currentGrid))
+      setGrid((currentGrid) => computeNextGeneration(currentGrid))
     }, ANIMATION_SPEED)
 
     return () => clearInterval(timer)
