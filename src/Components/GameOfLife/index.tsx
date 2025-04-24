@@ -16,8 +16,7 @@ type Grid = number[][]
 
 // Create an empty grid filled with 0s
 const createEmptyGrid = (): Grid => {
-  return Array.from({ length: GRID_SIZE }, () => 
-    Array.from({ length: GRID_SIZE }, () => 0)
+  return Array.from({ length: GRID_SIZE }, () => Array.from({ length: GRID_SIZE }, () => 0)
   )
 }
 

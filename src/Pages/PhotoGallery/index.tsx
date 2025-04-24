@@ -61,7 +61,7 @@ export function PhotoGalleryPage() {
     } else {
       imageCols[minIndex].push(
         <a key={`${image.id}ANCHOR`} href={image.links.html}>
-          <img key={image.id} className="hvr-grow" src={image.urls.regular} alt="" />
+          <img key={image.id} className="hvr-grow" src={image.urls.regular} alt="Unsplash" />
         </a>,
       )
     }
