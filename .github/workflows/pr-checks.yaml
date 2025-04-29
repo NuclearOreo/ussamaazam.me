@@ -20,7 +20,7 @@ jobs:
       - name: Install Packages
         run: npm ci
 
-      - name: Run TSLint
+      - name: Run Lint
         run: npm run lint
 
       - name: Run Unit Tests
