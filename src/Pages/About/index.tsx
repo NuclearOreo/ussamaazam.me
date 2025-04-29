@@ -20,16 +20,16 @@ export function AboutPage() {
       </div>
       <div className="linksStyle">
         <a href="https://github.com/NuclearOreo">
-          <img className="github" src={GithubIcon} alt="" />
+          <img className="github" src={GithubIcon} alt="Github" />
         </a>
         <a href="https://leetcode.com/nuclearoreo/">
-          <img className="leetcode" src={LeetcodeIcon} alt="" />
+          <img className="leetcode" src={LeetcodeIcon} alt="Leetcode" />
         </a>
         <a href="https://www.linkedin.com/in/ussama-azam/">
-          <img className="linkedin" src={LinkedinIcon} alt="" />
+          <img className="linkedin" src={LinkedinIcon} alt="LinkedIn" />
         </a>
         <a href="https://unsplash.com/@ussamaazam">
-          <img className="unsplash" src={UnsplashIcon} alt="" />
+          <img className="unsplash" src={UnsplashIcon} alt="Unsplash" />
         </a>
       </div>
     </div>

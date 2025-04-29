@@ -24,7 +24,7 @@ export function BlogHome(): JSX.Element {
       </ul>
       <div className="footer">
         <a href="https://ussamaa.substack.com/?utm_source=substack&utm_medium=web&utm_campaign=substack_profile">
-          <img className="substack" src={SubStack} alt="" />
+          <img className="substack" src={SubStack} alt="Substack" />
         </a>
       </div>
     </div>

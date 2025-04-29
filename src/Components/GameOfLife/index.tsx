@@ -16,9 +16,7 @@ type Grid = number[][]
 
 // Create an empty grid filled with 0s
 const createEmptyGrid = (): Grid => {
-  return Array.from({ length: GRID_SIZE }, () => 
-    Array.from({ length: GRID_SIZE }, () => 0)
-  )
+  return Array.from({ length: GRID_SIZE }, () => Array.from({ length: GRID_SIZE }, () => 0))
 }
 
 // Interesting patterns to initialize the grid
@@ -50,26 +48,6 @@ const patterns = {
   },
 }
 
-// Add a pattern to the grid at specified position
-const addPatternToGrid = (
-  grid: Grid, 
-  pattern: number[][], 
-  rowStart: number, 
-  colStart: number
-): Grid => {
-  const newGrid = JSON.parse(JSON.stringify(grid))
-  pattern.forEach((row, i) => {
-    row.forEach((cell, j) => {
-      const newRow = (rowStart + i) % GRID_SIZE
-      const newCol = (colStart + j) % GRID_SIZE
-      if (newRow >= 0 && newRow < GRID_SIZE && newCol >= 0 && newCol < GRID_SIZE) {
-        newGrid[newRow][newCol] = cell
-      }
-    })
-  })
-  return newGrid
-}
-
 export function GameOfLife(): JSX.Element {
   const [grid, setGrid] = useState<Grid>(() => {
     // Initialize with random pattern
@@ -81,15 +59,12 @@ export function GameOfLife(): JSX.Element {
     let count = 0
     for (let i = -1; i <= 1; i += 1) {
       for (let j = -1; j <= 1; j += 1) {
-        if (i === 0 && j === 0) {
-          continue
+        if (i !== 0 || j !== 0) {
+          // Handle edges by wrapping around (toroidal grid)
+          const r = (row + i + GRID_SIZE) % GRID_SIZE
+          const c = (col + j + GRID_SIZE) % GRID_SIZE
+          count += currentGrid[r][c]
         }
-        
-        // Handle edges by wrapping around (toroidal grid)
-        const r = (row + i + GRID_SIZE) % GRID_SIZE
-        const c = (col + j + GRID_SIZE) % GRID_SIZE
-        
-        count += currentGrid[r][c]
       }
     }
     return count
@@ -98,12 +73,12 @@ export function GameOfLife(): JSX.Element {
   // Apply Game of Life rules to compute the next generation
   const computeNextGeneration = useCallback((currentGrid: Grid): Grid => {
     const newGrid = createEmptyGrid()
-    
+
     for (let row = 0; row < GRID_SIZE; row += 1) {
       for (let col = 0; col < GRID_SIZE; col += 1) {
         const neighbors = countNeighbors(currentGrid, row, col)
         const cell = currentGrid[row][col]
-        
+
         // Apply Conway's Game of Life rules
         if (cell === 1 && (neighbors < 2 || neighbors > 3)) {
           // Cell dies
@@ -117,7 +92,6 @@ export function GameOfLife(): JSX.Element {
         }
       }
     }
-    
     return newGrid
   }, [])
 
@@ -133,7 +107,6 @@ export function GameOfLife(): JSX.Element {
   // Render a single cell
   const renderCell = (row: number, col: number): JSX.Element => {
     const isAlive = grid[row][col] === 1
-    
     return (
       <div
         key={`${row}-${col}`}
