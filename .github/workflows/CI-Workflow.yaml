@@ -34,16 +34,16 @@ jobs:
         run: docker build -t site:latest .
 
       - name: Configure Docker Client
-        run: gcloud auth configure-docker --quiet
+        run: gcloud auth configure-docker us-east1-docker.pkg.dev --quiet
 
-      - name: Push Docker Image to Container Registry (GCR)
+      - name: Push Docker Image to Artifact Registry
         run: |-
-          docker tag site:latest gcr.io/website-353503/site:latest
-          docker push gcr.io/website-353503/site:latest
+          docker tag site:latest us-east1-docker.pkg.dev/website-353503/personal-site/site:latest
+          docker push us-east1-docker.pkg.dev/website-353503/personal-site/site:latest
 
       - name: Deploy
         uses: 'google-github-actions/deploy-cloudrun@v2'
         with:
-          image: 'gcr.io/website-353503/site:latest'
+          image: 'us-east1-docker.pkg.dev/website-353503/personal-site/site:latest'
           region: 'us-east1'
           service: 'personal-site'
