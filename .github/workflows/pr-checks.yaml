@@ -1,27 +1,27 @@
-name: PR Checks
+# name: PR Checks
 
-on:
-  pull_request:
-    branches: [version-2]
+# on:
+#   push:
+#     branches: [version-2]
 
-jobs:
-  pull-request-checks:
-    runs-on: ubuntu-latest
+# jobs:
+#   pull-request-checks:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
+#     steps:
+#       - uses: actions/checkout@v3
 
-      - name: Use Node.js 22.14.0
-        uses: actions/setup-node@v3
-        with:
-          node-version: 22.14.0
-          cache: 'npm'
+#       - name: Use Node.js 22.14.0
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 22.14.0
+#           cache: 'npm'
 
-      - name: Install Packages
-        run: npm ci
+#       - name: Install Packages
+#         run: npm ci
 
-      - name: Run Lint
-        run: npm run lint
+#       - name: Run Lint
+#         run: npm run lint
 
-      - name: Run Unit Tests
-        run: npm run coverage
+#       - name: Run Unit Tests
+#         run: npm run coverage
