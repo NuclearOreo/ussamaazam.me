@@ -1,7 +1,7 @@
 name: PR Checks
 
 on:
-  push:
+  pull_request:
     branches: [version-2]
 
 jobs:
