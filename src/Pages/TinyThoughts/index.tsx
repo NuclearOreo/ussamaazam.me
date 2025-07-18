@@ -9,6 +9,69 @@ export function TinyThoughts() {
       </div>
       <ul>
         <li>
+          06-22-2025
+          <ul>
+            <li>You become what you scroll. Choose accordingly.</li>
+            <li>
+              The greatest business failures often come not from playing the game poorly, but from
+              continuing to excel at things that no longer matter.
+            </li>
+          </ul>
+        </li>
+        <li>
+          06-02-2025
+          <ul>
+            <li>Do things that you like, and sometimes the world will agree.</li>
+            <li>Your audience is just&nbsp;you, pushed outwards.</li>
+          </ul>
+        </li>
+        <li>
+          04-06-2025
+          <ul>
+            <li>I shall not waste my days in trying to prolong them. I shall use my time.”</li>
+            <li>
+              The loudest signals come from the emptiest sources. Those who truly possess something
+              rarely need to announce it.
+            </li>
+            <li>
+              If you're busy showing off your brains, you're probably not listening closely enough,
+              thinking hard enough or reaching the smartest conclusions.
+            </li>
+            <li>
+              What I know for certain is that the conclusions I would draw from experience are
+              different from the ones based only on figures. Because if Lionel Messi scores three
+              times out of every ten attempts, he might be criticized by someone who sees only the
+              statistics for being just 30 per cent effective. I’d say: just copy him and see if you
+              can get up to that level. It’s practically impossible.
+            </li>
+          </ul>
+        </li>
+        <li>
+          03-20-2025
+          <ul>
+            <li>
+              Happiness is not attained through self-gratification, but through fidelity to a worthy
+              purpose.
+            </li>
+          </ul>
+        </li>
+        <li>
+          02-24-2025
+          <ul>
+            <li>Sword of Damocles</li>
+          </ul>
+        </li>
+        <li>
+          02-23-2025
+          <ul>
+            <li>
+              If you’re trying to choose between two theories and one gives you an excuse for being
+              lazy, the other one is probably right.
+            </li>
+            <li>Momentum is everything…Either you’re improving or regressing.</li>
+          </ul>
+        </li>
+        <li>
           02-12-2025
           <ul>
             <li>The purpose of art is washing the dust of our daily life off our souls.</li>
